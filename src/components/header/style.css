@@ -1,0 +1,20 @@
+.header {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    top: 0;
+}
+
+.header__background {
+    width: 100%;
+}
+
+.header__box {
+    max-width: 1500px;
+    width: 100%;
+    position: absolute;
+    margin-top: 20px;
+    display: flex;
+    gap: 0 10px;
+}

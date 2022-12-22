@@ -1,0 +1,57 @@
+.popover .MuiPopover-paper {
+    padding: 30px;
+    width: 580px;
+    margin-left: -280px;
+    border-radius: 15px;
+}
+
+.popover__box {
+    width: 100%;
+}
+
+.popover__box .MuiTabs-indicator {
+    display: none !important;
+}
+
+.popover__tab {
+    min-width: 115px !important;
+    text-transform: none !important;
+    align-items: flex-start !important;
+}
+
+.popover__tab span span {
+    right: -12px;
+}
+
+.popover__tab div {
+    font-weight: 700;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.popover__tab div:hover {
+    font-weight: 700;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.popover__tab.Mui-selected div {
+    color: #000000;
+}
+
+.popover__badge span {
+    background: #FF007A;
+    color: white;
+}
+
+.popover__icon {
+    border: none;
+    padding: 0;
+    background: transparent;
+    width: 26px !important;
+}
+
+.popover__icon:hover {
+    opacity: 0.3;
+    background: transparent;
+}

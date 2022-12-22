@@ -1,0 +1,54 @@
+.header-bar {
+    max-width: 1420px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 0 28px 0 60px;
+    display: flex;
+}
+
+.header-bar__links {
+    flex-grow: 1;
+    display: flex;
+    min-height: 80px;
+    gap: 0 40px;
+}
+
+.header-bar__link {
+    font-weight: 700;
+    font-size: 17px;
+    color: #D1D1D1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.header-bar__link:hover {
+    color: #9E9E9E !important;
+}
+
+.header-bar__buttons {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+}
+
+.header-bar__icon {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.header-bar__account {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.header-bar__account:hover {
+    opacity: 0.3;
+    background: transparent !important;
+}
