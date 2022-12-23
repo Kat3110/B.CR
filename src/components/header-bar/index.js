@@ -4,7 +4,24 @@ import Avatar from '../../assets/account.svg';
 import NotificationPopover from "../notification-popover";
 import './style.css'
 
-const pages = ['Home feed ', 'Projects', 'Insights', 'FAQ'];
+const pages = [
+    {
+        name: 'Home feed ',
+        url: '/'
+    },
+    {
+        name: 'Projects',
+        url: '/projects'
+    },
+    {
+        name: 'Insights',
+        url: '/'
+    },
+    {
+        name: 'FAQ',
+        url: '/'
+    },
+];
 
 function HeaderBar() {
     return (
@@ -12,8 +29,8 @@ function HeaderBar() {
             <div className='header-bar__links'>
                 {pages.map((page) => (
                     <Link className='header-bar__link'
-                        component="button" key={page}>
-                        {page}
+                        component="button" key={page.name}>
+                        {page.name}
                     </Link>))}
             </div>
             <div className='header-bar__buttons'>

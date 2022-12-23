@@ -6,8 +6,10 @@ import TabPanel from '@mui/lab/TabPanel';
 import Popover from "@mui/material/Popover";
 import Badge from "@mui/material/Badge";
 import bell from "../../assets/Bell.svg";
+import iconAcc from "../../assets/icon-acc.svg";
+import iconAcc2 from "../../assets/icon-acc2.svg";
+import NotificationMessage from "../notification-message";
 import './style.css'
-
 
 function NotificationPopover() {
 
@@ -29,52 +31,192 @@ function NotificationPopover() {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-notification-popover' : undefined;
 
-    return (
-        <>
-            <Badge className='popover__badge' badgeContent={27}>
-                <button
-                    aria-describedby={id}
-                    variant="contained"
-                    onClick={handleClick}
-                    className='popover__icon'>
-                    <img src={bell}/>
-                </button>
-            </Badge>
-            <Popover
-                id={id}
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{vertical: 'bottom', horizontal: 'center',}}
-                transformOrigin={{vertical: 'top', horizontal: 'left',}} className='popover'>
-                <div className='popover__box'>
-                    <TabContext value={value}>
-                        <div>
-                            <TabList onChange={handleChange}>
-                                <Tab className='popover__tab' value="1" disableRipple
-                                     label={
-                                         <Badge className='popover__badge'
-                                                badgeContent={2}>
-                                             <div>Update</div>
-                                         </Badge>}/>
-                                <Tab className='popover__tab' value="2" disableRipple
-                                     label={
-                                         <Badge className='popover__badge'
-                                                badgeContent={25}>
-                                             <div>Mention</div>
-                                         </Badge>}/>
-                                <Tab className='popover__tab' value="3" disableRipple
-                                     label={<div>Notice</div>}/>
-                            </TabList>
+    return (<>
+        <Badge className='popover__badge' badgeContent={27}>
+            <button
+                aria-describedby={id}
+                variant="contained"
+                onClick={handleClick}
+                className='popover__icon'>
+                <img src={bell}/>
+            </button>
+        </Badge>
+        <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            anchorOrigin={{vertical: 'bottom', horizontal: 'center',}}
+            transformOrigin={{vertical: 'top', horizontal: 'left',}} className='popover'>
+            <div className='popover__box'>
+                <TabContext value={value}>
+                    <div>
+                        <TabList onChange={handleChange}>
+                            <Tab className='popover__tab' value="1" disableRipple
+                                 label={<Badge className='popover__badge'
+                                               badgeContent={2}>
+                                     <div>Update</div>
+                                 </Badge>}/>
+                            <Tab className='popover__tab' value="2" disableRipple
+                                 label={<Badge className='popover__badge'
+                                               badgeContent={25}>
+                                     <div>Mention</div>
+                                 </Badge>}/>
+                            <Tab className='popover__tab' value="3" disableRipple
+                                 label={<div>Notice</div>}/>
+                        </TabList>
+                    </div>
+                    <TabPanel value="1" sx={{p: 0}}>
+                        <div className='popover__panel'>
+                            <div>
+                                <Badge color="secondary" variant="dot"
+                                       className='popover__badge popover__panel_dot'>
+                                    <p className='popover__panel_title'>Unread</p>
+                                </Badge>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='popover__panel_title'>Read</p>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <TabPanel value="1">Item One</TabPanel>
-                        <TabPanel value="2">Item Two</TabPanel>
-                        <TabPanel value="3">Item Three</TabPanel>
-                    </TabContext>
-                </div>
-            </Popover>
-        </>
-    );
+                    </TabPanel>
+                    <TabPanel value="2" sx={{p: 0}}>
+                        <div className='popover__panel'>
+                            <div>
+                                <Badge color="secondary" variant="dot"
+                                       className='popover__badge popover__panel_dot'>
+                                    <p className='popover__panel_title'>Unread</p>
+                                </Badge>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='popover__panel_title'>Read</p>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel value="3" sx={{p: 0}}>
+                        <div className='popover__panel'>
+                            <div>
+                                <Badge color="secondary" variant="dot"
+                                       className='popover__badge popover__panel_dot'>
+                                    <p className='popover__panel_title'>Unread</p>
+                                </Badge>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='popover__panel_title'>Read</p>
+                                <div className='popover__message_box'>
+                                    <NotificationMessage
+                                        img={iconAcc2}
+                                        name='Hubert Benjamin'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                    <NotificationMessage
+                                        img={iconAcc}
+                                        name='Yves Saint Laurent'
+                                        content='You have been invited to'
+                                        charis='Charis'
+                                        time='5 min. ago'
+                                        text='Charis 2023 Summer Kids Package'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </TabPanel>
+                </TabContext>
+            </div>
+        </Popover>
+    </>);
 }
 
 export default NotificationPopover;

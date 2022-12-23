@@ -1,0 +1,32 @@
+.blur {
+    display: flex;
+    flex-direction: column;
+}
+
+.blur__box {
+    max-width: 1500px;
+    width: 100%;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.025);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    gap: 5px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blur__box img{
+    width: 30px;
+    height: 30px;
+    background: transparent;
+}
+
+.blur__box_subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    color: rgba(0,0,0,0.4);
+    margin: 0;
+}

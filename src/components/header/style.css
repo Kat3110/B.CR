@@ -11,10 +11,8 @@
 }
 
 .header__box {
-    max-width: 1500px;
-    width: 100%;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 20px !important;
     display: flex;
     gap: 0 10px;
 }

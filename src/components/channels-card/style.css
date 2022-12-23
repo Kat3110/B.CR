@@ -1,0 +1,54 @@
+.channels__card {
+    max-width: 1500px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.channels__card_descript {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.channels__card_time {
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.channels__card_content {
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+
+.channels__card_content span {
+    font-weight: 700;
+    margin: 0;
+}
+
+.channels__card_account {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    width: 300px;
+}
+
+.channels__card_account img {
+    width: 25px;
+    height: 25px;
+}
+
+.channels__card_name {
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+    margin: 0;
+}
