@@ -1,17 +1,12 @@
-.insights__flex {
+.insights-card {
+    cursor: pointer;
+}
+
+.insights-card__flex {
     display: flex;
 }
 
-.insights__card {
-    max-width: 276px;
-    width: 100%;
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.insights__data {
+.insights-card__data {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -23,19 +18,19 @@
     margin-bottom: 20px;
 }
 
-.insights__data img {
+.insights-card__data img {
     width: 18px;
     height: 18px;
 }
 
-.insights__text {
+.insights-card__text {
     font-weight: 400;
     font-size: 14px;
     color: #000000;
     margin: 0;
 }
 
-.insights__content {
+.insights-card__content {
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
@@ -44,11 +39,7 @@
     overflow: hidden;
 }
 
-.insights__block {
-
-}
-
-.insights__time {
+.insights-card__time {
     font-weight: 400;
     font-size: 15px;
     line-height: 30px;
@@ -56,25 +47,25 @@
     margin: 0;
 }
 
-.insights__time span {
+.insights-card__time span {
     font-size: 40px;
     line-height: 46px;
     margin-right: 5px;
 }
 
-.insights__account {
+.insights-card__account {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
 }
 
-.insights__account img {
+.insights-card__account img {
     width: 25px;
     height: 25px;
 }
 
-.insights__name {
+.insights-card__name {
     font-weight: 400;
     font-size: 13px;
     color: #000000;

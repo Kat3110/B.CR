@@ -4,15 +4,15 @@ import './style.css'
 
 function NotificationMessage(props) {
     return (
-        <div className='massage__box'>
-            <div className='massage__box_name'>
-                <img src={props.img}  className='massage__box_name_icon'/>
-                <p className='massage__box_name_text'>{props.name}</p>
+        <div className='notification-message'>
+            <div className='notification-message__profile'>
+                <img src={props.img}  className='notification-message__icon'/>
+                <p className='notification-message__name'>{props.name}</p>
             </div>
-            <p className='massage__box_content'>
+            <p className='notification-message__content'>
                 {props.content} <span> {props.charis}</span>
             </p>
-            <div className='massage__box_date'>
+            <div className='notification-message__date'>
                 <span>{props.time}</span>
                 <p>{props.text}</p>
             </div>

@@ -1,4 +1,4 @@
-.massage__box {
+.notification-message {
     max-width: 500px;
     width: 100%;
     background: rgba(0, 0, 0, 0.03);
@@ -10,51 +10,51 @@
     cursor: pointer;
 }
 
-.massage__box:hover {
+.notification-message:hover {
     background: rgba(0, 0, 0, 0.05);
 }
 
-.massage__box_name {
+.notification-message__profile {
     display: flex;
     gap: 0 10px;
     align-items: center;
 }
 
-.massage__box_name_icon {
+.notification-message__icon {
     width: 25px;
     height: 25px;
 }
 
-.massage__box_name_text {
+.notification-message__name {
     font-weight: 400;
     font-size: 13px;
     color: #000000;
     margin: 0;
 }
 
-.massage__box_content {
+.notification-message__content {
     font-weight: 400;
     font-size: 15px;
     color: #000000;
     margin: 0;
 }
 
-.massage__box_content span{
+.notification-message__content span{
     font-weight: 700;
     margin: 0;
 }
 
-.massage__box_date {
+.notification-message__date {
     display: flex;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.3);
 }
 
-.massage__box_date span{
+.notification-message__date span{
     font-weight: 400;
 }
 
-.massage__box_date p{
+.notification-message__date p{
     font-weight: 700;
     margin: 0;
 }

@@ -9,9 +9,7 @@ import Acc2 from '../../assets/icon-acc.svg'
 import Acc3 from '../../assets/accA.svg'
 import Acc4 from '../../assets/accE.svg'
 import Acc5 from '../../assets/icon-acc2.svg'
-
 import './style.css'
-import Link from "@mui/material/Link";
 
 const insightsCard = [
     {
@@ -61,23 +59,20 @@ const insightsCard = [
     },
 ];
 
-function BoxInsights(props) {
+function BoxInsights() {
     return (
         <div className='box-insights box-channels'>
-            <h2 className='box__title'>
-                <img src={props.imag}/>
-                {props.title}
-            </h2>
             <div className='box-insights__flex'>
                 {insightsCard.map((card) => (
-                    <InsightsCard iconArrow={card.iconArrow}
-                                  text={card.text}
-                                  content={card.content}
-                                  number={card.number}
-                                  time={card.time}
-                                  account={card.account}
-                                  name={card.name}
-                                  key={card.name}
+                    <InsightsCard
+                        iconArrow={card.iconArrow}
+                        text={card.text}
+                        content={card.content}
+                        number={card.number}
+                        time={card.time}
+                        account={card.account}
+                        name={card.name}
+                        key={card.name}
                     />
                 ))}
             </div>

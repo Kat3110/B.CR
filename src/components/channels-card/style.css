@@ -1,4 +1,4 @@
-.channels__card {
+.channels-card {
     max-width: 1500px;
     width: 100%;
     box-sizing: border-box;
@@ -7,46 +7,57 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.channels__card_descript {
+.channels-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.channels-card:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+}
+
+.channels-card__descript {
     display: flex;
     align-items: center;
     gap: 0 20px;
 }
 
-.channels__card_time {
+.channels-card__time {
     font-weight: 400;
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 
-.channels__card_content {
+.channels-card__content {
     font-weight: 400;
     font-size: 17px;
     color: #000000;
     margin: 0;
 }
 
-.channels__card_content span {
+.channels-card__content span {
     font-weight: 700;
     margin: 0;
 }
 
-.channels__card_account {
+.channels-card__account {
     display: flex;
     align-items: center;
     gap: 0 10px;
     width: 300px;
 }
 
-.channels__card_account img {
+.channels-card__account img {
     width: 25px;
     height: 25px;
 }
 
-.channels__card_name {
+.channels-card__name {
     font-weight: 400;
     font-size: 13px;
     color: #000000;

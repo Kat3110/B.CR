@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import Header from './components/header/index.js'
-import CreateProject from './pages/create-project'
-import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import reportWebVitals from './reportWebVitals';
+import './index.css';
+import Header from './layout/header/index.js'
 import HomeFead from "./pages/home-fead";
+import MakeProject from './pages/make-project'
+import CreateProject from './pages/create-project'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +15,9 @@ root.render(
       <Header />
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<HomeFead />}/>
-              <Route path="/projects" element={<CreateProject />}/>
+              <Route path="/" element={<CreateProject/>}/>
+              <Route path="/projects" element={<MakeProject />}/>
+              <Route path="/home-fead" element={<HomeFead />}/>
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import background from '../../assets/maskBG.png';
 import logo from "../../assets/logo.svg";
-import HeaderBar from "../header-bar";
+import HeaderBar from "../../components/header-bar";
 import './style.css';
 
 function Header() {

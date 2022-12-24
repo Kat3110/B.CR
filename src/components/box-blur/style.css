@@ -1,9 +1,9 @@
-.blur {
+.box-blur {
     display: flex;
     flex-direction: column;
 }
 
-.blur__box {
+.box-blur__block {
     max-width: 1500px;
     width: 100%;
     height: 110px;
@@ -18,13 +18,13 @@
     justify-content: center;
 }
 
-.blur__box img{
+.box-blur__block img{
     width: 30px;
     height: 30px;
     background: transparent;
 }
 
-.blur__box_subtitle {
+.box-blur__block_subtitle {
     font-weight: 400;
     font-size: 17px;
     color: rgba(0,0,0,0.4);

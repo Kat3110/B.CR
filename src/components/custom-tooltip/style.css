@@ -1,0 +1,12 @@
+.custom-tooltip__content {
+    line-height: 20px;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.custom-tooltip__content:hover {
+    color: rgba(0,0,0,0.5);
+}

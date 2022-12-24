@@ -12,8 +12,49 @@
     position: relative;
 }
 
+.home-fead__flex {
+    width: 100%;
+}
+
+.home-fead__wrapper {
+    width: 1800px;
+    overflow-x: scroll;
+    display: flex;
+    gap: 0 20px;
+    padding: 60px 60px;
+    margin: -60px -60px;
+}
+
 .box-channels {
     display: flex;
     flex-direction: column;
     gap: 10px 0;
+}
+
+.home-fead__card {
+    max-width: 276px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home-fead__card:last-of-type {
+    margin: 0 50px 0 0;
+}
+
+.home-fead__card:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.home-fead__insights,
+.home-fead__notice,
+.home-fead__mention,
+.home-fead__update,
+.home-fead__projects {
+    gap: 20px 0;
+    display: flex;
+    flex-direction: column;
 }

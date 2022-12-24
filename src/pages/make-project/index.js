@@ -2,7 +2,7 @@ import * as React from 'react';
 import './style.css'
 
 
-function CreateProject() {
+function MakeProject() {
     return (
         <div className='make-project'>
             <h2 className='make-project__title'>We need your awesome project!</h2>
@@ -13,4 +13,4 @@ function CreateProject() {
     );
 }
 
-export default CreateProject;
+export default MakeProject;
