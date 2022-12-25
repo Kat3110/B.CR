@@ -11,7 +11,7 @@ import cardAccY from '../../assets/icon-acc.svg'
 function ProjectCard(props) {
     const accounts = [cardAccY, cardAccE, cardAccB, cardAccA, cardAccH, cardAccG]
 
-    return (<div className='home-fead__card project-card'>
+    return (<div className='home-feed__card project-card'>
         <div className="project-card__top">
             <img src={props.img}/>
             <div className="project-card__tooltip">

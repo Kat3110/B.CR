@@ -1,10 +1,57 @@
-.create-project {
+.create-project__before {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.create-project__typo {
+    padding-top: 90px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    margin: 0 0 30px;
+}
+
+.create-project__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(0, 0, 0, 0.5);
+    margin: 0 0 80px;
+    text-align: center;
+}
+
+.create-project__make {
+    padding: 15px 20px;
+    gap: 10px;
+    max-width: 290px;
+    width: 100%;
+    height: 54px;
+    background: #000000;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.create-project__make:hover {
+    background: #FF007A;
+    box-shadow: 0 5px 25px rgba(255, 0, 122, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.create-project__after {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 168px 0 350px;
-    background: #F8F6F2;
+    padding: 168px 0 0;
     width: 100%;
     gap: 40px 0
 }

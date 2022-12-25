@@ -4,7 +4,7 @@ import './style.css'
 
 function InsightsCard(props) {
     return (
-        <div className='home-fead__card insights-card'>
+        <div className='home-feed__card insights-card'>
             <div className='insights-card__data'>
                 <img src={props.iconArrow}/>
                 <span className='insights-card__text'>{props.text}</span>

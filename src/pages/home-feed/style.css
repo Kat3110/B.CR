@@ -1,10 +1,9 @@
-.home-fead {
+.home-feed {
     margin: 0 auto;
     width: 100%;
-    background: #F8F6F2;
-    padding: 0 0 494px;
+    padding: 0 0 214px;
 }
-.home-fead__box {
+.home-feed__box {
     display: flex;
     flex-direction: column;
     gap: 80px 0;
@@ -12,11 +11,11 @@
     position: relative;
 }
 
-.home-fead__flex {
+.home-feed__flex {
     width: 100%;
 }
 
-.home-fead__wrapper {
+.home-feed__wrapper {
     width: 1800px;
     overflow-x: scroll;
     display: flex;
@@ -31,7 +30,7 @@
     gap: 10px 0;
 }
 
-.home-fead__card {
+.home-feed__card {
     max-width: 276px;
     width: 100%;
     background: #FFFFFF;
@@ -41,19 +40,19 @@
     overflow: hidden;
 }
 
-.home-fead__card:last-of-type {
+.home-feed__card:last-of-type {
     margin: 0 50px 0 0;
 }
 
-.home-fead__card:hover {
+.home-feed__card:hover {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
-.home-fead__insights,
-.home-fead__notice,
-.home-fead__mention,
-.home-fead__update,
-.home-fead__projects {
+.home-feed__insights,
+.home-feed__notice,
+.home-feed__mention,
+.home-feed__update,
+.home-feed__projects {
     gap: 20px 0;
     display: flex;
     flex-direction: column;

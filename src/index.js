@@ -4,20 +4,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Header from './layout/header/index.js'
-import HomeFead from "./pages/home-fead";
-import MakeProject from './pages/make-project'
+import HomeFeed from "./pages/home-feed";
 import CreateProject from './pages/create-project'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Header />
       <BrowserRouter>
+          <Header />
           <Routes>
-              <Route path="/" element={<CreateProject/>}/>
-              <Route path="/projects" element={<MakeProject />}/>
-              <Route path="/home-fead" element={<HomeFead />}/>
+              <Route path="/" element={<HomeFeed />}/>
+              <Route path="/projects" element={<CreateProject />}/>
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

@@ -13,18 +13,23 @@
     display: flex;
     min-height: 80px;
     gap: 0 40px;
+    align-items: center;
 }
 
 .header-bar__link {
     font-weight: 700;
     font-size: 17px;
-    color: #D1D1D1 !important;
+    color: #D1D1D1;
     text-decoration: none !important;
     cursor: pointer;
 }
 
+.header-bar__link-active {
+    color: #000000;
+}
+
 .header-bar__link:hover {
-    color: #9E9E9E !important;
+    color: #9E9E9E;
 }
 
 .header-bar__buttons {

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Link from '@mui/material/Link';
 import Avatar from '../../assets/account.svg';
 import NotificationPopover from "../notification-popover";
+import { NavLink } from "react-router-dom";
 import './style.css'
 
 const pages = [
     {
-        name: 'Home feed ',
+        name: 'Home Feed',
         url: '/'
     },
     {
@@ -15,11 +15,11 @@ const pages = [
     },
     {
         name: 'Insights',
-        url: '/'
+        url: '/insights'
     },
     {
         name: 'FAQ',
-        url: '/'
+        url: '/faq'
     },
 ];
 
@@ -28,10 +28,16 @@ function HeaderBar() {
         <div className='header-bar'>
             <div className='header-bar__links'>
                 {pages.map((page) => (
-                    <Link className='header-bar__link'
-                        component="button" key={page.name}>
+                    <NavLink
+                        to={page.url}
+                        key={page.name}
+                        className={({ isActive }) =>
+                            isActive ? 'header-bar__link header-bar__link-active' : 'header-bar__link'
+                        }
+                    >
                         {page.name}
-                    </Link>))}
+                    </NavLink>
+                ))}
             </div>
             <div className='header-bar__buttons'>
                 <NotificationPopover/>

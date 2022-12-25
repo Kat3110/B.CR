@@ -15,8 +15,11 @@ import cardImg from '../../assets/cardImg.png'
 import cardImg2 from '../../assets/cardImg2.png'
 import cardImg3 from '../../assets/cardImg3.png'
 import cardImg4 from '../../assets/cardImg4.png'
-import BoxBlur from '../../components/box-blur/index'
-import BoxInsights from '../../components/box-insights/index'
+import BoxBlur from '../../components/box-blur'
+import BackgroundImg from '../../components/background-img'
+import bgImage from '../../assets/maskBG.png';
+import BoxInsights from '../../components/box-insights'
+import MentionCard from "../../components/mention-card";
 import ChannelsCard from "../../components/channels-card";
 import ProjectCard from "../../components/project-card";
 import MainTitle from "../../components/main-title";
@@ -104,14 +107,15 @@ const arrayOneMentionCard = [{
     time: "5 Min.", firstImg: accE, firstName: 'EDGAR', secondName: 'You', button: 'Centellian 24+ Renewal', id: 3
 },]
 
-function HomeFead() {
-    return (<div className='home-fead'>
-            <div className='home-fead__box container'>
+function HomeFeed() {
+    return (<div className='home-feed'>
+            <BackgroundImg background={bgImage} />
+            <div className='home-feed__box container'>
 
-                <div className='home-fead__projects'>
+                <div className='home-feed__projects'>
                     <MainTitle image={flag} title='Projects'></MainTitle>
-                    {arrayOneProjectCard.length <= 0 ? <BoxBlur/> : <div className='home-fead__flex'>
-                        <div className='home-fead__wrapper'>
+                    {arrayOneProjectCard.length <= 0 ? <BoxBlur/> : <div className='home-feed__flex'>
+                        <div className='home-feed__wrapper'>
                             {arrayOneProjectCard.map((card) => (<ProjectCard
                                     img={card.img}
                                     content={card.content}
@@ -123,7 +127,7 @@ function HomeFead() {
                     </div>}
                 </div>
 
-                <div className='home-fead__update box-channels'>
+                <div className='home-feed__update box-channels'>
                     <MainTitle image={bell} title='Update'></MainTitle>
 
                     <div>
@@ -138,23 +142,23 @@ function HomeFead() {
                     </div>
                 </div>
 
-                <div className='home-fead__mention'>
+                <div className='home-feed__mention'>
                     <MainTitle image={circleDots} title='Mention'></MainTitle>
 
-                    {arrayOneMentionCard.length <= 0 ? <BoxBlur/> : <div className='home-fead__flex'>
-                        <div className='home-fead__wrapper'>
-                            {arrayOneProjectCard.map((card) => (<ProjectCard
-                                    img={card.img}
-                                    content={card.content}
-                                    time={card.time}
-                                    percent={card.percent}
-                                    key={card.id}
-                                />))}
-                        </div>
+                    {arrayOneMentionCard.length <= 0 ? <BoxBlur/> : <div className='home-feed__flex'>
+                        {arrayOneMentionCard.map((card) => (<MentionCard
+                                firstImg={card.firstImg}
+                                firstName={card.firstName}
+                                time={card.time}
+                                secondImg={card.secondImg}
+                                secondName={card.secondName}
+                                button={card.button}
+                                key={card.id}
+                            />))}
                     </div>}
                 </div>
 
-                <div className='home-fead__notice box-channels'>
+                <div className='home-feed__notice box-channels'>
                     <MainTitle image={microphone} title='Notice'></MainTitle>
 
                     <div>
@@ -169,7 +173,7 @@ function HomeFead() {
                     </div>
                 </div>
 
-                <div className='home-fead__insights box-channels'>
+                <div className='home-feed__insights box-channels'>
                     <MainTitle image={idea} title='Insights'></MainTitle>
 
                     <BoxInsights/>
@@ -178,4 +182,4 @@ function HomeFead() {
         </div>);
 }
 
-export default HomeFead;
+export default HomeFeed;

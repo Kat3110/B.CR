@@ -1,5 +1,6 @@
 .insights-card {
     cursor: pointer;
+    margin: 0 !important;
 }
 
 .insights-card__flex {
