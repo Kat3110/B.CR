@@ -1,13 +1,3 @@
-.dialog-upload-img__btn {
-    border: none;
-    background: transparent;
-    box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
-}
-
-.dialog-upload-img__window .MuiPaper-elevation {
-    border-radius: 30px;
-}
-
 .dialog-upload-img__box {
     display: flex;
     flex-direction: column;

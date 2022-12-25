@@ -28,7 +28,7 @@ function DialogUploadImg() {
 
     return (
         <div className='dialog-upload-img'>
-            <button className='dialog-upload-img__btn' onClick={handleClickOpen}>
+            <button className='dialog__btn' onClick={handleClickOpen}>
                 <Edit/>
             </button>
             <Dialog
@@ -38,7 +38,7 @@ function DialogUploadImg() {
                 aria-describedby="alert-dialog-description"
                 fullWidth={fullWidth}
                 maxWidth={maxWidth}
-                className="dialog-upload-img__window"
+                className="dialog__window"
             >
                 <div className='dialog-upload-img__box'>
                     <h2 className='dialog-upload-img__title'>Set your profile.</h2>

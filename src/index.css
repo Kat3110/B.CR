@@ -15,3 +15,13 @@ body {
     max-width: 1500px;
     margin: 0 auto;
 }
+
+.dialog__btn {
+    border: none;
+    background: transparent;
+    box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
+}
+
+.dialog__window .MuiPaper-elevation {
+    border-radius: 30px;
+}

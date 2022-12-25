@@ -1,0 +1,25 @@
+.input-search {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.05)!important;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none !important;
+}
+
+.input-search:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.input-search__base {
+    width: 100%;
+}
+
+.input-search__btn{
+    padding: 0 8px 0 12px;
+}
