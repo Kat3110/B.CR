@@ -1,67 +1,59 @@
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked)
-{
-    position: absolute;
-    left: -9999px;
-}
-
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label {
-    display: inline-block;
+.checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     position: relative;
-    padding-left: 28px;
-    line-height: 20px;
     cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    user-select: none;
+    align-items: center;
 }
 
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before {
-    content: "";
+.checkbox input {
     position: absolute;
-    left: 0;
-    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox__checkmark {
     width: 17px;
     height: 17px;
     background: rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
 }
 
-/*input[type="checkbox"]:checked + label:before,*/
-/*input[type="checkbox"]:not(:checked) + label:before {*/
-/*    border-radius: 2px;*/
-/*}*/
+.checkbox:hover input ~ .checkbox__checkmark {
+    opacity: 0.9;
+}
 
-/*input[type="radio"]:checked + label:before {*/
-/*    border-radius: 100%;*/
-/*}*/
+.checkbox input:checked ~ .checkbox__checkmark {
+    background-color: #FF007A;
+}
 
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
+.checkbox__checkmark:after {
     content: "";
-    position: absolute;
-    transition: all 0.2s ease;
+    display: none;
 }
 
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
-    left: 3px;
-    top: 4px;
-    width: 10px;
-    height: 5px;
-    border-radius: 1px;
-    border-left: 1.5px solid #FFF8E7;
-    border-bottom: 1.5px solid #FFF8E7;
-    transform: rotate(-45deg);
+.checkbox input:checked ~ .checkbox__checkmark:after {
+    display: block;
 }
 
-input[type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-}
-
-input[type="checkbox"]:checked + label:after{
-    opacity: 1;
-}
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before {
-    background: #FF007A;
+.checkbox .checkbox__checkmark:after {
+    width: 4px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
 }

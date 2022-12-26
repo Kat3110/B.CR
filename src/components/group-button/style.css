@@ -1,0 +1,40 @@
+.group-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.group-btn button{
+    display: flex;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 10px;
+    width: 140px;
+    height: 54px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.group-btn__cancel {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0,0,0,0.3);
+}
+
+.group-btn__cancel:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.group-btn__confirm {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.group-btn__confirm:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}

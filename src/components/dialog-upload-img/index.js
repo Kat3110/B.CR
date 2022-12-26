@@ -1,9 +1,10 @@
 import * as React from 'react';
 import './style.css'
 import {ReactComponent as Edit} from '../../assets/PencilSimpleLine.svg'
-import  {ReactComponent as EmptyPicture}  from '../../assets/emptyPicture.svg'
-import  {ReactComponent as Pluse}  from '../../assets/Plus.svg'
+import {ReactComponent as EmptyPicture} from '../../assets/emptyPicture.svg'
+import {ReactComponent as Pluse} from '../../assets/Plus.svg'
 import Dialog from '@mui/material/Dialog';
+import GroupButton from "../group-button";
 
 
 function DialogUploadImg() {
@@ -49,32 +50,26 @@ function DialogUploadImg() {
                         <span className='dialog-upload-img__item dialog-upload-img__item_before'>PNG</span>
                     </div>
                     <div className='dialog-upload-img__picture'>
-                        <EmptyPicture />
-                        <div className='dialog-upload-img__add' >
+                        <EmptyPicture/>
+                        <div className='dialog-upload-img__add'>
                             <Pluse/>
                         </div>
                     </div>
-                    <div className='dialog-upload-img__colors' >
-                        <div className='dialog-upload-img__first' ></div>
-                        <div className='dialog-upload-img__second' ></div>
-                        <div className='dialog-upload-img__three' ></div>
-                        <div className='dialog-upload-img__four' ></div>
-                        <div className='dialog-upload-img__five' ></div>
-                        <div className='dialog-upload-img__six' ></div>
-                        <div className='dialog-upload-img__seven' ></div>
-                        <div className='dialog-upload-img__eight' ></div>
+                    <div className='dialog-upload-img__colors'>
+                        <div className='dialog-upload-img__first'></div>
+                        <div className='dialog-upload-img__second'></div>
+                        <div className='dialog-upload-img__three'></div>
+                        <div className='dialog-upload-img__four'></div>
+                        <div className='dialog-upload-img__five'></div>
+                        <div className='dialog-upload-img__six'></div>
+                        <div className='dialog-upload-img__seven'></div>
+                        <div className='dialog-upload-img__eight'></div>
                     </div>
-                    <div className='dialog-upload-img__group-btn' >
-                        <button className='dialog-upload-img__btn_cancel'  onClick={handleClose}>Cancel</button>
-                        <button className='dialog-upload-img__btn_confirm'  onClick={handleClose} autoFocus>
-                            Confirm
-                        </button>
-                    </div>
+                    <GroupButton close={handleClose}/>
                 </div>
-        </Dialog>
-</div>
-)
-    ;
+            </Dialog>
+        </div>
+    );
 }
 
 export default DialogUploadImg;

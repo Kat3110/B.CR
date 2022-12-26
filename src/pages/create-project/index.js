@@ -38,8 +38,11 @@ function CreateProject() {
                                 <DialogTemplates />
                             </div>
                         </div>
-                        <input className='create-project__title' type="text" placeholder='Enter the project title.'/>
-                        <button className='create-project__btn'>Start!</button>
+                        <div className='create-project__block'>
+                            <input className='create-project__title' type="text" placeholder='Enter the project title.'/>
+                            <button className='create-project__btn'>Start!</button>
+                        </div>
+
                     </div>
                 </div>}
         </div>

@@ -25,3 +25,8 @@ body {
 .dialog__window .MuiPaper-elevation {
     border-radius: 30px;
 }
+
+.dialog-templates__window .MuiPaper-elevation {
+    max-width: 1320px !important;
+    width: 100% !important;
+}

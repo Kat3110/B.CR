@@ -1,31 +1,32 @@
 .dialog-templates__box {
-    padding: 50px 60px;
+    padding: 50px 60px 35px;
     display: flex;
     gap: 0 30px;
 }
 
-.dialog-templates__left{
+.dialog-templates__left {
     max-width: 410px;
     width: 100%;
 }
 
-.dialog-upload-img__title{
+.dialog-templates__title {
     font-weight: 700;
     font-size: 20px;
-   color: #000000;
+    color: #000000;
+    margin: 0 0 20px;
 }
 
-.dialog-upload-img__search {
+.dialog-templates__search {
     display: flex;
     flex-direction: column;
-    gap: 17px;
-    margin: 20px 0 17px;
+    gap: 15px;
+    margin: 0 0 16px;
 }
 
 .dialog-templates__container {
     max-width: 410px;
     width: 100%;
-    height: 450px;
+    height: 447px;
     overflow-y: scroll;
     background: #F8F6F2;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -37,15 +38,15 @@
     align-items: flex-end;
 }
 
-.dialog-templates__card{
+.dialog-templates__card {
     max-width: 340px;
     width: 100%;
     background: #FFFFFF;
     border-radius: 15px;
-    padding:19px 20px;
+    padding: 19px 20px;
 }
 
-.dialog-templates__card-active{
+.dialog-templates__card-active {
     max-width: 327px;
     width: 100%;
     height: 97px;
@@ -53,7 +54,7 @@
     position: relative;
 }
 
-.dialog-templates__card-active:before{
+.dialog-templates__card-active:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -64,7 +65,7 @@
     border-radius: 5px;
 }
 
-.dialog-templates__card-active .dialog-templates__typo{
+.dialog-templates__card-active .dialog-templates__typo {
     font-weight: 700;
     font-size: 15px;
     line-height: 24px;
@@ -84,18 +85,32 @@
     border-radius: 5px;
     font-weight: 400;
     font-size: 13px;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 7px 10px ;
+    padding: 7px 10px;
 }
 
-.dialog-templates__date span{
+.dialog-templates__date span {
     font-weight: 700;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .dialog-templates__right {
     width: 100%;
+}
+
+.dialog-templates__block {
+    background: #F8F6F2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 15px;
+    flex-direction: column;
+    height: 510px;
+    overflow: hidden;
+    overflow-y: scroll;
 }

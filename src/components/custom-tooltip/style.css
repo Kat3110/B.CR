@@ -5,6 +5,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .custom-tooltip__content:hover {

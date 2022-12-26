@@ -2,12 +2,14 @@ import * as React from 'react';
 import './style.css'
 
 
-function Checkbox() {
+function Checkbox(props) {
 
     return (
-        <div>
-            <input type="checkbox" id="cb1"/> <label htmlFor="cb1">Show Only My Templates</label>
-        </div>
+        <label className="checkbox" style={{color: props.color ? props.color : null}}>
+            {props.text}
+            <input type="checkbox" />
+            <span className="checkbox__checkmark"></span>
+        </label>
     );
 }
 
