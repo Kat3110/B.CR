@@ -36,14 +36,14 @@
     left: -10px;
     height: 40px;
     width: 2px;
-    background: rgb(0,0,0,0.3);
+    background: rgb(0, 0, 0, 0.3);
 }
 
 .box-template__content .table {
     background: #FFFFFF;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid #000000;
     border-left: 1px solid #000000;
 }
@@ -53,8 +53,17 @@
     border-bottom: 1px solid #000000;
     font-weight: 400;
     font-size: 15px;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
     padding: 10px;
+}
+
+.box-template__content .table div:hover {
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    transition: 0.2s;
+    transform: scale(1.02);
+    background: white;
+    border: none;
+    margin-top: -1px;
 }
 
 .box-template__content .table div:first-of-type {
@@ -72,10 +81,17 @@
     gap: 0 7px;
     font-weight: 400;
     font-size: 15px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
-.box-template__content .audio .audio__icon{
+.box-template__content .audio:hover {
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.box-template__content .audio .audio__icon {
     width: 24px;
     height: 24px;
     background: #FFFFFF;
@@ -86,7 +102,7 @@
 }
 
 
-.box-template__content .audio svg{
+.box-template__content .audio svg {
     width: 14px;
     height: 14px;
 }

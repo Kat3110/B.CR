@@ -11,39 +11,12 @@
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
-.popover__box {
-    width: 100%;
+.popover .tabs__tab {
+    padding-right: 25px !important;
 }
 
-.popover__box .MuiTabs-indicator {
-    display: none !important;
-}
-
-.popover__tab {
-    min-width: 115px !important;
-    text-transform: none !important;
-    align-items: flex-start !important;
-    padding: 0 !important;
-}
-
-.popover__tab span span {
+.popover .tabs__tab span span {
     right: -12px;
-}
-
-.popover__tab div {
-    font-weight: 700;
-    font-size: 17px;
-    color: rgba(0, 0, 0, 0.25);
-}
-
-.popover__tab div:hover {
-    font-weight: 700;
-    font-size: 17px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.popover__tab.Mui-selected div {
-    color: #000000;
 }
 
 .popover__badge span {

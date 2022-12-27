@@ -6,6 +6,7 @@ import './index.css';
 import Header from './layout/header/index.js'
 import HomeFeed from "./pages/home-feed";
 import CreateProject from './pages/create-project'
+import PageTemplate from './pages/page-templete'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
           <Routes>
               <Route path="/" element={<HomeFeed />}/>
               <Route path="/projects" element={<CreateProject />}/>
+              <Route path="/projects/template" element={<PageTemplate />}/>
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

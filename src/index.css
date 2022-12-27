@@ -30,3 +30,40 @@ body {
     max-width: 1320px !important;
     width: 100% !important;
 }
+
+.tabs {
+    width: 100%;
+}
+
+.tabs .MuiTabs-indicator {
+    display: none !important;
+}
+
+.tabs__list .MuiTabs-flexContainer {
+    gap: 0 25px;
+}
+
+.tabs__tab {
+    text-transform: none !important;
+    max-width: max-content !important;
+    min-width: max-content !important;
+    padding: 0 !important;
+    align-items: flex-start !important;
+}
+
+.tabs__tab div {
+    font-weight: 400;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.tabs__tab div:hover {
+    font-weight: 700;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.tabs__tab.Mui-selected div {
+    color: #000000;
+    font-weight: 700 !important;
+}

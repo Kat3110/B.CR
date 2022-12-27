@@ -7,13 +7,13 @@
     height: 50px;
     background: rgba(0, 0, 0, 0.05)!important;
     padding: 0 12px;
-    border-radius: 10px;
+    border-radius: 10px!important;
     border: none;
     box-shadow: none !important;
 }
 
 .input-search:hover {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.08) !important;
 }
 
 .input-search__base {
@@ -21,5 +21,5 @@
 }
 
 .input-search__btn{
-    padding: 0 8px 0 12px;
+    padding: 0 8px 0 0;
 }

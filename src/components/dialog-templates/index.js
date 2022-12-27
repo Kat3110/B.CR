@@ -4,9 +4,13 @@ import './style.css'
 import {ReactComponent as Edit} from '../../assets/PencilSimpleLine.svg'
 import InputSearch from "../input-search";
 import Checkbox from "../checkbox";
-import TemplatesBar from "../templates-bar";
 import BoxTemplate from "../box-template";
 import GroupButton from "../group-button";
+import CheckboxTemplate from "../checkbox-template";
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 import {ReactComponent as IconMusic} from "../../assets/MusicNotesSimple.svg";
 
 
@@ -29,7 +33,7 @@ function DialogTemplates() {
     const handleClose = () => {
         setOpen(false);
     };
-    const [value, setValue] = React.useState('1');
+    const [value, setValue] = React.useState('2');
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -49,107 +53,125 @@ function DialogTemplates() {
                             <Checkbox text='Show Only My Templates' color="rgba(0,0,0,0.25)" />
                         </div>
                         <div className='dialog-templates__container'>
-                            <div className='dialog-templates__card'>
-                                <h3 className='dialog-templates__typo'>Seasonal Promotion: Standard Course</h3>
-                                <div className='dialog-templates__date'>
-                                    <span>Last modified</span>
-                                    Aug 3, 2022 at 11:27 AM
-                                </div>
-                            </div>
-
-                            <div className='dialog-templates__card dialog-templates__card-active'>
-                                <h3 className='dialog-templates__typo'>Super Fast Production</h3>
-                                <div className='dialog-templates__date'>
-                                    <span>Last modified</span>
-                                    Aug 3, 2022 at 11:27 AM
-                                </div>
-                            </div>
-
-                            <div className='dialog-templates__card'>
-                                <h3 className='dialog-templates__typo'>Unbreakable process</h3>
-                                <div className='dialog-templates__date'>
-                                    <span>Last modified</span>
-                                    Aug 3, 2022 at 11:27 AM
-                                </div>
-                            </div>
-
-                            <div className='dialog-templates__card'>
-                                <h3 className='dialog-templates__typo'>Never failed template</h3>
-                                <div className='dialog-templates__date'>
-                                    <span>Last modified</span>
-                                    Aug 3, 2022 at 11:27 AM
-                                </div>
-                            </div>
-
-
+                            <CheckboxTemplate
+                                title='Seasonal Promotion: Standard Course'
+                                time='Aug 3, 2022 at 11:27 AM'
+                            />
+                            <CheckboxTemplate
+                                check='true'
+                                title='Super Fast Production'
+                                time='Aug 3, 2022 at 11:27 AM'
+                            />
+                            <CheckboxTemplate
+                                title='Unbreakable process'
+                                time='Aug 3, 2022 at 11:27 AM'
+                            />
+                            <CheckboxTemplate
+                                title='Never failed template'
+                                time='Aug 3, 2022 at 11:27 AM'
+                            />
                         </div>
                     </div>
 
                     <div className='dialog-templates__right'>
                         <h2 className='dialog-templates__title'>Preview</h2>
-                        <TemplatesBar />
-                        <div className='dialog-templates__block'>
-                            <BoxTemplate children={
-                                <article>
-                                    <Checkbox text="Toner concept and prescription suggestions"/>
-                                    <Checkbox text="Review of toner concept and sales strategy"/>
-                                    <Checkbox text="Raw material inspection"/>
-                                    <Checkbox text="Raw material inspection"/>
-                                </article>
-                                }
-                            />
+                        <div className='tabs'>
+                            <TabContext value={value}>
+                                <TabList className='tabs__list' onChange={handleChange}>
+                                    <Tab className='tabs__tab' value="1" disableRipple
+                                         label={<div>Outline</div>}/>
+                                    <Tab className='tabs__tab' value="2" disableRipple
+                                         label={<div>Ingredient</div>}/>
+                                    <Tab className='tabs__tab' value="3" disableRipple
+                                         label={<div>Certify</div>}/>
+                                    <Tab className='tabs__tab' value="4" disableRipple
+                                         label={<div>Package</div>}/>
+                                    <Tab className='tabs__tab' value="5" disableRipple
+                                         label={<div>Test</div>}/>
+                                    <Tab className='tabs__tab' value="6" disableRipple
+                                         label={<div>Manufacture</div>}/>
+                                </TabList>
+                                <div className='dialog-templates__block'>
+                                    <TabPanel value="1" sx={{p: 0}}>
+                                        Outline Content
+                                    </TabPanel>
+                                    <TabPanel value="2" sx={{p: 0}}>
+                                        <BoxTemplate children={
+                                            <article>
+                                                <Checkbox text="Toner concept and prescription suggestions"/>
+                                                <Checkbox text="Review of toner concept and sales strategy"/>
+                                                <Checkbox text="Raw material inspection"/>
+                                                <Checkbox text="Raw material inspection"/>
+                                            </article>
+                                        }
+                                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <p>
-                                        Quotation contents<br />
-                                        is here
-                                    </p>
-                                </article>
-                                }
-                            />
+                                        <BoxTemplate children={
+                                            <article>
+                                                <p>
+                                                    Quotation contents<br />
+                                                    is here
+                                                </p>
+                                            </article>
+                                        }
+                                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <div className='table'>
-                                        <div>Chart title</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                    </div>
-                                </article>
-                                }
-                            />
+                                        <BoxTemplate children={
+                                            <article>
+                                                <div className='table'>
+                                                    <div>Chart title</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                    <div>Contents</div>
+                                                </div>
+                                            </article>
+                                        }
+                                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <div className='audio'>
-                                        <div className='audio__icon'>
-                                            <IconMusic/>
-                                        </div>
-                                        Audio.mp3
-                                    </div>
-                                </article>
-                            }
-                            />
+                                        <BoxTemplate children={
+                                            <article>
+                                                <div className='audio'>
+                                                    <div className='audio__icon'>
+                                                        <IconMusic/>
+                                                    </div>
+                                                    Audio.mp3
+                                                </div>
+                                            </article>
+                                        }
+                                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <p>
-                                        Quotation contents<br />
-                                        is here
-                                    </p>
-                                </article>
-                            }
-                            />
+                                        <BoxTemplate children={
+                                            <article>
+                                                <p>
+                                                    Quotation contents<br />
+                                                    is here
+                                                </p>
+                                            </article>
+                                        }
+                                        />
+                                    </TabPanel>
+                                    <TabPanel value="3" sx={{p: 0}}>
+                                        Certify Content
+                                    </TabPanel>
+                                    <TabPanel value="4" sx={{p: 0}}>
+                                        Package Content
+                                    </TabPanel>
+                                    <TabPanel value="5" sx={{p: 0}}>
+                                        Test Content
+                                    </TabPanel>
+                                    <TabPanel value="6" sx={{p: 0}}>
+                                        Manufacture Content
+                                    </TabPanel>
+                                </div>
+                            </TabContext>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,96 @@
+.page-template__box {
+    display: flex;
+    gap: 0 50px;
+    flex-direction: row;
+    margin: -60px auto 300px;
+}
+
+.page-template__left {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.page-template__items {
+    max-width: 450px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 35px 20px 20px;
+    margin-bottom: 50px;
+}
+
+.page-template__items .tabs__list {
+    margin-bottom: 40px;
+}
+
+.page-template .tabs__tab div:hover {
+    font-weight: 400;
+}
+
+.page-template__checkboxes {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.page-template__right {
+    width: 100%;
+}
+
+.page-template__right .MuiTabPanel-root {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.page-template__tabs {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.page-template__typo {
+    display: flex;
+    padding: 40px 30px 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-template__title {
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    margin: 0;
+}
+
+.page-template__group-button {
+    display: flex;
+    gap: 0 5px;
+}
+
+.page-template__btn {
+    width: 142px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 7px;
+    background: #000000;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.page-template__btn:hover {
+    background: #FF007A;
+    box-shadow: 0 5px 10px rgba(255, 0, 122, 0.25);
+}
+
+.page-template__tabs-list {
+    padding: 0 20px 20px;
+}

@@ -48,21 +48,21 @@ function NotificationPopover() {
             onClose={handleClose}
             anchorOrigin={{vertical: 'bottom', horizontal: 'center',}}
             transformOrigin={{vertical: 'top', horizontal: 'left',}} className='popover'>
-            <div className='popover__box'>
+            <div className='tabs'>
                 <TabContext value={value}>
                     <div>
-                        <TabList onChange={handleChange}>
-                            <Tab className='popover__tab' value="1" disableRipple
+                        <TabList className='tabs__list' onChange={handleChange}>
+                            <Tab className='tabs__tab' value="1" disableRipple
                                  label={<Badge className='popover__badge'
                                                badgeContent={2}>
                                      <div>Update</div>
                                  </Badge>}/>
-                            <Tab className='popover__tab' value="2" disableRipple
+                            <Tab className='tabs__tab' value="2" disableRipple
                                  label={<Badge className='popover__badge'
                                                badgeContent={25}>
                                      <div>Mention</div>
                                  </Badge>}/>
-                            <Tab className='popover__tab' value="3" disableRipple
+                            <Tab className='tabs__tab' value="3" disableRipple
                                  label={<div>Notice</div>}/>
                         </TabList>
                     </div>

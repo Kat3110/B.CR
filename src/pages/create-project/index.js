@@ -7,6 +7,7 @@ import bcgCreate from '../../assets/bcgCreate.svg'
 import emptyPicture from '../../assets/emptyPicture.svg'
 import DialogTemplates from '../../components/dialog-templates'
 import bgImage from "../../assets/maskBG.png";
+import {NavLink} from "react-router-dom";
 
 
 function CreateProject() {
@@ -45,6 +46,9 @@ function CreateProject() {
 
                     </div>
                 </div>}
+            <button className='create-project__btn-active' style={{position: 'absolute', bottom: 0, right: 0}}>
+                <NavLink to='/projects/template'>test</NavLink>
+            </button>
         </div>
     );
 }

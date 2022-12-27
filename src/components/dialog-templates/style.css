@@ -35,82 +35,29 @@
     flex-direction: column;
     gap: 15px;
     padding: 30px 30px;
-    align-items: flex-end;
-}
-
-.dialog-templates__card {
-    max-width: 340px;
-    width: 100%;
-    background: #FFFFFF;
-    border-radius: 15px;
-    padding: 19px 20px;
-}
-
-.dialog-templates__card-active {
-    max-width: 327px;
-    width: 100%;
-    height: 97px;
-    background: rgba(255, 255, 255, 0.6);
-    position: relative;
-}
-
-.dialog-templates__card-active:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -13px;
-    width: 8px;
-    height: 8px;
-    background: #000000;
-    border-radius: 5px;
-}
-
-.dialog-templates__card-active .dialog-templates__typo {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-}
-
-.dialog-templates__typo {
-    font-weight: 400;
-    font-size: 17px;
-    color: #000000;
-    margin: 0 0 11px;
-}
-
-.dialog-templates__date {
-    max-width: 258px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px 10px;
-}
-
-.dialog-templates__date span {
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
 }
 
 .dialog-templates__right {
     width: 100%;
 }
 
+.dialog-templates__right .tabs__tab div {
+    font-weight: 400;
+}
+
 .dialog-templates__block {
     background: #F8F6F2;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    display: flex;
-    gap: 30px;
     padding: 30px;
-    margin-top: 15px;
-    flex-direction: column;
-    height: 510px;
+    height: 498px;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.dialog-templates__block .MuiTabPanel-root {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
