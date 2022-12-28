@@ -39,6 +39,11 @@ body {
     display: none !important;
 }
 
+.tabs__list {
+    display: flex;
+    gap: 0 25px;
+}
+
 .tabs__list .MuiTabs-flexContainer {
     gap: 0 25px;
 }
@@ -55,6 +60,7 @@ body {
     font-weight: 400;
     font-size: 17px;
     color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .tabs__tab div:hover {
@@ -66,4 +72,5 @@ body {
 .tabs__tab.Mui-selected div {
     color: #000000;
     font-weight: 700 !important;
+    cursor: auto;
 }
