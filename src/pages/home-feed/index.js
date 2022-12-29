@@ -114,7 +114,7 @@ function HomeFeed() {
 
                 <div className='home-feed__projects'>
                     <MainTitle image={flag} title='Projects'></MainTitle>
-                    {arrayOneProjectCard.length <= 0 ? <BoxBlur/> : <div className='home-feed__flex'>
+                    {arrayOneProjectCard.length <= 0 ? <BoxBlur hght='110px' text='There are no project.'/> : <div className='home-feed__flex'>
                         <div className='home-feed__wrapper'>
                             {arrayOneProjectCard.map((card) => (<ProjectCard
                                     img={card.img}
@@ -145,7 +145,7 @@ function HomeFeed() {
                 <div className='home-feed__mention'>
                     <MainTitle image={circleDots} title='Mention'></MainTitle>
 
-                    {arrayOneMentionCard.length <= 0 ? <BoxBlur/> : <div className='home-feed__flex'>
+                    {arrayOneMentionCard.length <= 0 ? <BoxBlur hght='110px' text='There are no mention.'/> : <div className='home-feed__flex'>
                         {arrayOneMentionCard.map((card) => (<MentionCard
                                 firstImg={card.firstImg}
                                 firstName={card.firstName}

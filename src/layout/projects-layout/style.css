@@ -1,0 +1,42 @@
+/*.project-layout {*/
+
+/*}*/
+
+.project-layout__box {
+    display: flex;
+    gap: 0 50px;
+    flex-direction: row;
+    margin: -60px auto 300px;
+}
+
+.project-layout__left {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.project-layout__items {
+    min-width: 450px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 35px 20px 20px;
+    margin-bottom: 50px;
+}
+
+.project-layout__items .tabs__list {
+    margin-bottom: 40px;
+}
+
+.project-layout .tabs__tab div:hover {
+    font-weight: 400;
+}
+
+.project-layout__right {
+    width: 100%;
+}
+
+.project-layout__right .MuiTabPanel-root {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

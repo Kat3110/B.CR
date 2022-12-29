@@ -46,8 +46,10 @@ function CreateProject() {
 
                     </div>
                 </div>}
-            <button className='create-project__btn-active' style={{position: 'absolute', bottom: 0, right: 0}}>
-                <NavLink to='/projects/template'>test</NavLink>
+            <button className='create-project__btn-active' style={{position: 'absolute', bottom: '20%', right: '10%', width:'250px'}}>
+                <NavLink to='/projects/template' style={{color: 'white', textDecoration: 'none'}}>
+                    page Templete
+                </NavLink>
             </button>
         </div>
     );
