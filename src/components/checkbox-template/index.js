@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './style.css'
 
-
+//radio
 function CheckboxTemplate(props) {
 
     return (

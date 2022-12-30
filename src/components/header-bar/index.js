@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Avatar from '../../assets/account.svg';
 import NotificationPopover from "../notification-popover";
 import { NavLink } from "react-router-dom";
 import './style.css'
+import CapitalLetter from "../capital-letter";
 
 const pages = [
     {
@@ -43,7 +43,10 @@ function HeaderBar() {
                 <NotificationPopover/>
                 <button
                     className='header-bar__icon'>
-                    <img src={Avatar}/>
+                    <CapitalLetter
+                        letter='b'
+                        bgColor='#FFD702'
+                    />
                     <p className='header-bar__account'>Bryce L.</p>
                 </button>
             </div>

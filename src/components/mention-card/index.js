@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.css'
+import CapitalLetter from "../capital-letter";
 
 
 function MentionCard(props) {
@@ -7,7 +8,10 @@ function MentionCard(props) {
         <div className='mention-card'>
             <span className='mention-card__time'>{props.time}</span>
             <span className='mention-card__person'>
-                {props.firstImg ? <img src={props.firstImg}/> : null}
+                <CapitalLetter
+                    letter={props.firstName[0]}
+                    bgColor={props.color}
+                />
                 {props.firstName}
             </span>
             <span>mentioned</span>

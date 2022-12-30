@@ -1,0 +1,14 @@
+.capital-letter {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 10px;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF !important;
+}

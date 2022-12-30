@@ -1,12 +1,16 @@
 import * as React from 'react';
 import './style.css'
+import CapitalLetter from "../capital-letter";
 
 
 function NotificationMessage(props) {
     return (
         <div className='notification-message'>
             <div className='notification-message__profile'>
-                <img src={props.img}  className='notification-message__icon'/>
+                <CapitalLetter
+                    letter={props.name[0]}
+                    bgColor={props.color}
+                />
                 <p className='notification-message__name'>{props.name}</p>
             </div>
             <p className='notification-message__content'>

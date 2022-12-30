@@ -1,0 +1,117 @@
+.radio-projects {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+
+.radio-projects input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.radio-projects__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+.radio-projects__checkmark {
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #000000;
+    display: none;
+}
+
+.radio-projects:hover input ~ .radio-projects__checkmark {
+    background-color: #ccc;
+}
+
+.radio-projects input:checked ~ .radio-projects__checkmark {
+    background: #000000;
+    display: block;
+}
+
+.radio-projects__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-projects input:checked ~ .radio-projects__checkmark:after {
+    display: block;
+}
+
+.radio-projects__card {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 19px 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 17px;
+}
+
+.radio-projects__card:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transition: 0.2s;
+}
+
+.radio-projects input:checked ~ .radio-projects__card {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.radio-projects input:checked ~ .radio-projects__card .radio-projects__typo {
+    font-weight: 700;
+}
+.radio-projects__card_img {
+    width: 63px;
+    height: 63px;
+    border-radius: 10px;
+}
+.radio-projects__card_box {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.radio-projects__typo {
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    margin: 0;
+}
+
+.radio-projects__name {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: black;
+    display: flex;
+    gap: 0 10px;
+    align-items: center;
+}
+
+.radio-projects__name span {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.radio-projects__pinned{
+    margin: 0 0 0 auto;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.radio-projects__pinned:is(.pinned){
+    color: black;
+}

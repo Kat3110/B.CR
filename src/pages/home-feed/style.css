@@ -30,6 +30,12 @@
     gap: 10px 0;
 }
 
+.box-channels .home-feed__insights {
+    display: flex;
+    gap: 0 30px;
+    flex-direction: row;
+}
+
 .home-feed__card {
     max-width: 276px;
     width: 100%;

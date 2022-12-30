@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './style.css'
+import CapitalLetter from "../capital-letter";
 
 
 function InsightsCard(props) {
@@ -13,7 +14,10 @@ function InsightsCard(props) {
             <div className='insights-card__block'>
                 <p className='insights-card__time'><span>{props.number}</span>{props.time}</p>
                 <div className='insights-card__account'>
-                    <img src={props.account}/>
+                    <CapitalLetter
+                        letter={props.name[0]}
+                        bgColor={props.color}
+                    />
                     <p className='insights-card__name'>{props.name}</p>
                 </div>
             </div>

@@ -1,15 +1,12 @@
 import * as React from 'react';
 import './style.css'
 import CustomTooltip from "../custom-tooltip";
-import cardAccG from '../../assets/accBlackG.svg'
-import cardAccH from '../../assets/icon-acc2.svg'
-import cardAccA from '../../assets/accA.svg'
-import cardAccB from '../../assets/accB.svg'
-import cardAccE from '../../assets/accE.svg'
-import cardAccY from '../../assets/icon-acc.svg'
+import CapitalLetter from "../capital-letter";
+import {useState} from "react";
 
 function ProjectCard(props) {
-    const accounts = [cardAccY, cardAccE, cardAccB, cardAccA, cardAccH, cardAccG]
+
+    const [accounts, setAccounts] = useState(props.accounts)
 
     return (<div className='home-feed__card project-card'>
         <div className="project-card__top">
@@ -28,8 +25,12 @@ function ProjectCard(props) {
                 </div>
             </div>
             <div className='project-card__accounts'>
-                {accounts.map((account) => (
-                    <img src={account} key={account}/>
+                { accounts?.map((account) => (
+                    <CapitalLetter
+                        letter={account.letter}
+                        key={account.color+account.letter}
+                        bgColor={account.color}
+                    />
                 ))}
             </div>
         </div>

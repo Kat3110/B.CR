@@ -6,8 +6,6 @@ import TabPanel from '@mui/lab/TabPanel';
 import Popover from "@mui/material/Popover";
 import Badge from "@mui/material/Badge";
 import bell from "../../assets/Bell.svg";
-import iconAcc from "../../assets/icon-acc.svg";
-import iconAcc2 from "../../assets/icon-acc2.svg";
 import NotificationMessage from "../notification-message";
 import './style.css'
 
@@ -35,7 +33,6 @@ function NotificationPopover() {
         <Badge className='popover__badge' badgeContent={27}>
             <button
                 aria-describedby={id}
-                variant="contained"
                 onClick={handleClick}
                 className='popover__icon'>
                 <img src={bell}/>
@@ -75,7 +72,7 @@ function NotificationPopover() {
                                 </Badge>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -83,7 +80,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -96,7 +93,7 @@ function NotificationPopover() {
                                 <p className='popover__panel_title'>Read</p>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -104,7 +101,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -124,7 +121,7 @@ function NotificationPopover() {
                                 </Badge>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -132,7 +129,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -145,7 +142,7 @@ function NotificationPopover() {
                                 <p className='popover__panel_title'>Read</p>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -153,7 +150,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -173,7 +170,7 @@ function NotificationPopover() {
                                 </Badge>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -181,7 +178,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -194,7 +191,7 @@ function NotificationPopover() {
                                 <p className='popover__panel_title'>Read</p>
                                 <div className='popover__message_box'>
                                     <NotificationMessage
-                                        img={iconAcc2}
+                                        color='#00E99E'
                                         name='Hubert Benjamin'
                                         content='You have been invited to'
                                         charis='Charis'
@@ -202,7 +199,7 @@ function NotificationPopover() {
                                         text='Charis 2023 Summer Kids Package'
                                     />
                                     <NotificationMessage
-                                        img={iconAcc}
+                                        color='#8F00FF'
                                         name='Yves Saint Laurent'
                                         content='You have been invited to'
                                         charis='Charis'

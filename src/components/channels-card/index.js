@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './style.css'
 import CustomTooltip from "../custom-tooltip";
+import CapitalLetter from "../capital-letter";
 
 
 function ChannelsCard(props) {
@@ -11,7 +12,10 @@ function ChannelsCard(props) {
                 <p className='channels-card__content'>{props.content}<span>{props.charis}</span></p>
             </div>
             <div className='channels-card__account'>
-                <img src={props.icon}/>
+                <CapitalLetter
+                    letter={props.name[0]}
+                    bgColor={props.color}
+                />
                 <p className='channels-card__name'>
                     <CustomTooltip content={props.name} hover={props.email} size="13px" weight="400" />
                 </p>
