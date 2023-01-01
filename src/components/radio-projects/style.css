@@ -6,7 +6,7 @@
     position: relative;
     cursor: pointer;
     user-select: none;
-    width: 100%;
+    width: 98%;
 }
 
 .radio-projects input {
@@ -20,7 +20,24 @@
     display: flex;
     flex-direction: column;
     gap: 15px 0;
+    max-height: 870px;
+    overflow-y: scroll;
+    position: relative;
+    padding-right: 5px;
 }
+
+.radio-projects__checkboxes:after {
+    content: "";
+    display: block;
+    width: 98%;
+    height: 50px;
+    background: linear-gradient( rgba(248, 246, 242, 0)0%, #F8F6F2 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
 .radio-projects__checkmark {
     flex-shrink: 0;
     align-items: center;
@@ -112,6 +129,22 @@
     color: rgba(0, 0, 0, 0.2);
 }
 
+.radio-projects__pinned path{
+    stroke: #d2d1d1;
+}
+
+.radio-projects__pinned:hover{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.radio-projects__pinned:hover path{
+    stroke: #5c5b5b;
+}
+
 .radio-projects__pinned:is(.pinned){
     color: black;
+}
+
+.radio-projects__pinned:is(.pinned) path{
+    stroke: black;
 }

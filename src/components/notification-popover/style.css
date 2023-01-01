@@ -17,16 +17,7 @@
     right: 0;
     bottom: 0;
 }
-/*.popover:after .MuiPopover-paper {*/
-/*    content: "";*/
-/*    display: block;*/
-/*    width: 29px;*/
-/*    height: 50px;*/
-/*    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);*/
-/*    position: absolute;*/
-/*    right: 55px;*/
-/*    top: 30px;*/
-/*}*/
+
 .popover .MuiBackdrop-root {
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
@@ -42,6 +33,10 @@
 .popover__badge span {
     background: #FF007A;
     color: white;
+}
+
+.popover__badge span:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #FF007A;
 }
 
 .popover__icon {

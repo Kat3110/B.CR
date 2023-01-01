@@ -40,3 +40,11 @@
     flex-direction: column;
     gap: 30px;
 }
+
+.project-layout__tabs {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding: 25px 20px 17px;
+}

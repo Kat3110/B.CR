@@ -1,3 +1,24 @@
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 5px;
+    height: 5px;
+    box-shadow: 0 5px 10px rgba(255, 0, 122, 0.2);
+    border: 1px solid #FF007A;
+    background: #FF007A;
+}
+
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;

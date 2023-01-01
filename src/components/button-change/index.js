@@ -4,7 +4,7 @@ import './style.css'
 function ButtonChange(props) {
     return (
         <button className='button-change'>
-            <img className='button-change__icon' src={props.icon} />
+            {props.icon}
         </button>
     );
 }

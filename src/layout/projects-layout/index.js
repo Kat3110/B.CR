@@ -20,7 +20,13 @@ function ProjectsLayout(props) {
                     { props.checkboxes ? props.checkboxes : <BoxBlur hght='233px' text='No projects.'/> }
                 </div>
                 <div className='project-layout__right'>
-                { props.right ? props.right : <BoxBlur hght='450px' text='No projects.'/> }
+                    { props.tabs && props.content ?
+                        <>
+                            {props.tabs}
+                            {props.content}
+                        </>
+                        : <BoxBlur hght='450px' text='No projects.'/>
+                    }
                 </div>
             </div>
         </div>

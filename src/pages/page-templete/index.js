@@ -10,18 +10,92 @@ import TabPanel from "@mui/lab/TabPanel";
 import BoxTemplate from "../../components/box-template";
 import {ReactComponent as IconMusic} from "../../assets/MusicNotesSimple.svg";
 import ButtonChange from "../../components/button-change";
-import DeleteIcon from "../../assets/Trash.svg";
-import DoneIcon from '../../assets/PencilSimpleLine.svg';
+import {ReactComponent as DeleteIcon} from "../../assets/Trash.svg";
+import {ReactComponent as DoneIcon} from '../../assets/PencilSimpleLine.svg';
 import {ReactComponent as DoneIcon1} from '../../assets/PencilSimpleLine.svg';
 import { NavLink } from "react-router-dom";
 
 import {ReactComponent as Check} from '../../assets/Check.svg';
 import TextField from '@mui/material/TextField';
 import ChipsDelete from "../../components/chip-delete";
-import BoxBlur from "../../components/box-blur";
 
 import ProjectsLayout from "../../layout/projects-layout"
 
+const arrayCheckboxTemplate = [
+    {
+        title: 'Seasonal Promotion: Standard Course',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Unbreakable process',
+        time: 'Aug 3, 2022 at 11:27 AM',
+        check: true
+    },
+    {
+        title: 'Super Fast Production',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Never failed template',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Communication like magic',
+        time: 'Aug 3, 2022 at 11:30 AM'
+    }
+]
+
+const arrayListTabs = [
+    {
+        value: '1',
+        label: 'Outline'
+    },
+    {
+        value: '2',
+        label: 'Ingredient'
+    },
+    {
+        value: '3',
+        label: 'Certify'
+    },
+    {
+        value: '4',
+        label: 'Package'
+    },
+    {
+        value: '5',
+        label: 'Test'
+    },
+    {
+        value: '6',
+        label: 'Manufacture'
+    },
+]
+
+const arrayCheckboxes = [
+    {
+        text: 'Toner concept and prescription suggestions'
+    },
+    {
+        text: 'Review of toner concept and sales strategy'
+    },
+    {
+        text: 'Weekly customer meeting'
+    },
+    {
+        text: 'Customer meeting and subsidiary material review'
+    },
+    {
+        text: 'Supply and demand of additional supporting data (data based on functional labeling, separate emission labeling, etc.)'
+    },
+    {
+        text: 'Raw material inspection'
+    },
+    {
+        text: 'Raw material inspection'
+    },
+
+]
 
 function PageTemplate() {
 
@@ -49,33 +123,20 @@ function PageTemplate() {
                 checkboxes={
                     <div className='page-template__checkboxes'>
                         <Checkbox text='Show Only My Templates' color="rgba(0,0,0,0.5)"/>
-                        <CheckboxTemplate
-                            title='Seasonal Promotion: Standard Course'
-                            time='Aug 3, 2022 at 11:27 AM'
-                        />
-                        <CheckboxTemplate
-                            title='Unbreakable process'
-                            time='Aug 3, 2022 at 11:27 AM'
-                        />
-                        <CheckboxTemplate
-                            check='true'
-                            title='Super Fast Production'
-                            time='Aug 3, 2022 at 11:27 AM'
-                        />
-                        <CheckboxTemplate
-                            title='Never failed template'
-                            time='Aug 3, 2022 at 11:27 AM'
-                        />
-                        <CheckboxTemplate
-                            title='Communication like magic'
-                            time='Aug 3, 2022 at 11:27 AM'
-                        />
+                        {arrayCheckboxTemplate.map((checkbox) => (
+                            <CheckboxTemplate
+                                check={checkbox.check}
+                                title={checkbox.title}
+                                time={checkbox.time}
+                                key={checkbox.time+checkbox.title}
+                            />))
+                        }
                     </div>
                 }
-                right={
-                    <div className='page-template__right'>
+                tabs={
+                    <>
                         {edit ?
-                            <div className='page-template__tabs tabs'>
+                            <div className='project-layout__tabs tabs'>
                                 <TabContext value={value}>
                                     <div className='page-template__typo'>
                                         <h2 className='page-template__title'>Super Fast Production</h2>
@@ -85,130 +146,120 @@ function PageTemplate() {
                                                 onClick={() => setEdit(!edit)}
                                                 style={{border: 'none', backgroundColor: 'transparent', padding: 0}}
                                             >
-                                                <ButtonChange icon={DoneIcon}/>
+                                                <ButtonChange icon={<DoneIcon />}/>
                                             </button>
-                                            <ButtonChange icon={DeleteIcon}/>
+                                            <ButtonChange icon={<DeleteIcon />}/>
                                         </div>
                                     </div>
                                     <TabList className='tabs__list page-template__tabs-list' onChange={handleChange}>
-                                        <Tab className='tabs__tab' value="1" disableRipple
-                                             label={<div>Outline</div>}/>
-                                        <Tab className='tabs__tab' value="2" disableRipple
-                                             label={<div>Ingredient</div>}/>
-                                        <Tab className='tabs__tab' value="3" disableRipple
-                                             label={<div>Certify</div>}/>
-                                        <Tab className='tabs__tab' value="4" disableRipple
-                                             label={<div>Package</div>}/>
-                                        <Tab className='tabs__tab' value="5" disableRipple
-                                             label={<div>Test</div>}/>
-                                        <Tab className='tabs__tab' value="6" disableRipple
-                                             label={<div>Manufacture</div>}/>
+                                        {arrayListTabs.map((tab) => (
+                                            <Tab
+                                                className='tabs__tab'
+                                                value={tab.value}
+                                                disableRipple
+                                                label={<div>{tab.label}</div>}
+                                                key={tab.value}
+                                            />))
+                                        }
                                     </TabList>
-                                    <TabPanel value="1" sx={{p: 0}}>
-                                    </TabPanel>
-                                    <TabPanel value="2" sx={{p: 0}}>
-                                    </TabPanel>
-                                    <TabPanel value="3" sx={{p: 0}}>
-                                    </TabPanel>
-                                    <TabPanel value="4" sx={{p: 0}}>
-                                    </TabPanel>
-                                    <TabPanel value="5" sx={{p: 0}}>
-                                    </TabPanel>
-                                    <TabPanel value="6" sx={{p: 0}}>
-                                    </TabPanel>
+                                    {arrayListTabs.map((tab) => (
+                                        <TabPanel
+                                            value={tab.value}
+                                            sx={{p: 0}}
+                                            key={tab.value}
+                                        ></TabPanel>))
+                                    }
                                 </TabContext>
                             </div>
                             :
-                            <div className='page-template__tabs page-template__tabs-change tabs'>
-                                <TabContext value={value}>
-                                    <div className='page-template__typo'>
-                                        <TextField
-                                            required
-                                            id="outlined-required"
-                                            defaultValue="Dr.G First Project"
-                                        />
-                                        <div className='page-template__group-button'>
-                                            <DoneIcon1/>
-                                            <button onClick={() => setEdit(!edit)}
-                                                    className='page-template__btn-cancel'>Cancel
-                                            </button>
-                                            <button onClick={() => setEdit(!edit)}
-                                                    className='page-template__btn-save'>Save
-                                            </button>
-                                        </div>
+                            <div className='project-layout__tabs page-template__tabs-change tabs'>
+                                <div className='page-template__typo'>
+                                    <TextField
+                                        required
+                                        id="outlined-required"
+                                        defaultValue="Dr.G First Project"
+                                    />
+                                    <div className='page-template__group-button'>
+                                        <DoneIcon1/>
+                                        <button onClick={() => setEdit(!edit)}
+                                                className='page-template__btn-cancel'>Cancel
+                                        </button>
+                                        <button onClick={() => setEdit(!edit)}
+                                                className='page-template__btn-save'>Save
+                                        </button>
                                     </div>
-                                    <ChipsDelete/>
-                                </TabContext>
+                                </div>
+                                <ChipsDelete/>
                             </div>
                         }
-
-                        <div className='page-template__block'>
-                            <BoxTemplate children={
+                    </>
+                }
+                content={
+                    <div className='page-template__block'>
+                        <BoxTemplate
+                            children={
                                 <article>
-                                    <Checkbox text="Toner concept and prescription suggestions"/>
-                                    <Checkbox text="Review of toner concept and sales strategy"/>
-                                    <Checkbox text="Weekly customer meeting"/>
-                                    <Checkbox text="Customer meeting and subsidiary material review"/>
-                                    <Checkbox
-                                        text="Supply and demand of additional supporting data (data based on functional labeling, separate emission labeling, etc.)"/>
-                                    <Checkbox text="Raw material inspection"/>
-                                    <Checkbox text="Raw material inspection"/>
+                                    {arrayCheckboxes.map((checkbox, index) => (
+                                        <Checkbox
+                                            text={checkbox.text}
+                                            key={index}
+                                        />))
+                                    }
                                 </article>
                             }
-                            />
+                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <p>
-                                        Quotation contents<br/>
-                                        is here
-                                    </p>
-                                </article>
-                            }
-                            />
+                        <BoxTemplate children={
+                            <article>
+                                <p>
+                                    Quotation contents<br/>
+                                    is here
+                                </p>
+                            </article>
+                        }
+                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <div className='table'>
-                                        <div>Chart title</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
-                                        <div>Contents</div>
+                        <BoxTemplate children={
+                            <article>
+                                <div className='table'>
+                                    <div>Chart title</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                    <div>Contents</div>
+                                </div>
+                            </article>
+                        }
+                        />
+
+                        <BoxTemplate children={
+                            <article>
+                                <div className='audio'>
+                                    <div className='audio__icon'>
+                                        <IconMusic/>
                                     </div>
-                                </article>
-                            }
-                            />
+                                    Audio.mp3
+                                </div>
+                            </article>
+                        }
+                        />
 
-                            <BoxTemplate children={
-                                <article>
-                                    <div className='audio'>
-                                        <div className='audio__icon'>
-                                            <IconMusic/>
-                                        </div>
-                                        Audio.mp3
-                                    </div>
-                                </article>
-                            }
-                            />
-
-                            <BoxTemplate children={
-                                <article>
-                                    <p>
-                                        Quotation contents<br/>
-                                        is here
-                                    </p>
-                                </article>
-                            }
-                            />
-                        </div>
+                        <BoxTemplate children={
+                            <article>
+                                <p>
+                                    Quotation contents<br/>
+                                    is here
+                                </p>
+                            </article>
+                        }
+                        />
                     </div>
                 }
             />
