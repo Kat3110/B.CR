@@ -33,11 +33,27 @@
 }
 
 .checkbox:hover input ~ .checkbox__checkmark {
-    opacity: 0.9;
+    /*background: rgba(0, 0, 0, 0.07);*/
+    background: rgba(0, 0, 0, 0.15);
+    border: 3px solid rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+
+.checkbox:hover input ~ .checkbox__checkmark:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    position: absolute;
+    transform: rotate(0deg);
+    border-radius: 2px;
 }
 
 .checkbox input:checked ~ .checkbox__checkmark {
     background-color: #FF007A;
+    border: transparent;
 }
 
 .checkbox__checkmark:after {
@@ -47,6 +63,10 @@
 
 .checkbox input:checked ~ .checkbox__checkmark:after {
     display: block;
+}
+
+.checkbox input:checked ~ .checkbox__checkmark:before {
+    display: none;
 }
 
 .checkbox .checkbox__checkmark:after {

@@ -1,0 +1,43 @@
+.dropdown-menu__content .MuiPaper-elevation {
+    padding: 12px 20px;
+    width: 150px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.dropdown-menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dropdown-menu__list div {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu__list svg {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.dropdown-menu__list div:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 100%;
+    background: #FF007A;
+    box-shadow: 0 5px 10px rgba(255, 0, 122, 0.25);
+    border-radius: 5px;
+}
+
+.dropdown-menu__list div:hover svg {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+}

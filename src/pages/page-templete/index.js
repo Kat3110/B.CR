@@ -20,6 +20,7 @@ import TextField from '@mui/material/TextField';
 import ChipsDelete from "../../components/chip-delete";
 
 import ProjectsLayout from "../../layout/projects-layout"
+import DialogCancel from "../../components/dialog-cancel";
 
 const arrayCheckboxTemplate = [
     {
@@ -142,12 +143,9 @@ function PageTemplate() {
                                         <h2 className='page-template__title'>Super Fast Production</h2>
                                         <div className='page-template__group-button'>
                                             <button className='page-template__btn'><Check/>Use template</button>
-                                            <button
-                                                onClick={() => setEdit(!edit)}
-                                                style={{border: 'none', backgroundColor: 'transparent', padding: 0}}
-                                            >
+                                            <div onClick={() => setEdit(!edit)}>
                                                 <ButtonChange icon={<DoneIcon />}/>
-                                            </button>
+                                            </div>
                                             <ButtonChange icon={<DeleteIcon />}/>
                                         </div>
                                     </div>
@@ -181,9 +179,7 @@ function PageTemplate() {
                                     />
                                     <div className='page-template__group-button'>
                                         <DoneIcon1/>
-                                        <button onClick={() => setEdit(!edit)}
-                                                className='page-template__btn-cancel'>Cancel
-                                        </button>
+                                        <DialogCancel />
                                         <button onClick={() => setEdit(!edit)}
                                                 className='page-template__btn-save'>Save
                                         </button>

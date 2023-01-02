@@ -40,6 +40,7 @@
 .page-template__group-button {
     display: flex;
     gap: 0 5px;
+    align-items: center;
 }
 
 .page-template__btn {

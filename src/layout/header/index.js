@@ -1,6 +1,6 @@
 import * as React from "react";
 import logo from "../../assets/logo.svg";
-import HeaderBar from "../../components/header-bar";
+import HeaderBar from "../header-bar";
 import './style.css';
 
 function Header() {

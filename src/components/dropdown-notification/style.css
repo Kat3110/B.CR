@@ -1,13 +1,12 @@
-.popover .MuiPopover-paper {
-    padding: 60px 30px 0;
+.dropdown-notification__menu .MuiPaper-elevation {
     width: 580px;
-    box-sizing: border-box;
-    max-height: 570px ;
-    margin-left: -280px;
+    padding: 60px 30px 0;
     border-radius: 15px;
     position: relative;
+    margin-top: 35px;
 }
-.popover .MuiPopover-paper:after{
+
+.dropdown-notification__menu .MuiPopover-paper:after{
     content: "";
     display: block;
     width: 100%;
@@ -18,28 +17,28 @@
     bottom: 0;
 }
 
-.popover .MuiBackdrop-root {
+.dropdown-notification__menu .MuiBackdrop-root {
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
-.popover .tabs__tab {
+.dropdown-notification__menu .tabs__tab {
     padding-right: 25px !important;
 }
 
-.popover .tabs__tab span span {
+.dropdown-notification__menu .tabs__tab span span {
     right: -12px;
 }
 
-.popover__badge span {
+.dropdown-notification__badge span {
     background: #FF007A;
     color: white;
 }
 
-.popover__badge span:hover {
+.dropdown-notification__badge span:hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #FF007A;
 }
 
-.popover__icon {
+.dropdown-notification__icon {
     border: none;
     padding: 0;
     background: transparent;
@@ -47,18 +46,18 @@
     cursor: pointer;
 }
 
-.popover__icon:hover {
+.dropdown-notification__icon:hover {
     opacity: 0.3;
     background: transparent;
 }
 
-.popover__message_box {
+.dropdown-notification__message {
     display: flex;
     gap: 5px 0;
     flex-direction: column;
 }
 
-.popover__panel {
+.dropdown-notification__panel {
     padding: 30px 0 !important;
     display: flex;
     gap: 30px 0;
@@ -69,12 +68,12 @@
     overflow: scroll;
 }
 
-.popover__panel_dot span {
+.dropdown-notification__dot span {
     top: -2px !important;
     right: -5px !important;
 }
 
-.popover__panel_title {
+.dropdown-notification__title {
     font-weight: 700;
     font-size: 15px;
     align-items: center;

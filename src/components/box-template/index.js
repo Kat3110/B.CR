@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './style.css'
 import { ReactComponent as Change } from "../../assets/change.svg";
+import { ReactComponent as Lock } from "../../assets/LockLaminated.svg";
 
 
 function BoxTemplate(props) {
@@ -15,6 +16,7 @@ function BoxTemplate(props) {
             </div>
             <div className='box-template__content'>
                 {props.change ? <div className="box-template__change"><Change /></div> : null}
+                {props.lock ? <div className="box-template__lock"><Lock /></div> : null}
                 {props.name ? <div className="box-template__box">
                     <span className="box-template__name">{props.name}</span>
                     <span className="box-template__manager">Manager</span>

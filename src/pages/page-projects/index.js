@@ -16,17 +16,21 @@ import {ReactComponent as DoneIcon1} from "../../assets/PencilSimpleLine.svg";
 import {ReactComponent as Download} from "../../assets/Download.svg";
 import {ReactComponent as Setting} from "../../assets/setting.svg";
 import TextField from "@mui/material/TextField";
-import ChipsDelete from "../../components/chip-delete";
 import BoxTemplate from "../../components/box-template";
 import Checkbox from "../../components/checkbox";
 import {ReactComponent as IconMusic} from "../../assets/MusicNotesSimple.svg";
 import {useState} from "react";
 import CapitalLetter from "../../components/capital-letter";
+import DropdownMenu from "../../components/dropdown-menu";
 import CheckboxCustom from "../../components/checkbox-custom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Microphone } from "../../assets/microphone.svg";
 import { ReactComponent as Close } from "../../assets/Plus.svg";
 import HTMLTooltip from '../../components/custom-tooltip'
+import { ReactComponent as LinkSimple } from '../../assets/LinkSimple.svg'
+import { ReactComponent as ChatCircle } from '../../assets/ChatCircle.svg'
+import { ReactComponent as File } from '../../assets/File.svg'
+import CheckboxesDelete from "../../components/checkboxes-delete";
 
 
 const arrayRadioProjects = [
@@ -118,27 +122,28 @@ const arrayRadioProjects = [
 
 const arrayListCustom = [
     {
-        value: '1',
-        label: 'Outline'
+        value: 0,
+        label: 'Outline',
+        checked: 'checked'
     },
     {
-        value: '2',
+        value: 1,
         label: 'Ingredient'
     },
     {
-        value: '3',
+        value: 2,
         label: 'Certify'
     },
     {
-        value: '4',
+        value: 3,
         label: 'Package'
     },
     {
-        value: '5',
+        value: 4,
         label: 'Test'
     },
     {
-        value: '6',
+        value: 5,
         label: 'Manufacture'
     },
 ]
@@ -175,6 +180,17 @@ function PageProjects() {
     const [value, setValue] = React.useState('2');
     const handleChange = (event, newValue) => {
         setValue(newValue);
+    };
+
+    const changeClass = (e) => {
+        let allCustoms = document.querySelectorAll('.page-projects__custom')
+
+        if (e.target.classList.contains('page-projects__custom-active')) {
+            e.target.classList.remove('page-projects__custom-active')
+        } else {
+            allCustoms.forEach(item => item.classList.remove('page-projects__custom-active'))
+            e.target.classList.add('page-projects__custom-active')
+        }
     };
 
     return (
@@ -219,13 +235,13 @@ function PageProjects() {
                     {edit ?
                         <div className='project-layout__tabs tabs'>
                             <TabContext value={value}>
-                                <div className='page-template__typo'>
-                                    <div className='page-template__card'>
-                                        <img src={Img} alt=""/>
-                                        <h2 className='page-template__title'>Dr.G First Project</h2>
+                                <div className='page-projects__typo page-template__typo'>
+                                    <div className='page-projects__card page-template__card'>
+                                        <img src={Img} alt="" style={{width: '50px'}} />
+                                        <h2 className='page-projects__title page-template__title'>Dr.G First Project</h2>
                                     </div>
-                                    <div className='page-template__box'>
-                                        <div className='page-template__account project-card__accounts'>
+                                    <div className='page-projects__box page-template__box'>
+                                        <div className='page-projects__account page-template__account project-card__accounts'>
                                             <CapitalLetter
                                                 letter='p'
                                                 bgColor='#00A3FF'
@@ -247,11 +263,31 @@ function PageProjects() {
                                                 bgColor=''
                                             />
                                         </div>
-                                        <div className='page-template__group-button'>
+                                        <div className='page-projects__group-button page-template__group-button'>
                                             <ButtonChange icon={<Setting />}/>
-                                            <ButtonChange icon={<DoneIcon />}/>
+                                            <div onClick={() => setEdit(!edit)}>
+                                                <ButtonChange icon={<DoneIcon />}/>
+                                            </div>
                                             <ButtonChange icon={<Download />}/>
-                                            <ButtonChange icon={<Change />}/>
+                                            <DropdownMenu
+                                                id={2}
+                                                trigger={
+                                                    <ButtonChange icon={<Change />}/>
+                                                }
+                                                content={
+                                                    <div className='dropdown-menu__list'>
+                                                        <div>
+                                                            <ChatCircle /> Mention
+                                                        </div>
+                                                        <div>
+                                                            <File /> Files
+                                                        </div>
+                                                        <div>
+                                                            <LinkSimple /> Url
+                                                        </div>
+                                                    </div>
+                                                }
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -259,6 +295,7 @@ function PageProjects() {
                                     {arrayListCustom.map((custom,index) => (
                                         <div
                                             className='page-projects__custom'
+                                            onClick={changeClass}
                                             key={index}>
                                             <HTMLTooltip
                                                 content={<CheckboxCustom />}
@@ -273,43 +310,46 @@ function PageProjects() {
                         </div>
                         :
                         <div className='project-layout__tabs tabs'>
-                            <div className='page-template__typo'>
-                                <TextField
-                                    required
-                                    id="outlined-required"
-                                    defaultValue="Dr.G First Project"
-                                />
-                                <div className='page-template__group-button'>
-                                    <DoneIcon1/>
+                            <div className='page-projects__typo page-template__typo'>
+                                <div className='page-projects__card page-template__card'>
+                                    <img src={Img} alt="" style={{width: '50px'}} />
+                                    <TextField
+                                        required
+                                        id="outlined-required"
+                                        defaultValue="Dr.G First Project"
+                                    />
+                                </div>
+                                <div className='page-projects__group-button page-template__group-button'>
+                                    <DoneIcon1  className='page-projects__edit'/>
                                     <button onClick={() => setEdit(!edit)}
-                                            className='page-template__btn-cancel'>Cancel
+                                            className='page-projects__btn-cancel page-template__btn-cancel'>Cancel
                                     </button>
                                     <button onClick={() => setEdit(!edit)}
-                                            className='page-template__btn-save'>Save
+                                            className='page-projects__btn-save page-template__btn-save'>Save
                                     </button>
                                 </div>
                             </div>
-                            <ChipsDelete/>
+                            <CheckboxesDelete data={arrayListCustom}/>
                         </div>
                     }
                     </>
                 }
                 content={
                     <>
-                        <div className='page-template__council'>
+                        <div className='page-projects__council page-template__council'>
                             <Logo />
-                            <div className='page-template__council-box'>
+                            <div className='page-projects__council-box page-template__council-box'>
                                 <span>
                                     <Microphone />
                                     NOTICE
                                 </span>
-                                <p className='page-template__council-text'>Toner concept and prescription suggestions  ...</p>
-                                <div className='page-template__council-close'>
+                                <p className='page-projects__council-text page-template__council-text'>Toner concept and prescription suggestions  ...</p>
+                                <div className='page-projects__council-close page-template__council-close'>
                                     <Close />
                                 </div>
                             </div>
                         </div>
-                        <div className='page-template__block'>
+                        <div className='page-projects__block page-template__block'>
                             <BoxTemplate
                                 children={
                                     <article>
@@ -392,7 +432,7 @@ function PageProjects() {
                                         </p>
                                     </article>
                                 }
-                                change
+                                lock
                                 name="EDGAR"
                                 date='1 days ago'
                                 bgColor= '#8F00FF'

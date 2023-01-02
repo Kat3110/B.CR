@@ -1,8 +1,8 @@
 import * as React from 'react';
-import NotificationPopover from "../notification-popover";
 import { NavLink } from "react-router-dom";
 import './style.css'
-import CapitalLetter from "../capital-letter";
+import CapitalLetter from "../../components/capital-letter";
+import DropdownNotification from "../../components/dropdown-notification";
 
 const pages = [
     {
@@ -24,6 +24,7 @@ const pages = [
 ];
 
 function HeaderBar() {
+
     return (
         <div className='header-bar'>
             <div className='header-bar__links'>
@@ -40,7 +41,7 @@ function HeaderBar() {
                 ))}
             </div>
             <div className='header-bar__buttons'>
-                <NotificationPopover/>
+                <DropdownNotification id='1' />
                 <button
                     className='header-bar__icon'>
                     <CapitalLetter

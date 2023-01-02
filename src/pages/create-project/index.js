@@ -7,21 +7,52 @@ import bcgCreate from '../../assets/bcgCreate.svg'
 import emptyPicture from '../../assets/emptyPicture.svg'
 import DialogTemplates from '../../components/dialog-templates'
 import bgImage from "../../assets/maskBG.png";
+import bgImage2 from "../../assets/maskBG2.jpg";
 import {NavLink} from "react-router-dom";
 
 
 function CreateProject() {
     const [status, setStatus] = useState(true)
 
+    const [joining, setJoining] = useState(true)
+
     return (
         <div className='create-project'>
             {status ?
                 <div className='create-project__before'>
-                    <BackgroundImg background={bgImage}/>
-                    <h2 className='create-project__typo'>We need your awesome project!</h2>
-                    <p className='create-project__subtitle'>B.CR is the best collaboration tool to<br/>
-                        successfully launch your project.</p>
-                    <button onClick={() => setStatus(!status)} className='create-project__make'>Make a project</button>
+                    { joining ?
+                        <BackgroundImg background={bgImage2}/>
+                        :
+                        <BackgroundImg background={bgImage}/>
+                    }
+                    <h2 className='create-project__typo'>
+                        { joining ?
+                            'We join your awesome project!'
+                            :
+                            'We need your awesome project!'
+                        }
+                    </h2>
+                    <p className='create-project__subtitle'>
+                        { joining ?
+                                <div>You can view the contents after invited to the project.<br/>
+                                Please ask the PM for an invitation and try again.</div>
+                            :
+                                <div>B.CR is the best collaboration tool to<br/>
+                                successfully launch your project.</div>
+                        }
+
+                    </p>
+
+                        { !joining ?
+                            <button onClick={() => setStatus(!status)} className='create-project__make create-project__button'>Make a project</button>
+                            :
+                            <div className='create-project__button-group'>
+                                {/*<a href='/projects/all'>*/}
+                                    <a href='/projects/all' className='create-project__projects create-project__button'>Projects</a>
+                                {/*</a>*/}
+                                <button className='create-project__home create-project__button'>Home Feed</button>
+                            </div>
+                        }
                 </div> :
                 <div className='create-project__after'>
                     <img src={bcgCreate}/>
