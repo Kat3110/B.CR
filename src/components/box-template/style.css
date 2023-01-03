@@ -191,3 +191,34 @@
     width: 14px;
     height: 14px;
 }
+
+.box-template__group {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.box-template__group .box-template__change {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.box-template__item {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box-template__item:hover {
+    background: rgba(0, 0, 0, 0.1);
+}

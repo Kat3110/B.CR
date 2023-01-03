@@ -4,6 +4,8 @@ import BackgroundImg from "../../components/background-img";
 import bgImage2 from "../../assets/maskBG2.jpg";
 import InputSearch from "../../components/input-search";
 import BoxBlur from "../../components/box-blur";
+import {NavLink} from "react-router-dom";
+import {ReactComponent as Plus} from "../../assets/Plus.svg";
 
 function ProjectsLayout(props) {
     return (
@@ -13,8 +15,36 @@ function ProjectsLayout(props) {
                 <div className='project-layout__left'>
                     <div className='project-layout__items'>
                         <div className='tabs'>
-                            {props.links}
-                            <InputSearch/>
+                            <div className='tabs__list'>
+                            {props.projects ?
+                                <>
+                                    <div className='tabs__tab Mui-selected'>
+                                        <div>Projects</div>
+                                    </div>
+                                    <NavLink to='/projects/template' style={{ textDecoration: 'none' }}>
+                                        <div className='tabs__tab'>
+                                            <div>Templates</div>
+                                        </div>
+                                    </NavLink>
+                                    <button className='project-layout__btn'>
+                                        <Plus />
+                                        Add project
+                                    </button>
+                                </>
+                                :
+                                <>
+                                    <NavLink to='/projects/all' style={{ textDecoration: 'none' }}>
+                                        <div className='tabs__tab'>
+                                            <div>Projects</div>
+                                        </div>
+                                    </NavLink>
+                                    <div className='tabs__tab Mui-selected'>
+                                        <div>Templates</div>
+                                    </div>
+                                </>
+                            }
+                            </div>
+                            <InputSearch detailed={props.projects} />
                         </div>
                     </div>
                     { props.checkboxes ? props.checkboxes : <BoxBlur hght='233px' text='No projects.'/> }

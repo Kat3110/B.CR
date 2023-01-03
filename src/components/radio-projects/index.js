@@ -22,7 +22,7 @@ function RadioProjects(props) {
             <div className='radio-projects__card'>
                 {props.badge ?
                     <Badge
-                        className='popover__badge'
+                        className='radio-projects__badge'
                         badgeContent={props.badge}
                     >
                         <img className='radio-projects__card_img' src={props.img}/>
@@ -31,7 +31,10 @@ function RadioProjects(props) {
                     <img className='radio-projects__card_img' src={props.img}/>
                 }
                 <div className='radio-projects__card_box'>
-                    <h3 className='radio-projects__typo'>{props.title}</h3>
+                    <h3 className='radio-projects__typo'>
+                        {props.completed ? <span>Completed</span> : null }
+                        {props.title}
+                    </h3>
                     <div className='radio-projects__name'>
                         <CapitalLetter
                             letter={props.name[0]}

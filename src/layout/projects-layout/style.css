@@ -19,7 +19,7 @@
     min-width: 450px;
     background: #FFFFFF;
     border-radius: 15px;
-    padding: 35px 20px 20px;
+    padding: 35px 30px 20px;
     margin-bottom: 50px;
 }
 
@@ -47,4 +47,22 @@
     border-radius: 15px;
     margin-bottom: 50px;
     padding: 25px 20px 17px;
+}
+
+.project-layout__btn {
+    width: 169px;
+    height: 60px;
+    background: #000000;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    border: none;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+.project-layout__btn:hover {
+    background: #FF007A;
+    box-shadow: 0 5px 10px rgb(255 0 122 / 25%);
 }

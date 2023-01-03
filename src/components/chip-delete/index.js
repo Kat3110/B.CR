@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
 import Chip from '@mui/material/Chip'
 import './style.css'
 import {ReactComponent as Plus} from '../../assets/Plus.svg'

@@ -103,11 +103,33 @@
     align-items: flex-start;
     flex-direction: column;
 }
+
+.radio-projects__badge span {
+    background: #FF007A;
+    color: white;
+}
+
+
+.radio-projects__badge span:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #FF007A;
+}
+
+
 .radio-projects__typo {
     font-weight: 400;
     font-size: 15px;
     color: #000000;
     margin: 0;
+}
+
+.radio-projects__typo span {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 5px 0 0;
+    background: #000000;
+    border-radius: 9px;
+    padding: 3px 10px;
 }
 
 .radio-projects__name {

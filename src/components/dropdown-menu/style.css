@@ -41,3 +41,7 @@
     color: #FFFFFF;
     fill: #FFFFFF;
 }
+
+.dropdown-menu__trigger[aria-expanded^="true"] {
+    opacity: 0.2;
+}

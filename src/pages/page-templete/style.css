@@ -85,37 +85,6 @@
     align-items: center;
 }
 
-.page-template__btn-cancel {
-    width: 90px;
-    height: 40px;
-    font-weight: 700;
-    font-size: 15px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-
-.page-template__btn-cancel:hover {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-.page-template__btn-save {
-    width: 90px;
-    height: 40px;
-    background: #FF007A;
-    box-shadow: 0 5px 10px rgba(255, 0, 122, 0.25);
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    text-align: center;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
 .page-template__tabs-change .page-template__group-button svg {
     width: 18px;
     height: 18px;

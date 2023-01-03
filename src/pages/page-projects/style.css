@@ -1,22 +1,4 @@
-.page-projects__btn {
-    width: 169px;
-    height: 60px;
-    background: #000000;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 15px;
-    color: #FFFFFF;
-    border: none;
-    margin: 0 0 0 auto;
-    cursor: pointer;
-}
-
-.page-projects__btn:hover {
-    background: #FF007A;
-    box-shadow: 0 5px 10px rgb(255 0 122 / 25%);
-}
-
- .page-projects .project-layout__items{
+.page-projects .project-layout__items{
     padding: 20px 30px 20px !important;
 }
 
@@ -140,7 +122,6 @@
 .page-template__council-close svg path{
     stroke: #F8899D;
 }
-
 
 .page-template__council-close:hover svg path{
     stroke: rgba(248, 137, 157, 0.4);

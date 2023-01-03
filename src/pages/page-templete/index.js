@@ -13,14 +13,13 @@ import ButtonChange from "../../components/button-change";
 import {ReactComponent as DeleteIcon} from "../../assets/Trash.svg";
 import {ReactComponent as DoneIcon} from '../../assets/PencilSimpleLine.svg';
 import {ReactComponent as DoneIcon1} from '../../assets/PencilSimpleLine.svg';
-import { NavLink } from "react-router-dom";
-
 import {ReactComponent as Check} from '../../assets/Check.svg';
 import TextField from '@mui/material/TextField';
 import ChipsDelete from "../../components/chip-delete";
-
 import ProjectsLayout from "../../layout/projects-layout"
 import DialogCancel from "../../components/dialog-cancel";
+import DialogSave from "../../components/dialog-save";
+import {Button} from "@mui/material";
 
 const arrayCheckboxTemplate = [
     {
@@ -110,17 +109,8 @@ function PageTemplate() {
     return (
         <div className='page-template'>
             <ProjectsLayout
-                links={
-                    <div className='tabs__list'>
-                        <NavLink to='/projects/all' style={{ textDecoration: 'none' }}>
-                            <div className='tabs__tab'>
-                                <div>Projects</div>
-                            </div>
-                        </NavLink>
-                        <div className='tabs__tab Mui-selected'>
-                            <div>Templates</div>
-                        </div>
-                    </div>}
+                projects={false}
+
                 checkboxes={
                     <div className='page-template__checkboxes'>
                         <Checkbox text='Show Only My Templates' color="rgba(0,0,0,0.5)"/>
@@ -134,6 +124,7 @@ function PageTemplate() {
                         }
                     </div>
                 }
+
                 tabs={
                     <>
                         {edit ?
@@ -179,10 +170,8 @@ function PageTemplate() {
                                     />
                                     <div className='page-template__group-button'>
                                         <DoneIcon1/>
-                                        <DialogCancel />
-                                        <button onClick={() => setEdit(!edit)}
-                                                className='page-template__btn-save'>Save
-                                        </button>
+                                        <DialogCancel onClick={() => setEdit(!edit)} />
+                                        <DialogSave  onClick={() => setEdit(!edit)}/>
                                     </div>
                                 </div>
                                 <ChipsDelete/>
@@ -190,6 +179,7 @@ function PageTemplate() {
                         }
                     </>
                 }
+
                 content={
                     <div className='page-template__block'>
                         <BoxTemplate

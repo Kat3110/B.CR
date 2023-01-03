@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './style.css'
-import { NavLink } from "react-router-dom";
 import ProjectsLayout from "../../layout/projects-layout"
 import { ReactComponent as Plus } from '../../assets/Plus.svg'
 import RadioProjects from "../../components/radio-projects";
@@ -31,11 +30,16 @@ import { ReactComponent as LinkSimple } from '../../assets/LinkSimple.svg'
 import { ReactComponent as ChatCircle } from '../../assets/ChatCircle.svg'
 import { ReactComponent as File } from '../../assets/File.svg'
 import CheckboxesDelete from "../../components/checkboxes-delete";
+import DialogCancel from "../../components/dialog-cancel";
+import DialogSave from "../../components/dialog-save";
+import Button from "../../components/button";
+import DialogMembers from "../../components/dialog-members";
 
 
 const arrayRadioProjects = [
     {
         check: true,
+        completed: true,
         img: Img,
         color: '',
         title: 'Dr.G First Project',
@@ -173,6 +177,27 @@ const arrayCheckboxes = [
 
 ]
 
+const arrayCapitalLetter = [
+    {
+        letter: 'p',
+        bgColor: '#00A3FF'
+    },
+    {
+        letter: 'u',
+        bgColor: '#FFD702'
+    },
+    {
+        letter: 'h',
+        bgColor: '#00E99E'
+    },
+    {
+        letter: 't'
+    },
+    {
+        letter: 'a'
+    },
+]
+
 function PageProjects() {
 
     const [edit, setEdit] = useState(true)
@@ -196,144 +221,117 @@ function PageProjects() {
     return (
         <div className='page-projects'>
             <ProjectsLayout
-                links={
-                <div className='tabs__list'>
-                    <div className='tabs__tab Mui-selected'>
-                        <div>Projects</div>
-                    </div>
-                    <NavLink to='/projects/template' style={{ textDecoration: 'none' }}>
-                        <div className='tabs__tab'>
-                            <div>Templates</div>
-                        </div>
-                    </NavLink>
-                    <button className='page-projects__btn'>
-                        <Plus />
-                        Add project
-                    </button>
-                </div>
-            }
+                projects={true}
+
                 checkboxes={
-                <>
-                    <div className='radio-projects__checkboxes'>
-                        {arrayRadioProjects.map((radio) => (
-                            <RadioProjects
-                                check={radio.check}
-                                img={radio.img}
-                                color={radio.color}
-                                title={radio.title}
-                                name={radio.name}
-                                pinned={radio.pinned}
-                                badge={radio.badge}
-                                key={radio.id}
-                            />))}
-                    </div>
-                    <div className="page-projects__overflow"></div>
-                </>
+                    <>
+                        <div className='radio-projects__checkboxes'>
+                            {arrayRadioProjects.map((radio) => (
+                                <RadioProjects
+                                    check={radio.check}
+                                    completed={radio.completed}
+                                    img={radio.img}
+                                    color={radio.color}
+                                    title={radio.title}
+                                    name={radio.name}
+                                    pinned={radio.pinned}
+                                    badge={radio.badge}
+                                    key={radio.id}
+                                />))}
+                        </div>
+                        <div className="page-projects__overflow"></div>
+                    </>
                 }
+
                 tabs={
                     <>
-                    {edit ?
-                        <div className='project-layout__tabs tabs'>
-                            <TabContext value={value}>
+                        {edit ?
+                            <div className='project-layout__tabs tabs'>
+                                <TabContext value={value}>
+                                    <div className='page-projects__typo page-template__typo'>
+                                        <div className='page-projects__card page-template__card'>
+                                            <img src={Img} alt="" style={{width: '50px'}} />
+                                            <h2 className='page-projects__title page-template__title'>Dr.G First Project</h2>
+                                        </div>
+                                        <div className='page-projects__box page-template__box'>
+                                            <div className='page-projects__account page-template__account project-card__accounts'>
+                                                {arrayCapitalLetter.map((letter, index) => (
+                                                    <CapitalLetter
+                                                        letter={letter.letter}
+                                                        bgColor={letter.bgColor}
+                                                        key={index}
+                                                    />))
+                                                }
+                                            </div>
+                                            <div className='page-projects__group-button page-template__group-button'>
+                                                {/*<ButtonChange icon={<Setting />}/>*/}
+                                                <DialogMembers />
+                                                <div onClick={() => setEdit(!edit)}>
+                                                    <ButtonChange icon={<DoneIcon />}/>
+                                                </div>
+                                                <ButtonChange icon={<Download />}/>
+                                                <DropdownMenu
+                                                    id={2}
+                                                    trigger={
+                                                        <ButtonChange icon={<Change />}/>
+                                                    }
+                                                    content={
+                                                        <div className='dropdown-menu__list'>
+                                                            <div>
+                                                                <ChatCircle /> Mention
+                                                            </div>
+                                                            <div>
+                                                                <File /> Files
+                                                            </div>
+                                                            <div>
+                                                                <LinkSimple /> Url
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='page-projects__customs'>
+                                        {arrayListCustom.map((custom,index) => (
+                                            <div
+                                                className='page-projects__custom'
+                                                onClick={changeClass}
+                                                key={index}>
+                                                <HTMLTooltip
+                                                    content={<CheckboxCustom />}
+                                                    hover='Complete stage'
+                                                />
+                                                {custom.label}
+                                            </div>
+                                            ))
+                                        }
+                                    </div>
+                                </TabContext>
+                            </div>
+                            :
+                            <div className='project-layout__tabs tabs'>
                                 <div className='page-projects__typo page-template__typo'>
                                     <div className='page-projects__card page-template__card'>
                                         <img src={Img} alt="" style={{width: '50px'}} />
-                                        <h2 className='page-projects__title page-template__title'>Dr.G First Project</h2>
+                                        <TextField
+                                            required
+                                            id="outlined-required"
+                                            defaultValue="Dr.G First Project"
+                                        />
                                     </div>
-                                    <div className='page-projects__box page-template__box'>
-                                        <div className='page-projects__account page-template__account project-card__accounts'>
-                                            <CapitalLetter
-                                                letter='p'
-                                                bgColor='#00A3FF'
-                                            />
-                                            <CapitalLetter
-                                                letter='u'
-                                                bgColor='#FFD702'
-                                            />
-                                            <CapitalLetter
-                                                letter='h'
-                                                bgColor='#00E99E'
-                                            />
-                                            <CapitalLetter
-                                                letter='t'
-                                                bgColor=''
-                                            />
-                                            <CapitalLetter
-                                                letter='a'
-                                                bgColor=''
-                                            />
-                                        </div>
-                                        <div className='page-projects__group-button page-template__group-button'>
-                                            <ButtonChange icon={<Setting />}/>
-                                            <div onClick={() => setEdit(!edit)}>
-                                                <ButtonChange icon={<DoneIcon />}/>
-                                            </div>
-                                            <ButtonChange icon={<Download />}/>
-                                            <DropdownMenu
-                                                id={2}
-                                                trigger={
-                                                    <ButtonChange icon={<Change />}/>
-                                                }
-                                                content={
-                                                    <div className='dropdown-menu__list'>
-                                                        <div>
-                                                            <ChatCircle /> Mention
-                                                        </div>
-                                                        <div>
-                                                            <File /> Files
-                                                        </div>
-                                                        <div>
-                                                            <LinkSimple /> Url
-                                                        </div>
-                                                    </div>
-                                                }
-                                            />
-                                        </div>
+                                    <div className='page-projects__group-button page-template__group-button'>
+                                        <DoneIcon1  className='page-projects__edit'/>
+                                        <DialogCancel onClick={() => setEdit(!edit)} />
+                                        <DialogSave  onClick={() => setEdit(!edit)}/>
                                     </div>
                                 </div>
-                                <div className='page-projects__customs'>
-                                    {arrayListCustom.map((custom,index) => (
-                                        <div
-                                            className='page-projects__custom'
-                                            onClick={changeClass}
-                                            key={index}>
-                                            <HTMLTooltip
-                                                content={<CheckboxCustom />}
-                                                hover='Complete stage'
-                                            />
-                                            {custom.label}
-                                        </div>
-                                        ))
-                                    }
-                                </div>
-                            </TabContext>
-                        </div>
-                        :
-                        <div className='project-layout__tabs tabs'>
-                            <div className='page-projects__typo page-template__typo'>
-                                <div className='page-projects__card page-template__card'>
-                                    <img src={Img} alt="" style={{width: '50px'}} />
-                                    <TextField
-                                        required
-                                        id="outlined-required"
-                                        defaultValue="Dr.G First Project"
-                                    />
-                                </div>
-                                <div className='page-projects__group-button page-template__group-button'>
-                                    <DoneIcon1  className='page-projects__edit'/>
-                                    <button onClick={() => setEdit(!edit)}
-                                            className='page-projects__btn-cancel page-template__btn-cancel'>Cancel
-                                    </button>
-                                    <button onClick={() => setEdit(!edit)}
-                                            className='page-projects__btn-save page-template__btn-save'>Save
-                                    </button>
-                                </div>
+                                <CheckboxesDelete data={arrayListCustom}/>
                             </div>
-                            <CheckboxesDelete data={arrayListCustom}/>
-                        </div>
-                    }
+                        }
                     </>
                 }
+
                 content={
                     <>
                         <div className='page-projects__council page-template__council'>
@@ -361,7 +359,7 @@ function PageProjects() {
                                         }
                                     </article>
                                 }
-                                change
+                                changeGroup
                                 name="Hubert Benjamin"
                                 date='1 days ago'
                                 bgColor= '#00E99E'

@@ -8,48 +8,45 @@ import emptyPicture from '../../assets/emptyPicture.svg'
 import DialogTemplates from '../../components/dialog-templates'
 import bgImage from "../../assets/maskBG.png";
 import bgImage2 from "../../assets/maskBG2.jpg";
-import {NavLink} from "react-router-dom";
+import DialogMembers from "../../components/dialog-members";
+import SelectWindow from "../../components/select-window";
 
 
-function CreateProject() {
+function CreateProject(props) {
     const [status, setStatus] = useState(true)
-
-    const [joining, setJoining] = useState(true)
 
     return (
         <div className='create-project'>
             {status ?
                 <div className='create-project__before'>
-                    { joining ?
+                    { props.join ?
                         <BackgroundImg background={bgImage2}/>
                         :
                         <BackgroundImg background={bgImage}/>
                     }
                     <h2 className='create-project__typo'>
-                        { joining ?
+                        { props.join ?
                             'We join your awesome project!'
                             :
                             'We need your awesome project!'
                         }
                     </h2>
                     <p className='create-project__subtitle'>
-                        { joining ?
-                                <div>You can view the contents after invited to the project.<br/>
-                                Please ask the PM for an invitation and try again.</div>
+                        { props.join ?
+                                <>You can view the contents after invited to the project.<br/>
+                                Please ask the PM for an invitation and try again.</>
                             :
-                                <div>B.CR is the best collaboration tool to<br/>
-                                successfully launch your project.</div>
+                                <>B.CR is the best collaboration tool to<br/>
+                                successfully launch your project.</>
                         }
 
                     </p>
 
-                        { !joining ?
+                        { !props.join ?
                             <button onClick={() => setStatus(!status)} className='create-project__make create-project__button'>Make a project</button>
                             :
                             <div className='create-project__button-group'>
-                                {/*<a href='/projects/all'>*/}
-                                    <a href='/projects/all' className='create-project__projects create-project__button'>Projects</a>
-                                {/*</a>*/}
+                                <a href='/projects/all' className='create-project__projects create-project__button'>Projects</a>
                                 <button className='create-project__home create-project__button'>Home Feed</button>
                             </div>
                         }
@@ -77,11 +74,7 @@ function CreateProject() {
 
                     </div>
                 </div>}
-            <button className='create-project__btn-active' style={{position: 'absolute', bottom: '20%', right: '10%', width:'250px'}}>
-                <NavLink to='/projects/template' style={{color: 'white', textDecoration: 'none'}}>
-                    page Templete
-                </NavLink>
-            </button>
+            <DialogMembers />
         </div>
     );
 }

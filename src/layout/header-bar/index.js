@@ -23,7 +23,7 @@ const pages = [
     },
 ];
 
-function HeaderBar() {
+function HeaderBar(props) {
 
     return (
         <div className='header-bar'>
@@ -48,7 +48,7 @@ function HeaderBar() {
                         letter='b'
                         bgColor='#FFD702'
                     />
-                    <p className='header-bar__account'>Bryce L.</p>
+                    <p onClick={props.onClick} className='header-bar__account'>Bryce L.</p>
                 </button>
             </div>
         </div>

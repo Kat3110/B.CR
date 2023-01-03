@@ -3,7 +3,7 @@ import './style.css'
 
 function ButtonChange(props) {
     return (
-        <button className='button-change'>
+        <button onClick={props.onClick} className='button-change'>
             {props.icon}
         </button>
     );

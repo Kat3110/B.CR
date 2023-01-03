@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import style from './style.css'
+import './style.css'
+import Button from "../button";
+import GroupButton from "../group-button";
 
-function DialogCancel() {
+function DialogCancel(props) {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -17,9 +18,7 @@ function DialogCancel() {
 
     return (
         <div className='dialog-cancel'>
-            <button onClick={handleClickOpen}
-                    className='page-template__btn-cancel'>Cancel
-            </button>
+            <Button onClick={handleClickOpen} text='Cancel' color='default' size='s'/>
             <Dialog
                 className='dialog-cancel__window'
                 open={open}
@@ -35,12 +34,7 @@ function DialogCancel() {
                         Are you sure without saving?
                     </p>
                 </DialogContent>
-                <div className='dialog-cancel__button-group'>
-                    <button className='dialog-cancel__button dialog-cancel__button_cancel' onClick={handleClose}>Cancel</button>
-                    <button className='dialog-cancel__button dialog-cancel__button_confirm'  onClick={handleClose} autoFocus>
-                        Confirm
-                    </button>
-                </div>
+                <GroupButton close={handleClose} onClick={props.onClick}/>
             </Dialog>
         </div>
     );

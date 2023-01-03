@@ -13,6 +13,56 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import {ReactComponent as IconMusic} from "../../assets/MusicNotesSimple.svg";
 
+const arrayCheckboxTemplate = [
+    {
+        title: 'Seasonal Promotion: Standard Course',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Unbreakable process',
+        time: 'Aug 3, 2022 at 11:27 AM',
+        check: true
+    },
+    {
+        title: 'Super Fast Production',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Never failed template',
+        time: 'Aug 3, 2022 at 11:27 AM'
+    },
+    {
+        title: 'Communication like magic',
+        time: 'Aug 3, 2022 at 11:30 AM'
+    }
+]
+
+const arrayListTabs = [
+    {
+        value: '1',
+        label: 'Outline'
+    },
+    {
+        value: '2',
+        label: 'Ingredient'
+    },
+    {
+        value: '3',
+        label: 'Certify'
+    },
+    {
+        value: '4',
+        label: 'Package'
+    },
+    {
+        value: '5',
+        label: 'Test'
+    },
+    {
+        value: '6',
+        label: 'Manufacture'
+    },
+]
 
 function DialogTemplates() {
 
@@ -53,23 +103,14 @@ function DialogTemplates() {
                             <Checkbox text='Show Only My Templates' color="rgba(0,0,0,0.25)" />
                         </div>
                         <div className='dialog-templates__container'>
-                            <CheckboxTemplate
-                                title='Seasonal Promotion: Standard Course'
-                                time='Aug 3, 2022 at 11:27 AM'
-                            />
-                            <CheckboxTemplate
-                                check='true'
-                                title='Super Fast Production'
-                                time='Aug 3, 2022 at 11:27 AM'
-                            />
-                            <CheckboxTemplate
-                                title='Unbreakable process'
-                                time='Aug 3, 2022 at 11:27 AM'
-                            />
-                            <CheckboxTemplate
-                                title='Never failed template'
-                                time='Aug 3, 2022 at 11:27 AM'
-                            />
+                            {arrayCheckboxTemplate.map((checkbox) => (
+                                <CheckboxTemplate
+                                    check={checkbox.check}
+                                    title={checkbox.title}
+                                    time={checkbox.time}
+                                    key={checkbox.time+checkbox.title}
+                                />))
+                            }
                         </div>
                     </div>
 
@@ -78,18 +119,15 @@ function DialogTemplates() {
                         <div className='tabs'>
                             <TabContext value={value}>
                                 <TabList className='tabs__list' onChange={handleChange}>
-                                    <Tab className='tabs__tab' value="1" disableRipple
-                                         label={<div>Outline</div>}/>
-                                    <Tab className='tabs__tab' value="2" disableRipple
-                                         label={<div>Ingredient</div>}/>
-                                    <Tab className='tabs__tab' value="3" disableRipple
-                                         label={<div>Certify</div>}/>
-                                    <Tab className='tabs__tab' value="4" disableRipple
-                                         label={<div>Package</div>}/>
-                                    <Tab className='tabs__tab' value="5" disableRipple
-                                         label={<div>Test</div>}/>
-                                    <Tab className='tabs__tab' value="6" disableRipple
-                                         label={<div>Manufacture</div>}/>
+                                    {arrayListTabs.map((tab) => (
+                                        <Tab
+                                            className='tabs__tab'
+                                            value={tab.value}
+                                            disableRipple
+                                            label={<div>{tab.label}</div>}
+                                            key={tab.value}
+                                        />))
+                                    }
                                 </TabList>
                                 <div className='dialog-templates__block'>
                                     <TabPanel value="1" sx={{p: 0}}>

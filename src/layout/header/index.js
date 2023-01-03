@@ -3,12 +3,12 @@ import logo from "../../assets/logo.svg";
 import HeaderBar from "../header-bar";
 import './style.css';
 
-function Header() {
+function Header(props) {
     return (
         <header className="header">
             <div className="header__box container">
                 <img src={logo}/>
-                <HeaderBar />
+                <HeaderBar onClick={props.onClick} />
             </div>
         </header>
     );

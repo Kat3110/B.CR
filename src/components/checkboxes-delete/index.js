@@ -4,6 +4,7 @@ import './style.css'
 import {ReactComponent as Plus} from '../../assets/Plus.svg'
 import {ReactComponent as Trash} from '../../assets/Trash.svg'
 import Checkbox from "../checkbox";
+import HTMLTooltip from "../custom-tooltip";
 
 function CheckboxesDelete(props) {
     const [chipData, setChipData] = React.useState(props.data);
@@ -25,11 +26,16 @@ function CheckboxesDelete(props) {
                         >
                             <Chip
                                 deleteIcon={<Trash />}
-                                label={<Checkbox
-                                    text={data.label}
-                                    checked={data.checked}
-                                    disabled='disabled'
-                                />}
+                                label={
+                                    <HTMLTooltip
+                                        content={<Checkbox
+                                            text={data.label}
+                                            checked={data.checked}
+                                            disabled='disabled'
+                                        />}
+                                        hover='Complete stage'
+                                    />
+                                }
                                 onDelete={data.label === '' ? undefined : handleDelete(data)}
                                 className='checkboxes-delete__item'
                             />
