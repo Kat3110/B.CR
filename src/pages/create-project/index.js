@@ -8,8 +8,6 @@ import emptyPicture from '../../assets/emptyPicture.svg'
 import DialogTemplates from '../../components/dialog-templates'
 import bgImage from "../../assets/maskBG.png";
 import bgImage2 from "../../assets/maskBG2.jpg";
-import DialogMembers from "../../components/dialog-members";
-import SelectWindow from "../../components/select-window";
 
 
 function CreateProject(props) {
@@ -52,10 +50,10 @@ function CreateProject(props) {
                         }
                 </div> :
                 <div className='create-project__after'>
-                    <img src={bcgCreate}/>
+                    <img src={bcgCreate} alt='.'/>
                     <div className='create-project__box'>
                         <div className='create-project__picture'>
-                            <img src={emptyPicture}/>
+                            <img src={emptyPicture} alt='.'/>
                             <div className='create-project__edit'>
                                 <DialogUploadImg/>
                             </div>
@@ -74,7 +72,6 @@ function CreateProject(props) {
 
                     </div>
                 </div>}
-            <DialogMembers />
         </div>
     );
 }

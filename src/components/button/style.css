@@ -5,6 +5,9 @@
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button__size-s {
@@ -48,4 +51,9 @@
     background: #FF007A;
     box-shadow: 0 5px 25px rgba(255, 0, 122, 0.25);
     color: white;
+}
+
+.button svg {
+    margin-right: 10px;
+    flex-shrink: 0;
 }

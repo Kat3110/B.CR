@@ -1,0 +1,56 @@
+.date-pickers {
+    background: transparent !important;
+    border: none !important;
+}
+
+.date-pickers .MuiOutlinedInput-notchedOutline {
+    background: transparent !important;
+    border: none !important;
+}
+
+.date-pickers__box .MuiInputBase-root {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent !important;
+    border: none !important;
+    /*padding: 5px 10px;*/
+    /*max-width: 120px;*/
+    /*width: 100%;*/
+}
+
+.MuiInputBase-input {
+    width: 100px !important;
+    padding: 5.5px 10px !important;
+}
+
+.MuiButtonBase-root {
+    padding: 9px !important;
+}
+
+.MuiButtonBase-root:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiSvgIcon-root {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.date-pickers__box .MuiInputBase-root input,
+.date-pickers__box .MuiInputBase-root button {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+}
+
+.date-pickers__box .MuiInputBase-root svg {
+    display: none;
+}
+.date-pickers__box .MuiInputBase-root button {
+    width: 34px;
+    height: 34px;
+    background-image: url("../../assets/CalendarBlank.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -8px;
+}

@@ -1,19 +1,55 @@
 .select-window {
-    border: none;
-    outline: none;
-}
-.select-window:focus{
-    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: max-content;
 }
 
-.select-window .MuiSelect-select {
-    height: max-content;
-    padding: 5px 10px;
-    background: #FFFFFF;
+.select-window__icon {
+    position: absolute;
+    right: 15px;
+}
+
+.select-window__select {
+    border: none;
+    outline: none;
+    min-width: 138px;
+}
+
+.select-window__select {
+
+}
+
+.select-window__select fieldset {
+    display: none;
+}
+
+.select-window__select .MuiSelect-icon {
+    display: none;
+}
+
+.select-window__select .MuiSelect-select {
+    padding: 5px 10px !important;;
     border-radius: 5px;
     border: none;
+    width: 100% !important;
+    background-color: #FFFFFF;
+    background-image: url("../../assets/CaretDown.svg");
+    background-position: 115px center;
+    background-repeat: no-repeat;
+    /*border-bottom: 1px solid #FFFFFF;*/
 }
-.select-window .MuiList-root {
+
+.select-window__select .MuiSelect-select[aria-expanded="true"] {
+    background-color: #FFFFFF !important;
+    box-shadow: 10px 0 35px rgb(0 0 0 / 10%);
+    border-radius: 5px 5px 0 0;
+    background-image: url("../../assets/CaretUp.svg");
+    /*border-bottom: rgba(0, 0, 0, 0.05);*/
+}
+
+.select-window__select .MuiList-root {
     background: #FFFFFF;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
@@ -26,10 +62,15 @@
     line-height: 20px;
 }
 
+.select-window__option:first-of-type {
+    border-top: 1px solid rgba(0, 0, 0, 0.05)
+}
+
 .select-window__option.Mui-selected {
     background-color: transparent !important;
 }
 
-.select-window__option:hover {
-    background-color: gainsboro !important;
+.select-window__option.MuiButtonBase-root:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 3px;
 }

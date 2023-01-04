@@ -9,11 +9,15 @@ import SelectWindow from "../select-window";
 const arraySelect = [
     {
         value: 1,
-        label: 'dratute'
+        label: 'PM'
     },
     {
         value: 2,
-        label: 'hello'
+        label: 'Manager'
+    },
+    {
+        value: 3,
+        label: 'Leave'
     }
 ]
 
@@ -29,12 +33,12 @@ function InputSearch(props) {
                 : null }
             { props.select ?
                 <div className='input-search__select' placeholder={props.text}>
-                    <SelectWindow value={2} array={arraySelect} />
+                    <SelectWindow value={1} array={arraySelect} />
                 </div>
                 : null }
             <InputBase
                 className='input-search__base'
-                placeholder="Search"
+                placeholder={props.text ? props.text : 'Search'}
             />
             <div className='input-search__btn'>
                 <Glass />

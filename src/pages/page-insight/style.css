@@ -1,0 +1,75 @@
+.page-insight__menu {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 35px 20px 30px 25px;
+    flex-shrink: 0;
+    min-width: 180px;
+    height: 298px;
+}
+
+.page-insight__content {
+    width: 100%;
+}
+
+.page-insight__title {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0 0 35px;
+}
+
+.page-insight__box {
+    display: flex;
+    margin-top: -60px;
+    gap: 0 50px;
+}
+
+.page-insight__list .MuiButtonBase-root {
+    padding: 0 !important;
+}
+
+.page-insight .MuiTabs-flexContainer {
+    flex-direction: column;
+}
+
+.page-insight .MuiTabs-indicator {
+    background: transparent;
+}
+
+.page-insight .MuiTabs-flexContainer {
+    gap: 15px 0;
+}
+
+.page-insight__tab {
+    background: transparent !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    line-height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #000000 !important;
+    opacity: 0.3 !important;
+    text-transform: none !important;
+    flex-direction: row !important;
+    gap: 0 10px;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    width: 130px;
+
+}
+
+.page-insight__tab.Mui-selected {
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+.page-insight__list .Mui-selected .page-insight__svg {
+    color: #FF007A !important;
+}
+
+.page-insight__filter {
+    /*display: flex;*/
+    /*gap: 0 15px;*/
+    /*align-items: center;*/
+}

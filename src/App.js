@@ -6,6 +6,7 @@ import CreateProject from "./pages/create-project";
 import PageTemplate from "./pages/page-templete";
 import PageProjects from "./pages/page-projects";
 import {useState} from "react";
+import PageInsight from "./pages/page-insight";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/projects" element={<CreateProject join={join} />}/>
                 <Route path="/projects/template" element={<PageTemplate />}/>
                 <Route path="/projects/all" element={<PageProjects />}/>
+                <Route path="/insights" element={<PageInsight />}/>
             </Routes>
         </BrowserRouter>
     );
