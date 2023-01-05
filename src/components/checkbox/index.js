@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './checkbox.css'
 
 function Checkbox(props) {
     return (

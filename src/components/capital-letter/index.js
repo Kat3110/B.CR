@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './capital-letter.css'
 
 function CapitalLetter(props) {
     return (

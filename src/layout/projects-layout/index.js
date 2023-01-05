@@ -1,5 +1,5 @@
 import * as React from "react";
-import './style.css';
+import './project-layout.css';
 import BackgroundImg from "../../components/background-img";
 import bgImage2 from "../../assets/maskBG2.jpg";
 import InputSearch from "../../components/input-search";

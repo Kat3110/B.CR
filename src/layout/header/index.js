@@ -1,7 +1,7 @@
 import * as React from "react";
 import logo from "../../assets/logo.svg";
 import HeaderBar from "../header-bar";
-import './style.css';
+import './header.css';
 
 function Header(props) {
     return (

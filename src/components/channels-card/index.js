@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './channels-card.css'
 import CustomTooltip from "../custom-tooltip";
 import CapitalLetter from "../capital-letter";
 

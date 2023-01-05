@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useState} from "react";
-import './style.css'
+import './create-project.css'
 import DialogUploadImg from "../../components/dialog-upload-img";
 import BackgroundImg from "../../components/background-img";
 import bcgCreate from '../../assets/bcgCreate.svg'

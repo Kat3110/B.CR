@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './button-filter.css'
 
 function ButtonFilter(props) {
     return (

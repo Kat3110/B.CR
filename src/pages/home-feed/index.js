@@ -16,7 +16,7 @@ import ChannelsCard from "../../components/channels-card";
 import ProjectCard from "../../components/project-card";
 import MainTitle from "../../components/main-title";
 
-import './style.css'
+import './home-feed.css'
 import ArrowUUpLeft from "../../assets/ArrowUUpLeft.svg";
 import ArrowElbowLeft from "../../assets/ArrowElbowLeft.svg";
 import TrendUp from "../../assets/TrendUp.svg";

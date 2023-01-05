@@ -2,7 +2,7 @@ import * as React from 'react';
 import Chip from '@mui/material/Chip';
 import Paper from '@mui/material/Paper';
 import {ReactComponent as DeleteIcon} from "../../assets/DeleteIcon.svg";
-import './style.css'
+import './chip-member.css'
 
 export default function ChipMember(props) {
     const [chipData, setChipData] = React.useState(props.array);

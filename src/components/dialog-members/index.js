@@ -1,16 +1,14 @@
 import * as React from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
 import './style.css';
 import {ReactComponent as PaperPlaneTilt} from "../../assets/PaperPlaneTilt.svg";
 import {ReactComponent as Setting} from "../../assets/setting.svg";
-import {ReactComponent as Close} from "../../assets/Plus.svg";
 import ButtonChange from "../button-change";
 import InputSearch from "../input-search";
 import Button from "../../components/button";
 import ChipMember from "../chip-member";
 import CapitalLetter from "../capital-letter";
 import SelectWindow from "../select-window";
+import DialogPattern from "../dialog-pattern";
 
 const arrayListMember = [
     {
@@ -78,35 +76,15 @@ const arrayChip = [
 ]
 
 function DialogMembers() {
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     return (
-        <div className='dialog-members'>
-            <ButtonChange icon={<Setting />} onClick={handleClickOpen} />
-            <Dialog
-                className='dialog-members__window'
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-            >
-                <DialogContent className='dialog-members__box'>
-                    <div className='dialog-members__headline'>
-                        <h2 className='dialog-members__title'>
-                            <Setting/>
-                            Members
-                        </h2>
-                        <Close className='dialog-members__close' onClick={handleClose} />
-                    </div>
-                    <div className='dialog-members__content'>
+        <>
+            <DialogPattern
+                trigger={<ButtonChange icon={<Setting />} />}
+                icon={<Setting/>}
+                title='Members'
+                content={
+                    <>
                         <div className='dialog-members__search'>
                             <InputSearch text='Email adress' select/>
                             <Button
@@ -150,10 +128,10 @@ function DialogMembers() {
                                     </div>))}
                             </div>
                         </div>
-                    </div>
-                </DialogContent>
-            </Dialog>
-        </div>
+                    </>
+                }
+            />
+        </>
     );
 }
 

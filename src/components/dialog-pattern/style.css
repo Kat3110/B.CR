@@ -1,0 +1,64 @@
+.dialog-pattern__window .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+    border-radius: 30px;
+    padding: 40px 30px 30px !important;
+    max-width: 660px !important;
+    width: 100%;
+}
+
+.dialog-pattern__window .MuiDialog-paperScrollPaper {
+    overflow-x: hidden !important;
+}
+
+.dialog-pattern__box {
+    display: flex;
+    padding: 0 !important;
+    overflow: hidden;
+    flex-direction: column;
+    width: 99%;
+    gap: 30px 0;
+}
+
+.dialog-pattern__content {
+    overflow-y: auto;
+    padding-right: 1px;
+    /*max-height: 600px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialog-pattern__headline {
+    display: flex;
+    padding: 0 !important;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.dialog-pattern__title {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 17px;
+    align-items: center;
+    gap: 0 7px;
+}
+
+.dialog-pattern__title svg {
+    width: 20px;
+    height: 20px;
+    color: #FF007A;
+}
+
+.dialog-pattern__close {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    margin: 0 0 auto;
+}
+
+.dialog-pattern__close:hover {
+    transition: 0.3s;
+    opacity: 0.3;
+}

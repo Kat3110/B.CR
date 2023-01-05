@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './checkbox-template.css'
 
 //radio
 function CheckboxTemplate(props) {

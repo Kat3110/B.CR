@@ -1,11 +1,9 @@
 .insight-filter {
     width: 100%;
-    height: 338px;
     background: #FFFFFF;
     border-radius: 15px;
-    padding: 37px 50px;
     display: flex;
-    gap: 55px 0;
+    margin: 0;
     flex-direction: column;
 }
 
@@ -13,9 +11,18 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
-    margin: 0;
+    margin: 0 0 55px;
     color: #000000;
+}
 
+.insight-filter__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 15px;
+    position: relative;
 }
 
 .insight-filter__row-first {
@@ -35,5 +42,18 @@
     font-weight: 700;
     font-size: 15px;
     color: #000000;
-    margin: 0 45px 0 0;
+    min-width: 100px;
+    margin: 0;
+}
+
+.insight-filter__row-second,
+.insight-filter__row-third{
+    display: flex;
+    align-items: center;
+}
+
+.insight-filter__box .button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }

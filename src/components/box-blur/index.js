@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Smail from '../../assets/SmileyWink.svg'
-import './style.css'
+import './box-blur.css'
 
 
 function BoxBlur(props) {

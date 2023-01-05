@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink } from "react-router-dom";
-import './style.css'
+import './header-bar.css'
 import CapitalLetter from "../../components/capital-letter";
 import DropdownNotification from "../../components/dropdown-notification";
 

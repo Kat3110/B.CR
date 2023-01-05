@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './box-template.css'
 import { ReactComponent as Change } from "../../assets/change.svg";
 import { ReactComponent as Lock } from "../../assets/LockLaminated.svg";
 import { ReactComponent as CaretRight } from "../../assets/CaretRight.svg";

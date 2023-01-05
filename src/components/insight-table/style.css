@@ -1,0 +1,51 @@
+.insight-table {
+    position: relative;
+}
+
+.insight-table .button {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.insight-table table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.insight-table thead th {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    background: rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    font-size: 13px;
+    color: black;
+    border: none;
+}
+
+.insight-table .MuiTableCell-root{
+    border-bottom: none !important;
+}
+
+.insight-table td.MuiTableCell-root{
+    border-bottom: none !important;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+}
+
+.insight-table thead th:first-of-type {
+    border-radius: 10px 0 0 10px !important;
+}
+
+.insight-table thead th:last-of-type {
+    border-radius: 0 10px 10px 0 !important;
+}
+
+.insight-table tbody th {
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.3;
+}

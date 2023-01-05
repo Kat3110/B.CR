@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './page-projects.css'
 import ProjectsLayout from "../../layout/projects-layout"
 import { ReactComponent as Plus } from '../../assets/Plus.svg'
 import RadioProjects from "../../components/radio-projects";
@@ -13,7 +13,6 @@ import ButtonChange from "../../components/button-change";
 import {ReactComponent as DoneIcon} from "../../assets/PencilSimpleLine.svg";
 import {ReactComponent as DoneIcon1} from "../../assets/PencilSimpleLine.svg";
 import {ReactComponent as Download} from "../../assets/Download.svg";
-import {ReactComponent as Setting} from "../../assets/setting.svg";
 import TextField from "@mui/material/TextField";
 import BoxTemplate from "../../components/box-template";
 import Checkbox from "../../components/checkbox";
@@ -28,12 +27,11 @@ import { ReactComponent as Close } from "../../assets/Plus.svg";
 import HTMLTooltip from '../../components/custom-tooltip'
 import { ReactComponent as LinkSimple } from '../../assets/LinkSimple.svg'
 import { ReactComponent as ChatCircle } from '../../assets/ChatCircle.svg'
-import { ReactComponent as File } from '../../assets/File.svg'
 import CheckboxesDelete from "../../components/checkboxes-delete";
 import DialogCancel from "../../components/dialog-cancel";
 import DialogSave from "../../components/dialog-save";
-import Button from "../../components/button";
 import DialogMembers from "../../components/dialog-members";
+import DialogFiles from "../../components/dialog-files";
 
 
 const arrayRadioProjects = [
@@ -280,9 +278,7 @@ function PageProjects() {
                                                             <div>
                                                                 <ChatCircle /> Mention
                                                             </div>
-                                                            <div>
-                                                                <File /> Files
-                                                            </div>
+                                                            <DialogFiles />
                                                             <div>
                                                                 <LinkSimple /> Url
                                                             </div>

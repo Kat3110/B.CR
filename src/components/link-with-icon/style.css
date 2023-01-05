@@ -1,0 +1,23 @@
+.link-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-with-icon__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.link-with-icon__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000000;
+}

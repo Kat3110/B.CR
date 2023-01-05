@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Chip from '@mui/material/Chip'
-import './style.css'
+import './checkboxes-delete.css'
 import {ReactComponent as Plus} from '../../assets/Plus.svg'
 import {ReactComponent as Trash} from '../../assets/Trash.svg'
 import Checkbox from "../checkbox";

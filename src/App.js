@@ -10,7 +10,7 @@ import PageInsight from "./pages/page-insight";
 
 
 function App() {
-    const [join, setJoin] = useState(false)
+    const [join, setJoin] = useState(true)
 
     return (
         <BrowserRouter>

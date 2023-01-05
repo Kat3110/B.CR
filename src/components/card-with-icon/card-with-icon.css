@@ -1,0 +1,46 @@
+.card-with-icon {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card-with-icon__svg {
+    flex-shrink: 0;
+}
+
+.card-with-icon__content {
+    display: flex;
+}
+
+.card-with-icon__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-with-icon__image {
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.card-with-icon__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-with-icon__date {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
+}

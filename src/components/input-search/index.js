@@ -33,7 +33,7 @@ function InputSearch(props) {
                 : null }
             { props.select ?
                 <div className='input-search__select' placeholder={props.text}>
-                    <SelectWindow value={1} array={arraySelect} />
+                    <SelectWindow color='white' value={1} array={arraySelect} />
                 </div>
                 : null }
             <InputBase

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useState} from "react";
-import './style.css'
+import './page-template.css'
 import Checkbox from "../../components/checkbox";
 import CheckboxTemplate from "../../components/checkbox-template";
 import TabContext from "@mui/lab/TabContext";
@@ -19,7 +19,6 @@ import ChipsDelete from "../../components/chip-delete";
 import ProjectsLayout from "../../layout/projects-layout"
 import DialogCancel from "../../components/dialog-cancel";
 import DialogSave from "../../components/dialog-save";
-import {Button} from "@mui/material";
 
 const arrayCheckboxTemplate = [
     {
