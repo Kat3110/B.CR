@@ -25,13 +25,13 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Microphone } from "../../assets/microphone.svg";
 import { ReactComponent as Close } from "../../assets/Plus.svg";
 import HTMLTooltip from '../../components/custom-tooltip'
-import { ReactComponent as LinkSimple } from '../../assets/LinkSimple.svg'
 import { ReactComponent as ChatCircle } from '../../assets/ChatCircle.svg'
 import CheckboxesDelete from "../../components/checkboxes-delete";
 import DialogCancel from "../../components/dialog-cancel";
 import DialogSave from "../../components/dialog-save";
 import DialogMembers from "../../components/dialog-members";
 import DialogFiles from "../../components/dialog-files";
+import DialogUrl from "../../components/dialog-url";
 
 
 const arrayRadioProjects = [
@@ -279,9 +279,7 @@ function PageProjects() {
                                                                 <ChatCircle /> Mention
                                                             </div>
                                                             <DialogFiles />
-                                                            <div>
-                                                                <LinkSimple /> Url
-                                                            </div>
+                                                            <DialogUrl />
                                                         </div>
                                                     }
                                                 />

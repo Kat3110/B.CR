@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
-import './style.css'
+import './dialog-templates.css'
 import {ReactComponent as Edit} from '../../assets/PencilSimpleLine.svg'
 import InputSearch from "../input-search";
 import Checkbox from "../checkbox";

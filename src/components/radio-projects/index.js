@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './radio-projects.css'
 import {ReactComponent as Pinned} from '../../assets/pinned.svg'
 import {useState} from "react";
 import CapitalLetter from "../capital-letter";

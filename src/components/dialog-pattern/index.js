@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import './style.css';
+import './dialog-pattern.css';
 import {ReactComponent as Close} from "../../assets/Plus.svg";
 
 function DialogPattern(props) {

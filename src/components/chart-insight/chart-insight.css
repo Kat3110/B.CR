@@ -1,3 +1,113 @@
 .chart-insight {
     width: 100%;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.chart-insight div {
+    width: 2000px;
+    height: 300px;
+}
+
+.chart-insight canvas {
+    width: 100% !important;
+}
+
+.chart-insight__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0 0;
+}
+
+.chart-insight__button-group {
+    width: 205px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.chart-insight__button {
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(0,0,0,0.25);
+}
+
+.chart-insight__button-active {
+    font-weight: 700;
+    font-size: 15px;
+    color: #FF007A;
+}
+
+.chart-insight__button-active:hover {
+    color: #FF007A !important;
+}
+
+.chart-insight__button:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+.chart-insight__checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chart-insight__checkbox label{
+    cursor: pointer;
+}
+
+.chart-insight__checkbox label:hover{
+    transition: 0.3s;
+    color: rgba(0,0,0,0.30);
+}
+
+.chart-insight__drop-menu .MuiPaper-elevation {
+    width: max-content;
+}
+
+.chart-insight__menu .dropdown-menu__trigger[aria-expanded^="true"] {
+    opacity: 1 !important;
+}
+
+.chart-insight__menu .dropdown-menu__trigger svg {
+    width: 18px;
+    height: 18px;
+}
+
+.chart-insight__box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.chart-insight__legend {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.chart-insight__legend button{
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+}
+
+.chart-insight__legend button span{
+    height: 3px;
+    width: 10px;
 }

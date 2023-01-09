@@ -1,9 +1,7 @@
 import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import ListSubheader from '@mui/material/ListSubheader';
-import {ReactComponent as CaretDown} from "../../assets/CaretDown.svg";
-import './style.css'
+import './select-window.css'
 
 function SelectWindow(props) {
     const MenuProps = {

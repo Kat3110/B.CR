@@ -1,0 +1,23 @@
+.insight-table__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.insight-table__btn-group .button {
+    position: relative;
+    top: inherit;
+    right: inherit;
+}
+
+.insight-table__btn-group svg path{
+    color: grey;
+}
+
+.insight-table__btn-group:hover svg path{
+    color: white;
+    transition: 0.3s;
+}

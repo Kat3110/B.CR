@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import './style.css'
+import './dialog-cancel.css'
 import Button from "../button";
 import GroupButton from "../group-button";
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './insight-title.css'
 
 
 function InsightTitle(props) {

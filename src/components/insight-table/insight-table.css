@@ -49,3 +49,18 @@
     color: #000000;
     opacity: 0.3;
 }
+
+.insight-table tbody td:first-of-type {
+    border-radius: 5px 0 0 5px !important;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.insight-table tbody td:last-of-type {
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.insight-table tbody tr:hover td {
+    background: rgba(0, 0, 0, 0.02);
+}

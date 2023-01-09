@@ -9,9 +9,7 @@
 
 .page-insight__content {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    max-width: 1270px;
 }
 
 .page-insight__title {
@@ -59,7 +57,6 @@
     justify-content: flex-start !important;
     padding: 0 !important;
     width: 130px;
-
 }
 
 .page-insight__tab.Mui-selected {
@@ -92,4 +89,50 @@
 
 .page-insight__content div[role="tabpanel"] {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1270px;
+}
+
+.page-insight__chart {
+    position: relative;
+}
+
+.page-insight__chart:before {
+    content: '';
+    display: block;
+    overflow-y: scroll;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.page-insight__times {
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-insight__times span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.page-insight__chart .dropdown-menu svg {
+    margin: 0;
+}
+
+.page-insight__chart .dropdown-menu .button {
+    padding: 10px;
 }

@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import {ReactComponent as Glass} from "../../assets/MagnifyingGlass.svg";
 import {ReactComponent as Slider} from "../../assets/Sliders.svg";
-import './style.css'
+import './input-search.css'
 import SelectWindow from "../select-window";
 
 const arraySelect = [

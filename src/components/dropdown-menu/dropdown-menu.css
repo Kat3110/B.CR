@@ -45,3 +45,7 @@
 .dropdown-menu__trigger[aria-expanded^="true"] {
     opacity: 0.2;
 }
+
+.dropdown-menu__trigger .button {
+    position: relative !important;
+}

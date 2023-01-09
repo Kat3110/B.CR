@@ -1,11 +1,15 @@
 import * as React from 'react';
-import './style.css'
+import './link-with-icon.css'
+import {ReactComponent as LinkSimpleDialog} from "../../assets/LinkSimpleDialog.svg";
 
 function LinkWithIcon(props) {
     return (
         <div className="link-with-icon">
             <span className="link-with-icon__img">
-                <img src={props.icon} alt='' />
+                {props.icon ?
+                    <img src={props.icon} alt='' />
+                    : <LinkSimpleDialog />
+                }
             </span>
             <a
                 className="link-with-icon__text"

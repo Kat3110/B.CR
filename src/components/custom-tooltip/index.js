@@ -1,7 +1,7 @@
 import {styled} from "@mui/material/styles";
 import Tooltip, {tooltipClasses} from "@mui/material/Tooltip";
 import * as React from "react";
-import './style.css'
+import './custom-tooltip.css'
 
 const HTMLTooltip = styled(({className, ...props}) => (
     <Tooltip {...props} classes={{popper: className}} placement="top"/>))(({theme}) => ({

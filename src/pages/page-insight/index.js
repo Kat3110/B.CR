@@ -8,13 +8,25 @@ import BackgroundImg from "../../components/background-img";
 import bgImage from "../../assets/maskBG.png";
 import {ReactComponent as User} from "../../assets/Users.svg";
 import {ReactComponent as Scroll} from "../../assets/Scroll.svg";
-import {ReactComponent as ToggleRightfrom} from "../../assets/ToggleRight.svg";
+import {ReactComponent as ToggleRightFrom} from "../../assets/ToggleRight.svg";
 import bgImage2 from "../../assets/maskBG2.jpg";
 import InsightFilter from "../../components/insight-filter";
 import ChartInsight from "../../components/chart-insight";
 import Clock from "../../assets/ClockCounterClockwise.svg";
 import MainTitle from "../../components/main-title";
 import InsightTable from "../../components/insight-table";
+import InsightTableTwo from "../../components/insight-table-two";
+import InsightTableThree from "../../components/insight-table-three";
+import InsightTableFour from "../../components/insight-table-four";
+import InsightTableFive from "../../components/insight-table-five";
+import InsightTableSix from "../../components/insight-table-six";
+import InsightTableSeven from "../../components/insight-table-seven";
+import InsightTableEight from "../../components/insight-table-eight";
+import InsightTableProjects from "../../components/insight-table-projects";
+import ArrowUpLeft from "../../assets/ArrowUUpLeft.svg";
+import ArrowElbowLeft from "../../assets/ArrowElbowLeft.svg";
+import TrendUp from "../../assets/TrendUp.svg";
+import TrendDown from "../../assets/TrendDown.svg";
 
 
 function PageInsight(props) {
@@ -44,7 +56,7 @@ function PageInsight(props) {
                         >
                             <Tab
                                 disableRipple
-                                label={<><ToggleRightfrom className='page-insight__svg'/>Dashboard</>}
+                                label={<><ToggleRightFrom className='page-insight__svg'/>Dashboard</>}
                                 value="1"
                                 className='page-insight__tab'
                             />
@@ -69,22 +81,62 @@ function PageInsight(props) {
                             <div className="page-insight__card">
                                 <div className='page-insight__filter'>
                                     <MainTitle title='Dashboard'/>
-                                    <InsightFilter title='Period' image={Clock} />
-                                    <ChartInsight />
+                                    <InsightFilter active title='Period' image={Clock} />
+                                    <div className='page-insight__chart'>
+                                        <ChartInsight />
+                                    </div>
                                 </div>
                                 <div className='page-insight__filter'>
                                     <InsightFilter title='Data' image={Clock} />
-                                    <ChartInsight />
+                                    <div className='page-insight__chart'>
+                                        <ChartInsight />
+                                    </div>
                                 </div>
                             </div>
                             <div className="page-insight__card">
                                 <div className="page-insight__table">
                                     <MainTitle title='Projects data'/>
-                                    <InsightTable />
+                                    <InsightTable title={'Fastest response time'} image={ArrowUpLeft} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableTwo title={'Slowest response time'} image={ArrowElbowLeft} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableThree title={'Largest data amount'} image={TrendUp} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableFour title={'Smallest data amount'} image={TrendDown} />
+                                </div>
+                            </div>
+                            <div className="page-insight__card">
+                                <div className="page-insight__table">
+                                    <MainTitle title='Users data'/>
+                                    <InsightTableFive title={'Fastest response time'} image={ArrowUpLeft} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableSix title={'Slowest response time'} image={ArrowElbowLeft} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableSeven title={'Largest data amount'} image={TrendUp} />
+                                </div>
+                                <div className="page-insight__table">
+                                    <InsightTableEight title={'Smallest data amount'} image={TrendDown} />
                                 </div>
                             </div>
                         </TabPanel>
-                        <TabPanel value="2">2</TabPanel>
+                        <TabPanel value="2">
+                            <div className="page-insight__card">
+                                <div className='page-insight__filter'>
+                                    <MainTitle title='Project Data'/>
+                                    <InsightFilter />
+                                </div>
+                            </div>
+                            <div className="page-insight__card">
+                                <div className="page-insight__table">
+                                    <InsightTableProjects />
+                                </div>
+                            </div>
+                        </TabPanel>
                         <TabPanel value="3">3</TabPanel>
                     </TabContext>
                 </div>

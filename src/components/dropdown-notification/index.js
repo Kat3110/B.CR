@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Menu from '@mui/material/Menu';
-import './style.css'
+import './dropdown-notification.css'
 import bell from "../../assets/Bell.svg";
 import Badge from "@mui/material/Badge";
 import TabContext from "@mui/lab/TabContext";

@@ -1,0 +1,86 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pagination__box {
+    display: flex;
+    gap: 0 10px;
+    align-items: center;
+}
+
+.pagination__page {
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+}
+
+.pagination__leaf {
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+}
+
+.pagination__leaf span{
+    font-weight: 700;
+}
+
+.pagination__number{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0,0,0,0.1);
+}
+
+.pagination__number span{
+    cursor: pointer;
+}
+
+.pagination__number span:hover{
+    color: rgba(0,0,0,0.4);
+}
+
+.pagination__number-active{
+    color: #FF007A;
+    font-weight: 700;
+}
+
+.pagination__svg-rotate {
+    transform: rotate(180deg);
+}
+
+.pagination__svg {
+    margin-right: 27px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination__svg svg{
+    cursor: pointer;
+}
+
+.pagination__svg:last-of-type {
+    margin: 0 0 0 27px;
+}
+
+.pagination__svg:last-of-type path {
+    color: black;
+}
+
+.pagination__drop .MuiPaper-elevation {
+    width: max-content;
+}
+
+.pagination__drop .dropdown-menu__trigger[aria-expanded^="true"] {
+    opacity: 1 !important;
+}
+
+.pagination__drop .dropdown-menu__trigger svg {
+    width: 18px;
+    height: 18px;
+}

@@ -1,25 +1,16 @@
 import * as React from 'react';
-import './style.css';
+import './dialog__files.css';
 import {ReactComponent as File} from "../../assets/File.svg";
 import FileLink from "../../assets/FileLink.svg";
 import image33 from "../../assets/image33.jpg";
 import image34 from "../../assets/image34.jpg";
 import DialogPattern from "../dialog-pattern";
-import {ReactComponent as Setting} from "../../assets/setting.svg";
 import InputSearch from "../input-search";
 import CardWithIcon from "../card-with-icon/card-with-icon";
 import {ReactComponent as DownloadSimple} from "../../assets/DownloadSimple.svg";
 
 const arrayCards = [
     {
-        content: '1',
-        color: '#00E99E',
-        name: 'Hubert Benjamin',
-        date: 'Aug 3, 2022 at 11:27 AM',
-        link: 'Passwords.xlsx'
-    },
-    {
-        content: '1',
         name: 'Benjamin Hubert',
         color: '#FFD702',
         image: image33,
@@ -27,7 +18,6 @@ const arrayCards = [
         link: 'science.png'
     },
     {
-        content: '1',
         name: 'EDGAR',
         color: '#00A3FF',
         image: image34,
@@ -35,11 +25,16 @@ const arrayCards = [
         link: 'science.png'
     },
     {
-        content: '1',
         name: 'Angelica',
         color: '#8F00FF',
         date: 'Aug 3, 2022 at 11:27 AM',
         link: 'Contract.docx'
+    },
+    {
+        color: '#00E99E',
+        name: 'Hubert Benjamin',
+        date: 'Aug 3, 2022 at 11:27 AM',
+        link: 'Passwords.xlsx'
     }
 ]
 
@@ -50,7 +45,7 @@ function DialogFiles() {
             <DialogPattern
                 className='dialog__files'
                 trigger={<><File /> Files</>}
-                icon={<Setting/>}
+                icon={<File />}
                 title='Files'
                 content={<>
                     <InputSearch text='Search' />

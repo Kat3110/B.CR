@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './mention-card.css'
 import CapitalLetter from "../capital-letter";
 
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './main-title.css'
 
 
 function MainTitle(props) {

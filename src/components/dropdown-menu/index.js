@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Menu from '@mui/material/Menu';
-import './style.css'
+import './dropdown-menu.css'
 export default function DropdownMenu(props) {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,10 +24,14 @@ export default function DropdownMenu(props) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                {props.trigger}
+                {props.changeTrigger ?
+                    open ? props.changeTrigger : props.trigger
+                    :
+                    props.trigger
+                }
             </div>
             <Menu
-                className='dropdown-menu__content'
+                className={`dropdown-menu__content ${ props.nameClass }`}
                 id={props.id}
                 anchorEl={anchorEl}
                 open={open}

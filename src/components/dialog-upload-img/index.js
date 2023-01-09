@@ -1,11 +1,10 @@
 import * as React from 'react';
-import './style.css'
+import './dialog-upload-img.css'
 import {ReactComponent as Edit} from '../../assets/PencilSimpleLine.svg'
 import {ReactComponent as EmptyPicture} from '../../assets/emptyPicture.svg'
 import {ReactComponent as Pluse} from '../../assets/Plus.svg'
 import Dialog from '@mui/material/Dialog';
 import GroupButton from "../group-button";
-import Button from "../button";
 
 
 function DialogUploadImg() {

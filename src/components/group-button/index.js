@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css'
+import './group-btn.css'
 import Button from "../button";
 
 function GroupButton(props) {

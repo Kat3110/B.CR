@@ -1,11 +1,10 @@
 import * as React from 'react';
-import './style.css'
+import './insight-filter.css'
 import DatePickers from "../../components/date-pickers";
 import ButtonFilter from "../button-filter";
 import Button from "../../components/button";
 import SelectWindow from "../../components/select-window";
 import InsightTitle from "../insight-title";
-import MainTitle from "../main-title";
 
 const arraySelectStep = [
     {
@@ -57,7 +56,9 @@ function InsightFilter(props) {
 
     return (
         <div className='insight-filter'>
-            <InsightTitle title={props.title} image={props.image}/>
+            {props.title ?
+                <InsightTitle title={props.title} image={props.image}/>
+                : null}
             <div className='insight-filter__box'>
                 <div className='insight-filter__row-first'>
                     <h3 className='insight-filter__subtitle'>Period</h3>
@@ -67,7 +68,7 @@ function InsightFilter(props) {
                     <ButtonFilter color='default' text='2 Days'/>
                     <ButtonFilter color='default' text='1 Day'/>
                     <ButtonFilter color='default' text='1 Month'/>
-                    <ButtonFilter color='pink' text='3 Months'/>
+                    <ButtonFilter color={props.active ? 'pink' : 'default'} text='3 Months'/>
                     <ButtonFilter color='default' text='6 Months'/>
                     <ButtonFilter color='default' text='1 Year'/>
                 </div>

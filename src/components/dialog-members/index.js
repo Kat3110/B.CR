@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './style.css';
+import './dialog-members.css';
 import {ReactComponent as PaperPlaneTilt} from "../../assets/PaperPlaneTilt.svg";
 import {ReactComponent as Setting} from "../../assets/setting.svg";
 import ButtonChange from "../button-change";
