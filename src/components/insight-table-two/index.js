@@ -10,6 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CapitalLetter from "../capital-letter";
 import Button from "../button";
+import ChipMember from "../chip-member";
 
 function InsightTableTwo(props) {
 

@@ -23,6 +23,7 @@ function InsightTableFive(props) {
             {
                 name: 'Aron H.',
                 color: '#00A3FF',
+                email: 'aron@internet.com'
 
             },
             'Manager',
@@ -37,6 +38,7 @@ function InsightTableFive(props) {
             {
                 name: 'Yves Saint Laurent',
                 color: '#8F00FF',
+                email: 'aron@internet.com'
 
             },
             'Manager',
@@ -51,6 +53,7 @@ function InsightTableFive(props) {
             {
                 name: 'Angelica',
                 color: '#00A3FF',
+                email: 'aron@internet.com'
 
             },
             'Manager',
@@ -65,6 +68,7 @@ function InsightTableFive(props) {
             {
                 name: 'EDGAR',
                 color: '#00A3FF',
+                email: 'aron@internet.com'
 
             },
             'Manager',
@@ -79,7 +83,7 @@ function InsightTableFive(props) {
             {
                 name: 'Hubert Benjamin',
                 color: '#00E99E',
-
+                email: 'aron@internet.com'
             },
             'Manager',
             50,
@@ -122,7 +126,11 @@ function InsightTableFive(props) {
                                                alignItems: 'center',
                                                gap: '0 5px'
                                 }}>
-                                    <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
+                                    <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/>
+                                    <div className='insight-table__pm'>
+                                        <span>{row.pm.name}</span>
+                                        <span>{row.pm.email}</span>
+                                    </div>
                                 </TableCell>
                                 <TableCell align="left">{row.authority}</TableCell>
                                 <TableCell align="left">{row.joined}</TableCell>

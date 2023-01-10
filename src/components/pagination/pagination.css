@@ -84,3 +84,50 @@
     width: 18px;
     height: 18px;
 }
+
+.pagination__drop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+    gap: 10px;
+}
+
+.pagination__drop .dropdown-menu__trigger button{
+    padding: 10px;
+    gap: 33px !important;
+}
+
+.pagination__drop .dropdown-menu__trigger .button:hover svg{
+   background-color: #ffffff;
+}
+
+.pagination__drop-menu .MuiPaper-elevation {
+    width: max-content;
+    padding: 20px;
+}
+
+
+.pagination__drop-list {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    padding: 0;
+}
+
+.pagination__drop-list span{
+   cursor: pointer;
+}
+
+.pagination__drop-list span:hover{
+    color: rgba(0,0,0,0.4);
+}
+
+.pagination .button {
+    display: flex !important;
+}

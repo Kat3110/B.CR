@@ -86,7 +86,14 @@ function InsightTable(props) {
 
     return (
         <div className='insight-table'>
-            <InsightTitle title={props.title} image={props.image} />
+            <InsightTitle
+                title={props.title}
+                image={
+                    <>
+                        {props.image}
+                    </>
+                }
+            />
             <Button text='See all' />
             <TableContainer>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">

@@ -1,0 +1,175 @@
+.page-login {
+    display: flex;
+    flex-direction: column;
+    padding-top: 168px;
+    align-items: center;
+}
+
+.page-login__form img{
+   margin-bottom: 40px;
+}
+
+.page-login__form {
+    max-width: 566px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-login__form .MuiFormControl-root{
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px !important;
+    border: none !important;
+    height: 80px;
+}
+
+.page-login__form fieldset{
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.page-login__form .MuiInputBase-root::placeholder{
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.page-login__form .MuiInputBase-root input {
+    width: 100% !important;
+    height: 100%;
+    padding: 0 20px !important;
+    position: relative;
+}
+
+.page-login__form .page-login__input-error .MuiInputBase-root,
+.page-login__form .page-login__input-error .MuiInputBase-root input {
+    color: red;
+}
+
+
+.page-login__label-code .page-login__input-error .MuiInputBase-root,
+.page-login__label-code .page-login__input-error .MuiInputBase-root input {
+    color: black;
+}
+
+.page-login__form .MuiInputBase-root {
+    height: 100%;
+}
+
+.page-login__send {
+    font-weight: 700;
+    font-size: 20px;
+    color: #FF007A;
+    position: absolute;
+    right: 17px;
+}
+
+.page-login__form-password{
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.page-login__btn{
+    width: 120px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.page-login__btn-active{
+    color: #FFFFFF;
+    background: #FF007A;
+    box-shadow: 0 5px 25px rgba(255, 0, 122, 0.25);
+}
+
+.page-login__recovery {
+    display: flex;
+    align-items: center;
+    gap: 0 71px;
+}
+
+.page-login__recovery div{
+    gap: 20px;
+    display: flex;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.page-login__recovery div span{
+    cursor: pointer;
+}
+
+.page-login__label {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.page-login__error {
+    position: absolute;
+    right: 20px;
+    height: 26px;
+    background: #F8899D;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #FFFFFF;
+    gap: 0 5px;
+    padding: 3px 9px;
+    align-items: center;
+    display: none;
+}
+
+.page-login__label-code .page-login__error {
+    right: 140px;
+}
+
+.page-login__error-show {
+    display: flex;
+}
+
+.page-login__error:before {
+    content: '';
+    background-image: url("../../assets/WarningCircle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.page-login__attention {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.page-login__attention img{
+    margin: 0;
+}
+
+.page-login__attention span{
+    font-weight: 400;
+    font-size: 15px;
+    color: #FF007A;
+}

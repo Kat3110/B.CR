@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './insight-table-projects.css'
+import './insight-table-projects-two.css'
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,10 +11,10 @@ import CapitalLetter from "../capital-letter";
 import {ReactComponent as ArrowSquareInPink} from "../../assets/ArrowSquareInPink.svg";
 import Pagination from '../../components/pagination'
 
-function InsightTableProjects() {
+function InsightTableProjectsTwo() {
 
-    function createData(no, project, pm, blocks, mentions, time) {
-        return {no, project, pm, blocks, mentions, time};
+    function createData(no, project, pm, emoji, image, link, video, file, data) {
+        return {no, project, pm, emoji, image, link, video, file, data};
     }
 
     const rows = [
@@ -22,13 +22,16 @@ function InsightTableProjects() {
             1,
             'Charis 2023 Summer Kids Package',
             {
-                name: 'Aron H.',
-                color: '#00A3FF',
+                name: 'Hubert Benjamin',
+                color: '#00E99E',
 
             },
             50,
             50,
-            '10 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             2,
@@ -40,7 +43,10 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '50 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             3,
@@ -52,7 +58,10 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '35 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             4,
@@ -64,31 +73,40 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '2 hours (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             5,
             'Charis 2023 Summer Kids Package',
             {
-                name: 'Hubert Benjamin',
-                color: '#00E99E',
+                name: 'Benjamin Hubert',
+                color: '#FFD702',
 
             },
             50,
             50,
-            '3 hours (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             1,
             'Charis 2023 Summer Kids Package',
             {
-                name: 'Aron H.',
-                color: '#00A3FF',
+                name: 'Hubert Benjamin',
+                color: '#00E99E',
 
             },
             50,
             50,
-            '10 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             2,
@@ -100,7 +118,10 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '50 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             3,
@@ -112,7 +133,10 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '35 minutes (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             4,
@@ -124,24 +148,30 @@ function InsightTableProjects() {
             },
             50,
             50,
-            '2 hours (average)'
+            50,
+            50,
+            50,
+            50
         ),
         createData(
             5,
             'Charis 2023 Summer Kids Package',
             {
-                name: 'Hubert Benjamin',
-                color: '#00E99E',
+                name: 'Paves',
+                color: '#FFD702',
 
             },
             50,
             50,
-            '3 hours (average)'
+            50,
+            50,
+            50,
+            50
         ),
     ];
 
     const rowsHead = [
-        'No.', 'Project', 'PM', 'Blocks', 'Mention', 'Response time'
+        'No.', 'Project', 'PM','Emoji','Image','Link', 'Video', 'File', 'Data'
     ]
 
     return (
@@ -178,9 +208,12 @@ function InsightTableProjects() {
                                 }}>
                                     <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
                                 </TableCell>
-                                <TableCell align="left">{row.blocks}</TableCell>
-                                <TableCell align="left">{row.mentions}</TableCell>
-                                <TableCell align="left">{row.time}</TableCell>
+                                <TableCell align="left">{row.emoji}</TableCell>
+                                <TableCell align="left">{row.image}</TableCell>
+                                <TableCell align="left">{row.link}</TableCell>
+                                <TableCell align="left">{row.video}</TableCell>
+                                <TableCell align="left">{row.file}</TableCell>
+                                <TableCell align="left">{row.data}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -191,6 +224,6 @@ function InsightTableProjects() {
     );
 }
 
-export default InsightTableProjects;
+export default InsightTableProjectsTwo;
 
 

@@ -341,7 +341,6 @@ function HomeFeed() {
                             />
                         ))}
                     </div>
-
                 </div>
             </div>
         </div>);

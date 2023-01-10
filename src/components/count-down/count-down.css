@@ -1,0 +1,9 @@
+.count-down__timer {
+    font-weight: 400;
+    font-size: 13px;
+    color: #FF007A;
+    position: absolute;
+    right: 150px;
+    top: 42%;
+    margin: 0 !important;
+}

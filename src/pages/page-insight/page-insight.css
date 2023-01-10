@@ -1,3 +1,7 @@
+.page-insight {
+    padding-bottom: 100px;
+}
+
 .page-insight__menu {
     background: #FFFFFF;
     border-radius: 15px;
@@ -71,7 +75,7 @@
 .page-insight__card {
     background: #FFFFFF;
     border-radius: 15px;
-    padding: 50px 50px 100px;
+    padding: 50px 50px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -102,7 +106,6 @@
 .page-insight__chart:before {
     content: '';
     display: block;
-    overflow-y: scroll;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -135,4 +138,21 @@
 
 .page-insight__chart .dropdown-menu .button {
     padding: 10px;
+}
+
+.page-insight__content .MuiPaper-root{
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 25px;
+}
+
+.page-insight__content .MuiPaper-root .MuiButtonBase-root{
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    gap: 10px;
+}
+.page-insight__panel-two .insight-table .button {
+    display: none;
 }

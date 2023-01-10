@@ -8,8 +8,6 @@ import { ReactComponent as ArrowDown } from "../../assets/CaretDown.svg";
 import { ReactComponent as ArrowUp } from "../../assets/CaretUp.svg";
 
 function Pagination() {
-
-
     return (
       <div className='pagination'>
           <div className='pagination__box'>
@@ -35,8 +33,8 @@ function Pagination() {
               <div>Lists per page</div>
               <DropdownMenu
                   nameClass='pagination__drop-menu'
-                  trigger={ <Button icon={<ArrowDown/>} />}
-                  changeTrigger={<Button icon={<ArrowUp/>}/> }
+                  trigger={ <Button reverse={true} text={'10'} icon={<ArrowDown/>} />}
+                  changeTrigger={<Button reverse={true} text={'10'} icon={<ArrowUp/>} /> }
                   content={
                       <div className='pagination__drop-list'>
                           <span>1</span>
@@ -50,7 +48,7 @@ function Pagination() {
                           <span>9</span>
                           <span>10</span>
                       </div>
-                  }/>
+                  } />
           </div>
       </div>
     );

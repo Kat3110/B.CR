@@ -1,6 +1,5 @@
 import * as React from 'react';
-import './insight-table-seven.css'
-import InsightTitle from "../insight-title";
+import './insight-table-users.css'
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,12 +8,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CapitalLetter from "../capital-letter";
-import Button from "../button";
+import {ReactComponent as ArrowSquareInPink} from "../../assets/ArrowSquareInPink.svg";
+import Pagination from '../../components/pagination'
 
-function InsightTableSeven(props) {
+function InsightTableUsers() {
 
-    function createData(rank, pm, authority, joined, text, emoji, image, link, video, file, time, access) {
-        return {rank, pm, authority, joined, text, emoji, image, link, video, file, time, access};
+    function createData(rank, pm, authority, joined, blocks, mentions, time, access) {
+        return {rank, pm, authority, joined, blocks, mentions, time, access};
     }
 
     const rows = [
@@ -24,17 +24,14 @@ function InsightTableSeven(props) {
                 name: 'Aron H.',
                 color: '#00A3FF',
                 email: 'aron@internet.com'
+
             },
             'Manager',
             50,
             50,
             50,
-            50,
-            50,
-            50,
-            50,
-            '10 minutes (average)',
-            '10 min. ago'
+            '10 min. (average)',
+            '10 minutes (average)'
         ),
         createData(
             2,
@@ -42,17 +39,14 @@ function InsightTableSeven(props) {
                 name: 'Yves Saint Laurent',
                 color: '#8F00FF',
                 email: 'aron@internet.com'
+
             },
             'Manager',
             50,
             50,
             50,
-            50,
-            50,
-            50,
-            50,
-            '10 minutes (average)',
-            '20 min. ago'
+            '10 min. (average)',
+            '10 minutes (average)'
         ),
         createData(
             3,
@@ -65,12 +59,8 @@ function InsightTableSeven(props) {
             50,
             50,
             50,
-            50,
-            50,
-            50,
-            50,
-            '10 minutes (average)',
-            '30 min. ago'
+            '10 min. (average)',
+            '10 minutes (average)'
         ),
         createData(
             4,
@@ -83,12 +73,8 @@ function InsightTableSeven(props) {
             50,
             50,
             50,
-            50,
-            50,
-            50,
-            50,
-            '10 minutes (average)',
-            '1 hour ago'
+            '10 min. (average)',
+            '10 minutes (average)'
         ),
         createData(
             5,
@@ -101,23 +87,90 @@ function InsightTableSeven(props) {
             50,
             50,
             50,
+            '10 min. (average)',
+            '10 minutes (average)'
+        ),
+        createData(
+            6,
+            {
+                name: 'Aron H.',
+                color: '#00A3FF',
+                email: 'aron@internet.com'
+
+            },
+            'Manager',
             50,
             50,
             50,
+            '10 min. (average)',
+            '10 minutes (average)'
+        ),
+        createData(
+            7,
+            {
+                name: 'Yves Saint Laurent',
+                color: '#8F00FF',
+                email: 'aron@internet.com'
+
+            },
+            'Manager',
             50,
-            '10 minutes (average)',
-            '2 hours ago'
+            50,
+            50,
+            '10 min. (average)',
+            '10 minutes (average)'
+        ),
+        createData(
+            8,
+            {
+                name: 'Angelica',
+                color: '#00A3FF',
+                email: 'aron@internet.com'
+            },
+            'Manager',
+            50,
+            50,
+            50,
+            '10 min. (average)',
+            '10 minutes (average)'
+        ),
+        createData(
+            9,
+            {
+                name: 'EDGAR',
+                color: '#00A3FF',
+                email: 'aron@internet.com'
+            },
+            'Manager',
+            50,
+            50,
+            50,
+            '10 min. (average)',
+            '10 minutes (average)'
+        ),
+        createData(
+            10,
+            {
+                name: 'Hubert Benjamin',
+                color: '#00E99E',
+                email: 'aron@internet.com'
+            },
+            'Manager',
+            50,
+            50,
+            50,
+            '10 min. (average)',
+            '10 minutes (average)'
         ),
     ];
 
     const rowsHead = [
-        'Rank', 'User', 'Authority', 'Joined', 'Text', 'Emoji', 'Images', 'Link', 'Video', 'File', 'Response time', 'Last access'
+        'Rank', 'User', 'Authority', 'Joined', 'Blocks', 'Mentions' , 'Response time', 'Last access'
     ]
+
 
     return (
         <div className='insight-table'>
-            <InsightTitle title={props.title} image={props.image} />
-            <Button text='See all' />
             <TableContainer>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -141,7 +194,7 @@ function InsightTableSeven(props) {
                                                display: 'flex',
                                                alignItems: 'center',
                                                gap: '0 5px'
-                                }}>
+                                           }}>
                                     <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/>
                                     <div className='insight-table__pm'>
                                         <span>{row.pm.name}</span>
@@ -150,12 +203,8 @@ function InsightTableSeven(props) {
                                 </TableCell>
                                 <TableCell align="left">{row.authority}</TableCell>
                                 <TableCell align="left">{row.joined}</TableCell>
-                                <TableCell align="left">{row.text}</TableCell>
-                                <TableCell align="left">{row.emoji}</TableCell>
-                                <TableCell align="left">{row.image}</TableCell>
-                                <TableCell align="left">{row.link}</TableCell>
-                                <TableCell align="left">{row.video}</TableCell>
-                                <TableCell align="left">{row.file}</TableCell>
+                                <TableCell align="left">{row.blocks}</TableCell>
+                                <TableCell align="left">{row.mentions}</TableCell>
                                 <TableCell align="left">{row.time}</TableCell>
                                 <TableCell align="left">{row.access}</TableCell>
                             </TableRow>
@@ -163,10 +212,11 @@ function InsightTableSeven(props) {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <Pagination />
         </div>
     );
 }
 
-export default InsightTableSeven;
+export default InsightTableUsers;
 
 

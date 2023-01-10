@@ -8,8 +8,17 @@ function Button(props) {
             className={
                 `button button__size-${props.size ? props.size : 'm'} button__color-${props.color ? props.color : 'default'}`
             }>
-            {props.icon}
-            {props.text}
+            {props.reverse ?
+                <>
+                    {props.text}
+                    {props.icon}
+                </>
+            :
+                <>
+                    {props.icon}
+                    {props.text}
+                </>
+            }
         </button>
     );
 }

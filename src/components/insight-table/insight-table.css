@@ -64,3 +64,8 @@
 .insight-table tbody tr:hover td {
     background: rgba(0, 0, 0, 0.02);
 }
+
+.insight-table__pm {
+    display: flex;
+    flex-direction: column;
+}

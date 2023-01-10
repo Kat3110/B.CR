@@ -34,7 +34,13 @@ export default function ChipMember(props) {
                         key={data.key}
                         className='chip-member'
                         deleteIcon={<DeleteIcon />}
-                        label={data.label}
+                        label={data.firstWord ?
+                            <>
+                                <span className='chip-member__first-word'>
+                                    {data.firstWord}
+                                </span> {data.label}
+                            </>
+                            : data.label}
                         onClick={handleClick}
                         onDelete={data.label === 'React' ? undefined : handleDelete(data)}
                     />

@@ -4,7 +4,6 @@
     justify-content: flex-start;
     gap: 10px;
     position: relative;
-    margin-bottom: 50px;
 }
 
 .insight-table__btn-group .button {
@@ -13,11 +12,6 @@
     right: inherit;
 }
 
-.insight-table__btn-group svg path{
-    color: grey;
-}
-
-.insight-table__btn-group:hover svg path{
-    color: white;
-    transition: 0.3s;
+.insight-table__btn-group .button svg {
+    color: dimgrey;
 }
