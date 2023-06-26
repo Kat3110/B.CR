@@ -129,7 +129,7 @@
     margin: 0 5px 0 0;
     background: #000000;
     border-radius: 9px;
-    padding: 3px 10px;
+    padding: 3px 9px;
 }
 
 .radio-projects__name {
@@ -170,4 +170,29 @@
 
 .radio-projects__pinned:is(.pinned) path{
     stroke: black;
+}
+
+@media (max-width: 1500px) {
+    .radio-projects__checkboxes {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .radio-projects__typo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .radio-projects__typo span {
+        padding: 3px 7px;
+    }
+
+    .project-layout__tabs--mobile .radio-projects__typo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
 }

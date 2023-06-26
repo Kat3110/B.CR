@@ -93,3 +93,10 @@
     font-weight: 700;
     color: rgba(0, 0, 0, 0.5);
 }
+
+
+@media screen and (max-width: 600px) {
+    .checkbox-template__typo {
+        font-size: 15px;
+    }
+}

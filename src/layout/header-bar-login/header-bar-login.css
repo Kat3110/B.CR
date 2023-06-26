@@ -37,3 +37,21 @@
     text-decoration: none !important;
     cursor: pointer;
 }
+
+@media (max-width: 800px) {
+    .header-bar-login {
+        padding: 20px;
+    }
+
+    .header-bar-login__links {
+        justify-content: flex-start;
+        min-height: auto;
+        gap: 0 20px;
+    }
+
+    .header-bar-login__text,
+    .header-bar-login__box {
+        display: none;
+    }
+}
+

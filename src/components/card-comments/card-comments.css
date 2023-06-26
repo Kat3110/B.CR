@@ -1,0 +1,61 @@
+.card-comments {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.card-comments:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.card-comments__remove {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.card-comments__remove svg{
+    width: 20px;
+    height: 20px;
+}
+
+.card-comments__remove:hover {
+    color: rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.card-comments__account {
+    display: flex;
+    gap: 0 5px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000000;
+}
+
+.card-comments__time {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.3);
+    width: max-content;
+}
+
+.card-comments__comment {
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    line-height: 25px;
+}

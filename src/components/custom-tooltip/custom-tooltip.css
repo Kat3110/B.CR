@@ -9,5 +9,15 @@
 }
 
 .custom-tooltip__content:hover {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    .custom-tooltip__content {
+        font-size: 15px !important;
+    }
+
+    .custom-tooltip__content {
+        -webkit-box-orient: inherit;
+    }
 }

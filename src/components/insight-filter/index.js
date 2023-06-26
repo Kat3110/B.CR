@@ -65,12 +65,15 @@ function InsightFilter(props) {
                     <div className='insight-filter__date'>
                         <DatePickers/> ~ <DatePickers/>
                     </div>
-                    <ButtonFilter color='default' text='2 Days'/>
-                    <ButtonFilter color='default' text='1 Day'/>
-                    <ButtonFilter color='default' text='1 Month'/>
-                    <ButtonFilter color={props.active ? 'pink' : 'default'} text='3 Months'/>
-                    <ButtonFilter color='default' text='6 Months'/>
-                    <ButtonFilter color='default' text='1 Year'/>
+                    <div className='insight-filter__btn'>
+                        <ButtonFilter color='default' number={'2'} text='Days'/>
+                        <ButtonFilter color='default' number={'1'} text='Day'/>
+                        <ButtonFilter color='default' number={'1'} text='Month'/>
+                        <ButtonFilter color={props.active ? 'pink' : 'default'} number={'3'}  text='Months'/>
+                        <ButtonFilter color='default' number={'6'}  text='Months'/>
+                        <ButtonFilter color='default' number={'1'} text='Year'/>
+                    </div>
+
                 </div>
                 <div className='insight-filter__row-second'>
                     <h3 className='insight-filter__subtitle'>Project</h3>

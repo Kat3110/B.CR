@@ -1,0 +1,54 @@
+.dialog-leave__window .MuiPaper-elevation {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 810px;
+}
+
+.dialog-leave__dialog {
+    width: 100%;
+    padding: 80px;
+    box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dialog-leave__important {
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dialog-leave__read {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #F8899D;
+    margin-top: 10px;
+}
+
+.dialog-leave__description {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.dialog-leave__btn {
+    font-weight: 700;
+    font-size: 17px;
+    color: #F8899D;
+    border: none;
+    background: transparent;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0;
+    cursor: pointer;
+}

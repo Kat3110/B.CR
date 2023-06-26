@@ -1,0 +1,16 @@
+
+.logo-admin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-admin__text {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 32px;
+    color: #FFFFFF;
+    padding: 24px;
+    background: black;
+    border-radius: 15px;
+}

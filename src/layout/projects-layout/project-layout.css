@@ -2,7 +2,7 @@
     display: flex;
     gap: 0 50px;
     flex-direction: row;
-    margin: -60px auto 300px;
+    margin: -60px auto 10px;
 }
 
 .project-layout__left {
@@ -12,15 +12,20 @@
 }
 
 .project-layout__items {
-    min-width: 450px;
+    max-width: 450px;
+    width: 100%;
     background: #FFFFFF;
     border-radius: 15px;
-    padding: 35px 30px 33px;
+    padding: 35px 30px 20px;
     margin-bottom: 50px;
 }
 
 .project-layout__items .tabs__list {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
+}
+
+.page-template .project-layout__items .tabs__list {
+    margin-bottom: 55px;
 }
 
 .project-layout .tabs__tab div:hover {
@@ -28,7 +33,7 @@
 }
 
 .project-layout__right {
-    width: 100%;
+    width: calc(100% - 433px);
 }
 
 .project-layout__right .MuiTabPanel-root {
@@ -42,7 +47,15 @@
     background: #FFFFFF;
     border-radius: 15px;
     margin-bottom: 50px;
-    padding: 25px 20px 17px;
+    padding: 25px 20px 20px;
+}
+
+.project-layout .MuiButtonBase-root {
+    padding: 0 !important;
+}
+
+.project-layout .tabs__list .MuiTabs-flexContainer {
+    gap: 30px;
 }
 
 .project-layout__btn {
@@ -53,12 +66,106 @@
     font-weight: 700;
     font-size: 15px;
     color: #FFFFFF;
-    border: none;
     margin: 0 0 0 auto;
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-layout__btn svg {
+    margin-right: 5px;
 }
 
 .project-layout__btn:hover {
     background: #FF007A;
     box-shadow: 0 5px 10px rgb(255 0 122 / 25%);
+}
+
+.project-layout__tabs .tabs__tab.Mui-selected div {
+    color: black;
+    font-weight: 400 !important;
+    cursor: auto;
+}
+
+.project-layout__tabs .tabs__tab div {
+    color: black;
+    font-weight: 400 !important;
+    cursor: auto;
+}
+
+.project-layout__tabs--mobile .radio-projects {
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.project-layout__tabs--mobile.tabs {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.project-layout__tabs--mobile .radio-projects__checkmark {
+    display: none !important;
+}
+
+@media (max-width: 1500px) {
+    .project-layout__items {
+
+    }
+
+    .project-layout__left {
+        flex-shrink: 1;
+    }
+
+    .project-layout__box {
+        gap: 20px
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .project-layout__right {
+        width: 100%;
+    }
+
+    .project-layout__box {
+        flex-direction: column;
+        gap: 100px
+    }
+
+    .project-layout__items,
+    .project-layout__box .radio-projects__checkboxes,
+    .project-layout__box .page-projects__manager-block {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 840px) {
+    .project-layout__tabs.tabs {
+        display: none;
+    }
+
+    .project-layout__tabs--mobile.tabs {
+        display: flex;
+    }
+
+    .project-layout .box-template__img.box-template__img--mobile {
+        display: flex;
+    }
+
+    .project-layout .box-template__img {
+        display: none;
+    }
+
+    .project-layout__items {
+        padding: 25px 15px 15px;
+    }
+    .page-template .project-layout__items .tabs__list {
+        margin-bottom: 25px;
+    }
 }

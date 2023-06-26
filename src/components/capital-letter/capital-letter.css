@@ -11,4 +11,13 @@
     text-align: center;
     justify-content: center;
     color: #FFFFFF !important;
+    flex-shrink: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .capital-letter {
+        width: 25px;
+        height: 25px;
+    }
+}
+

@@ -2,7 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+}
+
+.pagination--mobile {
+    display: none;
+    gap: 30px;
+}
+
+.pagination__head, .pagination__body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.pagination__body {
+    justify-content: space-between;
 }
 
 .pagination__box {
@@ -130,4 +145,24 @@
 
 .pagination .button {
     display: flex !important;
+}
+
+
+@media (max-width: 1000px) {
+    .pagination__drop .button {
+        bottom: 0 !important;
+        max-width: 88px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pagination {
+        display: none;
+    }
+
+    .pagination--mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

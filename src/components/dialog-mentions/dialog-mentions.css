@@ -1,0 +1,50 @@
+.dialog-mentions__title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0;
+    color: #000000;
+}
+
+.dialog-mentions__title span{
+    font-weight: 700;
+}
+
+.dialog-mentions__time {
+    max-width: 163px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    padding: 7px 10px;
+    margin: 10px 0 20px;
+}
+
+.dialog-mentions .dialog-pattern__content{
+    max-height: 580px;
+    height: 100%;
+}
+
+.dialog-mentions .dialog-pattern__headline{
+    padding-top: 0 !important;
+}
+
+.dialog-mentions .dialog-pattern__box {
+    justify-content: flex-start;
+}
+
+.dialog-mentions .dialog-pattern__box {
+    gap: 6px 0;
+}
+
+@media (max-width: 540px) {
+    .dialog-mentions .checkbox-mentions {
+        gap: 10px;
+    }
+
+    .dialog-mentions__title{
+        font-size: 14px;
+    }
+}

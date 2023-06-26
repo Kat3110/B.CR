@@ -1,0 +1,61 @@
+.page-manager-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 80px;
+}
+
+.page-manager-home__add-member{
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-manager-home__add-member button{
+    width: 140px;
+    height: 34px;
+}
+
+.page-manager-home__links {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 34px;
+    color: rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.page-manager-home__links span{
+    cursor: pointer;
+}
+
+.page-manager-home__link-active {
+    color: black;
+}
+
+.page-manager-home__table {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px 50px;
+}
+
+.page-manager-home .insight-table thead th:first-of-type{
+   border-radius: 5px 0 0 5px !important;
+}
+
+.page-manager-home .insight-table thead th {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.page-manager-home__group-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,142 +1,165 @@
 .dialog-upload-img__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 0;
-    max-width: 288px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  max-width: 288px;
+  margin: 0 auto;
+}
+
+.dialog-upload-img__box .flex-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 288px;
+  margin: 0 auto;
 }
 
 .dialog-upload-img__title {
-    font-weight: 700;
-    font-size: 20px;
-    color: #000000;
-    margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+  margin: 0 0 10px;
 }
 
 .dialog-upload-img__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .dialog-upload-img__list span:first-of-type {
-    font-weight: 400;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
 }
 
 .dialog-upload-img__item {
-    font-weight: 400;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.6);
-    margin-right: 24px;
-    position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 24px;
+  position: relative;
 }
 
 .dialog-upload-img__item:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .dialog-upload-img__item_before:before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    top: 5px;
-    left: -12px;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  top: 5px;
+  left: -12px;
 }
 
 .dialog-upload-img__picture {
-    position: relative;
-    margin-bottom: 20px;
+  width: 116px;
+  height: 116px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.dialog-upload-img__picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .dialog-upload-img__picture svg rect {
-    fill: #F8F6F2;
+  fill: #f8f6f2;
 }
 
 .dialog-upload-img__add {
-    position: absolute;
-    bottom: 8px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-    background: #FFFFFF;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .dialog-upload-img__add svg {
-    position: absolute;
-    bottom: 8px;
-    right: 7px;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 7px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
 }
 
 .dialog-upload-img__add:hover {
-    box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
 }
 
 .dialog-upload-img__add:hover svg {
-    color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .dialog-upload-img__colors {
-    display: flex;
-    gap: 15px 16px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 15px 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .dialog-upload-img__colors div {
-    height: 60px;
-    width: 60px;
-    border-radius: 10px;
-    cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .dialog-upload-img__colors div:hover {
-    transition: 0.4s;
-    transform: scale(1.1);
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 
 .dialog-upload-img__first {
-    background: linear-gradient(225.18deg, #FF007A 0%, #FEFF02 99.69%);
+  background: linear-gradient(225.18deg, #ff007a 0%, #feff02 99.69%);
 }
 
 .dialog-upload-img__second {
-    background: linear-gradient(360deg, #FF75F7 0.62%, rgb(255 243 0) 100.62%);
+  background: linear-gradient(360deg, #ff75f7 0.62%, rgb(255 243 0) 100.62%);
 }
 
 .dialog-upload-img__three {
-    background: linear-gradient(360deg, rgb(246 255 0) 0.63%, #28FFBA 100.63%);
+  background: linear-gradient(360deg, rgb(246 255 0) 0.63%, #28ffba 100.63%);
 }
 
 .dialog-upload-img__four {
-    background: linear-gradient(90deg, #FF75F7 0%, rgb(167 255 119) 100%);
+  background: linear-gradient(90deg, #ff75f7 0%, rgb(167 255 119) 100%);
 }
 
 .dialog-upload-img__five {
-    background: linear-gradient(90deg, #FF75F7 0%, rgb(246 255 0) 100%);
+  background: linear-gradient(90deg, #ff75f7 0%, rgb(246 255 0) 100%);
 }
 
 .dialog-upload-img__six {
-    background: linear-gradient(360deg, rgb(246 255 0) 0.63%, #28FFBA 100.63%);
+  background: linear-gradient(360deg, rgb(246 255 0) 0.63%, #28ffba 100.63%);
 }
 
 .dialog-upload-img__seven {
-    background: linear-gradient(360deg, #FF75F7 0.62%, rgb(255 243 0) 100.62%);
+  background: linear-gradient(360deg, #ff75f7 0.62%, rgb(255 243 0) 100.62%);
 }
 
 .dialog-upload-img__eight {
-    background: linear-gradient(225.18deg, #FF007A 0%, #FEFF02 99.69%);
+  background: linear-gradient(225.18deg, #ff007a 0%, #feff02 99.69%);
+}
+
+@media screen and (max-width: 600px) {
+  .dialog-upload-img__box {
+    padding: 50px 0 10px;
+    min-height: 100vh;
+  }
 }

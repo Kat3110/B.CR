@@ -1,1 +1,33 @@
+.dialog__url .card-with-icon__svg svg {
+    width: 30px;
+    height: 30px;
+}
 
+.dialog__url .card-with-icon__svg svg path {
+    stroke-width: 1px;
+}
+
+.dialog__url .card-with-icon {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+@media (max-width: 840px) {
+    .dialog__url .dialog-pattern__headline {
+        padding-top: 0 !important;
+    }
+
+    .dialog__url .input-search {
+        margin-bottom: 30px;
+    }
+
+    .dialog__url .link-with-icon__text {
+        font-size: 13px;
+    }
+}

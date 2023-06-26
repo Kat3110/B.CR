@@ -2,6 +2,7 @@ import * as React from 'react';
 import './link-with-icon.css'
 import {ReactComponent as LinkSimpleDialog} from "../../assets/LinkSimpleDialog.svg";
 
+
 function LinkWithIcon(props) {
     return (
         <div className="link-with-icon">

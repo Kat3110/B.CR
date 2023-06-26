@@ -26,6 +26,11 @@
     position: relative;
 }
 
+.box-template__disabled .box-template__content{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0 0 12px 12px;
+}
+
 .box-template__change {
     position: absolute;
     top: 10px;
@@ -84,12 +89,26 @@
     color: rgba(0, 0, 0, 0.5);
     position: relative;
     padding-left: 7px;
+    display: flex;
+    align-items: center;
 }
+
+.box-template__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.box-template__head-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 .box-template__manager:after {
     content: '';
     position: absolute;
-    top: 50%;
     left: -6px;
     width: 3px;
     height: 3px;
@@ -112,13 +131,14 @@
 .box-template__content p {
     position: relative;
     margin: 0;
+    padding-left: 10px;
 }
 
 .box-template__content p:before {
     content: '';
     position: absolute;
     top: 0;
-    left: -10px;
+    left: 0px;
     height: 40px;
     width: 2px;
     background: rgb(0, 0, 0, 0.3);
@@ -221,4 +241,71 @@
 
 .box-template__item:hover {
     background: rgba(0, 0, 0, 0.1);
+}
+
+.box-template__img--mobile {
+    display: none;
+}
+
+.box-template__item--mobile {
+    display: flex;
+}
+
+@media (max-width: 840px) {
+    .box-template--mobile {
+        display: flex;
+    }
+    .box-template__head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .box-template__head-top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box-template__group {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        background: white;
+        width: 100%;
+        padding: 20px;
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    .box-template__item--mobile {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .box-template__change {
+        top: 20px;
+        right: 20px;
+    }
+    .box-template__box {
+        padding: 15px 0 0;
+    }
+
+    .project-layout__right .box-template__content {
+        padding: 15px 15px 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box-template {
+        flex-direction: column;
+    }
+    .box-template__content {
+        padding: 20px 25px;
+    }
 }

@@ -1,0 +1,116 @@
+
+.dialog-make-block .MuiPaper-elevation.MuiDialog-paperScrollPaper{
+    padding: 40px !important;
+    max-width: 1060px !important;
+}
+
+.dialog-make-block__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-make-block__title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.dialog-make-block__columns {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dialog-make-block__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dialog-make-block__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.dialog-make-block__img {
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-make-block__img svg{
+    width: 32px;
+    height: 32px;
+    color: rgba(0,0,0,0.3);
+}
+
+.dialog-make-block__item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.dialog-make-block__item:hover svg {
+    color: #FF007A;
+    transition: 0.3s;
+}
+
+.dialog-make-block__item:hover .dialog-make-block__img{
+    transition: 0.3s;
+    background: transparent;
+}
+
+.dialog-make-block__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.dialog-make-block__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.dialog-make-block__btn {
+    display: none;
+}
+
+
+@media (max-width: 950px) {
+    .dialog-make-block__content {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .dialog-make-block__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 54px;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: rgba(0,0,0,0.3);
+        cursor: pointer;
+        border: none;
+        padding: 15px 20px;
+        margin: 161px auto 0;
+    }
+}
+
+@media (max-width: 840px) {
+    .dialog-make-block .dialog-pattern__headline{
+        padding: 0 !important;
+    }
+}

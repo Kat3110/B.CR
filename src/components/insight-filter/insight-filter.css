@@ -28,7 +28,8 @@
 .insight-filter__row-first {
     display: flex;
     align-items: center;
-    gap: 0 5px;
+    gap: 10px 5px;
+    flex-wrap: wrap;
 }
 
 .insight-filter__date {

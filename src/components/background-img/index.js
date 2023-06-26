@@ -9,6 +9,11 @@ function BackgroundImg(props) {
                 className="background-img"
                 alt="background"
             />
+            <img
+                src={props.backgroundMobile ? props.backgroundMobile : props.background}
+                className="background-img--mobile"
+                alt="background"
+            />
         </>
     );
 }

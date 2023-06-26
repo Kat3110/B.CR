@@ -55,3 +55,62 @@
     align-items: center;
     gap: 10px;
 }
+
+.dialog-members__btn {
+    display: none;
+}
+
+@media (max-width: 840px) {
+
+    .dialog-members .dialog-pattern__headline {
+        padding: 0 !important;
+    }
+
+    .dialog-members .dialog-members__search {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .dialog-members .dialog-remove  {
+        width: 100%;
+    }
+
+    .dialog-members .dialog-remove .button {
+        width: 100%;
+    }
+
+    .dialog-members .dialog-members__list {
+        height: 250px;
+    }
+    .dialog-members .dialog-members__item div {
+        max-width: 190px;
+        word-break: break-all;
+    }
+    .dialog-members__invitation h3 {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .dialog-members__invitation .dialog-members__list {
+        height: max-content;
+        padding: 23px 15px 45px;
+    }
+
+    .dialog-members__btn {
+        display: flex;
+        margin: 0 auto;
+        flex: 1 1;
+        align-items: flex-end;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dialog-members .select-window__select {
+        min-width: 130px !important;
+        width: 100%;
+    }
+}

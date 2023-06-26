@@ -1,0 +1,47 @@
+.dialog-csv .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+    border-radius: 30px;
+    padding: 50px 95px !important;
+    max-width: 800px !important;
+    width: 100%;
+}
+
+.dialog-csv__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 50px;
+    color: #000000;
+    text-align: center;
+}
+
+.dialog-csv .dialog-pattern__headline {
+    justify-content: center !important;
+}
+
+.dialog-csv .dialog-pattern__box {
+    gap: 100px;
+}
+
+.dialog-csv__box {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.dialog-csv__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .dialog-csv .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+        padding: 50px 20px 10px !important;
+    }
+
+    .dialog-csv .dialog-pattern__headline {
+        padding: 0 !important;
+    }
+}

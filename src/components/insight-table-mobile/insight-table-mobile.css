@@ -1,0 +1,74 @@
+.insight-table-mobile {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    /*display: flex;*/
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px;
+    display: none;
+}
+
+.insight-table-mobile__typo {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0;
+}
+
+.insight-table-mobile__box {
+    display: flex;
+    gap: 10px;
+}
+
+.insight-table-mobile__number {
+    background: #000000;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 0 10px;
+}
+
+.insight-table-mobile__name {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    color: #000000;
+    padding: 0 10px;
+}
+
+.insight-table-mobile__name span{
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.insight-table-mobile__table {
+    display: flex;
+    gap: 20px;
+}
+
+.insight-table-mobile__title {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.insight-table-mobile__data {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    color: #000000;
+}
+
+@media (max-width: 700px) {
+    .insight-table-mobile {
+        display: flex;
+    }
+}

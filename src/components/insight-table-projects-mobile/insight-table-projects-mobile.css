@@ -1,0 +1,27 @@
+.insight-table-projects-mobile .insight-table-mobile__box {
+    flex-direction: column;
+}
+
+.insight-table-projects-mobile .insight-table-mobile__total {
+    font-size: 13px;
+    line-height: 25px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.insight-table-projects-mobile-name {
+    display:flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.insight-table-projects-mobile-email {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.insight-table-projects-mobile-authority {
+    display: flex;
+    gap: 10px;
+}

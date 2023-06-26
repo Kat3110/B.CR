@@ -67,3 +67,63 @@
     transition: 0.5s;
     border: none;
 }
+
+.mention-card--mobile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.mention-card--mobile__box {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mention-card--mobile .mention-card__time {
+    width: 70px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.mention-card--mobile .mention-card__person {
+    margin: 0;
+    gap: 5px;
+}
+
+.mention-card--mobile button{
+    padding: 5px 10px;
+    width: max-content;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
+    .mention-card {
+        display: none;
+    }
+    .mention-card--mobile {
+        display: flex;
+    }
+}

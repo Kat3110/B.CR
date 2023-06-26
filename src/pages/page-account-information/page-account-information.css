@@ -1,0 +1,301 @@
+.page-account-information {
+    display: flex;
+    flex-direction: row;
+    margin-top: 157px;
+    justify-content: space-between;
+    min-height: calc(100vh - 157px);
+}
+
+.page-account-information__menu {
+    max-width: 230px;
+}
+
+.page-account-information__wrapper {
+    max-width: 1270px;
+    width: 100%;
+}
+
+.page-account-information__wrapper .MuiTabPanel-root,
+.page-account-information__content {
+    height: 100%;
+}
+
+.page-account-information__content .page-edit-profile__content {
+    flex: 1;
+}
+
+.page-account-information__title {
+    margin: 0 0 10px;
+}
+
+.page-account-information .MuiTabs-flexContainer {
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.page-account-information .page-insight__tab {
+    width: max-content;
+}
+
+.page-account-information .MuiTabs-indicator {
+    display: none;
+}
+
+.page-account-information__svg {
+    width: 32px;
+    height: 32px;
+}
+
+.page-account-information .MuiBadge-badge {
+    background: #FF007A !important;
+    top: 7px;
+    left: 7px;
+}
+
+.page-account-information .MuiBadge-root {
+    align-items: center;
+    width: 100%;
+}
+
+.page-account-information__content .button {
+    width: 100% !important;
+    margin-top: 34px;
+    padding: 24px 0;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.page-account-information__chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 154px auto 30px;
+}
+
+.page-account-information__chip .MuiButtonBase-root {
+    padding: 27px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    color: black;
+    border: none;
+    width: 100%;
+    max-width: 454px;
+}
+
+.page-account-information__chip span {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.page-account-information__chip .MuiButtonBase-root svg {
+    transform: rotate(45deg);
+    color: black;
+    margin-left: 25px;
+}
+
+.page-account-information__attention {
+    width: 80%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page-account-information__attention svg {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 15px;
+}
+
+.page-account-information .page-membership__input {
+    width: 100%;
+}
+
+.page-account-information__subtitle {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0 0 10px;
+}
+
+.page-account-information__box {
+    max-width: 566px;
+    width: 100%;
+}
+
+.page-account-information__box:first-of-type {
+    margin-bottom: 30px;
+}
+
+.page-account-information__check {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-account-information__window {
+    padding: 50px 35px;
+    margin-bottom: 40px;
+}
+
+.page-account-information__text {
+    text-align: center;
+}
+
+.page-account-information__typo {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.page-account-information__contain {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    flex: 1;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.page-account-information__contain div {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.page-account-information__contain .button {
+    margin: 0;
+}
+
+.page-account-information__wrapper .MuiTabPanel-root[hidden] {
+    display: none;
+}
+
+.page-account-information .dropdown-menu {
+    width: 100%;
+}
+
+.page-account-information__country {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .page-account-information__content.page-edit-profile__content {
+        flex: 1;
+    }
+
+    .page-account-information {
+        flex-direction: column;
+        margin-top: 130px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .page-account-information__wrapper {
+        flex: 1 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-account-information__gap {
+        gap: 30px !important;
+    }
+
+    .page-account-information__menu {
+        max-width: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        overflow-x: scroll;
+    }
+
+    .page-account-information__typo {
+        font-size: 20px;
+    }
+
+    .page-account-information__title {
+        margin: 0;
+        display: none;
+    }
+
+    .page-account-information .MuiTabs-flexContainer {
+        flex-direction: row;
+        gap: 0 30px;
+        font-weight: 400;
+    }
+
+    .page-account-information .page-insight__tab {
+        font-size: 16px !important;
+    }
+
+    .page-account-information .MuiTabs-flexContainer svg {
+        display: none;
+    }
+
+    .page-edit-profile__content .MuiInputBase-root input {
+        padding: 0 20px 0 150px !important;
+    }
+
+    .page-edit-profile__label {
+        top: 20px;
+    }
+
+    .page-account-information__content .button {
+        margin-top: 20px;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .page-account-information__wrapper .MuiTabPanel-root {
+        padding: 0;
+        margin-top: 50px;
+        flex: 1 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-account-information__text {
+        font-size: 15px;
+    }
+
+    .page-account-information__window {
+        margin: 0;
+    }
+
+    .page-account-information__content {
+        gap: 30px;
+    }
+
+    .page-account-information__box:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .page-account-information__attention {
+        font-size: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

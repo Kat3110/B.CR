@@ -16,20 +16,19 @@
     border: none !important;
 }
 
-.MuiInputBase-input {
+.date-pickers .MuiInputBase-input {
     width: 100px !important;
-    padding: 5.5px 10px !important;
 }
 
-.MuiButtonBase-root {
+.date-pickers .MuiButtonBase-root {
     padding: 9px !important;
 }
 
-.MuiButtonBase-root:hover {
+.date-pickers .MuiButtonBase-root:hover {
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-.MuiSvgIcon-root {
+.date-pickers .MuiSvgIcon-root {
     width: 16px !important;
     height: 16px !important;
 }
@@ -38,6 +37,7 @@
 .date-pickers__box .MuiInputBase-root button {
     background: rgba(0, 0, 0, 0.04);
     border-radius: 8px;
+    padding: 7px;
 }
 
 .date-pickers__box .MuiInputBase-root svg {

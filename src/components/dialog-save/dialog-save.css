@@ -1,81 +1,91 @@
 .dialog-save__window .MuiPaper-elevation {
-    border-radius: 30px;
-    padding: 40px 30px 30px !important;
-    max-width: 660px !important;
-    width: 100%;
+  border-radius: 30px;
+  padding: 40px 30px 30px !important;
+  max-width: 660px !important;
+  width: 100%;
 }
 
 .dialog-save__box {
-    display: flex;
-    flex-direction: column;
-    gap: 36px 0;
-    padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 36px 0;
+  padding: 0 !important;
 }
 
 .dialog-save__title {
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 700;
-    font-size: 17px;
-    align-items: center;
-    gap: 0 7px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 700;
+  font-size: 17px;
+  align-items: center;
+  gap: 0 7px;
 }
 
 .dialog-save__title svg {
-    width: 20px;
-    height: 20px;
-    color: #FF007A;
+  width: 20px;
+  height: 20px;
+  color: #ff007a;
 }
 
 .dialog-save__headline {
-    display: flex;
-    flex-direction: column;
-    gap: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
 }
 
 .dialog-save__headline .MuiTextField-root {
-    max-width: 600px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 10px;
-    border: none;
+  max-width: 600px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  border: none;
 }
 
 .dialog-save__headline .MuiInputBase-root input {
-    font-weight: 400;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 1);
-}
-
-.dialog-save__headline input::placeholder {
-    opacity: 1;
-    color: rgb(0, 0, 0);
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);
 }
 
 .dialog-save__headline .MuiOutlinedInput-root {
-    opacity: 1;
+  opacity: 1;
 }
 
 .dialog-save__headline .MuiOutlinedInput-notchedOutline {
-    border: none;
+  border: none;
 }
 
 .dialog-save__subtitle {
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 700;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
 }
 
 .dialog-save__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0 0 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 0 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 0 30px;
 }
 
+.dialog-save__buttons .button.button__color-default {
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .dialog-save__window .MuiPaper-elevation {
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    padding: 35px 15px 10px !important;
+  }
+  .dialog-save__buttons {
+    border-bottom: none;
+  }
+}

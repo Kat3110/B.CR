@@ -1,6 +1,6 @@
 .chart-insight {
     width: 100%;
-    overflow-y: auto;
+    overflow-x: auto;
     padding-bottom: 20px;
     margin-top: 20px;
 }
@@ -11,7 +11,7 @@
 }
 
 .chart-insight canvas {
-    width: 100% !important;
+    /*width: 100% !important;*/
 }
 
 .chart-insight__menu {
@@ -110,4 +110,61 @@
 .chart-insight__legend button span{
     height: 3px;
     width: 10px;
+}
+
+@media (max-width: 1000px) {
+    .chart-insight__menu {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chart-insight__box .button {
+        width: 80px;
+        bottom: 0 !important;
+        right: 0 !important;
+    }
+}
+
+@media (max-width: 530px) {
+    .chart-insight__button-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .chart-insight__box {
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .chart-insight__legend {
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .chart-insight__box .button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .chart-insight__box .dropdown-menu {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        background: white;
+    }
+
+    .chart-insight__box .dropdown-menu__trigger {
+        box-shadow: -16px 0 15px 3px rgba(255, 255, 255, 1);
+    }
+
+    .chart-insight__legend button {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
 }

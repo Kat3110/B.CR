@@ -1,0 +1,42 @@
+.dialog-reset-manager .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+    border-radius: 30px;
+    padding: 100px !important;
+    max-width: 800px !important;
+    width: 100%;
+}
+
+
+.dialog-reset-manager .dialog-pattern__title {
+    font-weight: 700;
+    font-size: 20px !important;
+    color: #000000;
+}
+
+.dialog-reset-manager .dialog-pattern__headline {
+    justify-content: center !important;
+}
+
+.dialog-reset-manager.dialog-pattern__box {
+    gap: 30px;
+}
+
+.dialog-reset-manager__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.dialog-reset-manager__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.dialog-reset-manager__subtitle span{
+    font-weight: 700;
+    color: #000000;
+}

@@ -29,12 +29,19 @@ body {
 * {
     font-family: 'Helvetica', sans-serif;
     box-sizing: border-box;
+    outline: none;
 }
 
 .container {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
+    padding: 0 10px;
+}
+
+.MuiDialog-root .MuiBackdrop-root {
+    background: rgba(248, 246, 242, 0.8);
+    box-shadow: 0 20px 150px rgba(0, 0, 0, 0.1);
 }
 
 .dialog__btn {
@@ -77,6 +84,10 @@ body {
     align-items: flex-start !important;
 }
 
+.tabs__tab.MuiButtonBase-root:hover {
+    background: transparent !important;
+}
+
 .tabs__tab div {
     font-weight: 400;
     font-size: 17px;
@@ -86,7 +97,6 @@ body {
 
 .tabs__tab div:hover {
     font-weight: 700;
-    font-size: 17px;
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -94,4 +104,31 @@ body {
     color: #000000;
     font-weight: 700 !important;
     cursor: auto;
+}
+
+@media screen and (max-width: 970px) {
+
+    .dialog__window .MuiDialog-paper{
+        margin: 0;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .flex-one {
+        flex: 1;
+    }
+
+    .dialog__window .MuiPaper-elevation {
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+    .tabs__tab div {
+        font-size: 15px;
+    }
 }

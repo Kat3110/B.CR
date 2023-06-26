@@ -1,10 +1,15 @@
 .card-with-icon {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    cursor: pointer;
+}
+
+.card-with-icon:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .card-with-icon__svg {
@@ -24,6 +29,8 @@
 .card-with-icon__image {
     margin-right: 10px;
     object-fit: contain;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
 }
 
 .card-with-icon__text {

@@ -1,0 +1,143 @@
+.page-membership {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin: 168px auto 100px;
+}
+
+.page-membership__img {
+  max-width: 566px;
+  width: 100%;
+}
+
+.page-membership__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 566px;
+  width: 100%;
+  gap: 35px;
+}
+
+.page-membership .MuiBadge-badge {
+  background-color: #ff007a;
+  top: 8px;
+  left: 8px;
+}
+
+.page-membership .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+
+.page-membership__input .MuiInputBase-root:hover fieldset {
+  border: inherit;
+}
+
+.page-membership .MuiFormControl-root,
+.page-membership .MuiInputBase-root {
+  width: 100%;
+  background: white;
+}
+
+.page-membership__input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-membership__input-error .MuiOutlinedInput-notchedOutline {
+  border: 1px solid rgba(253, 101, 105, 1) !important;
+}
+
+.page-membership__help-text {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-membership__input-error .page-membership__help-text {
+  color: rgba(253, 101, 105, 1);
+}
+
+.page-membership .checkbox {
+  color: black;
+  line-height: 27px;
+}
+
+.page-membership .checkbox span {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.page-membership__link {
+  text-decoration: none;
+}
+
+.page-membership .button {
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.page-membership-login {
+  min-height: 100vh;
+}
+
+.page-membership-login__form {
+  flex: 1;
+}
+
+.page-membership__drop {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.page-membership__drop svg {
+  margin-right: 5px;
+}
+
+.page-membership .dropdown-menu {
+  width: 100%;
+}
+
+.page-membership__menu {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .page-membership {
+    margin-top: 130px;
+  }
+
+  .page-membership__img {
+    width: 320px;
+  }
+
+  .page-membership__input .MuiInputBase-input {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .page-membership .button {
+    height: 60px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page-membership__img {
+    width: 223px;
+  }
+}

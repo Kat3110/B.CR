@@ -1,1 +1,11 @@
 
+
+@media (max-width: 840px) {
+    .dialog__files .dialog-pattern__headline{
+        padding-top: 0 !important;
+    }
+
+    .dialog__files .input-search {
+        margin: 0 0 30px;
+    }
+}

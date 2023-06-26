@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.dialog-pattern__window.height1060 .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+    max-width: 1060px !important;
+    padding: 40px 40px !important;
+}
+
 .dialog-pattern__window .MuiDialog-paperScrollPaper {
     overflow-x: hidden !important;
 }
@@ -61,4 +66,33 @@
 .dialog-pattern__close:hover {
     transition: 0.3s;
     opacity: 0.3;
+}
+
+@media (max-width: 800px) {
+    .dialog-pattern__window .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+        margin: 0 !important;
+        border-radius: 0 !important;
+        min-height: 100% !important;
+        padding: 50px 20px 0 !important;
+    }
+    .dialog-pattern__box {
+        justify-content: center;
+    }
+
+    .dialog-pattern__headline {
+        padding-top: 100px !important;
+    }
+
+    .dialog-pattern__content {
+        flex: 1;
+    }
+
+    .dialog-pattern__close {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dialog-pattern__close path {
+        stroke-width: 0.5px;
+    }
 }

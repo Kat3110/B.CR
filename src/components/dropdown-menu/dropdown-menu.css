@@ -1,6 +1,6 @@
 .dropdown-menu__content .MuiPaper-elevation {
     padding: 12px 20px;
-    width: 150px;
+    width: 230px;
     background: #FFFFFF;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -48,4 +48,10 @@
 
 .dropdown-menu__trigger .button {
     position: relative !important;
+}
+
+@media (max-width: 600px) {
+    .dropdown-menu__list div {
+        font-size: 15px;
+    }
 }

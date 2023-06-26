@@ -1,0 +1,62 @@
+.nav-menu-mobile {
+    display: none;
+}
+
+.nav-menu-mobile__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    width: max-content;
+}
+
+.nav-menu-mobile__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.2;
+    text-decoration: none;
+}
+
+.nav-menu-mobile__content .MuiPaper-elevation {
+    width: 293px !important;
+}
+
+.nav-menu-mobile__link-active {
+    display: none;
+}
+
+.nav-menu-mobile__content .dropdown-menu__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.nav-menu-mobile__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.nav-menu-mobile__title-page {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .nav-menu-mobile {
+        display: block;
+    }
+    .header-manager__links {
+        display: none !important;
+    }
+}
+

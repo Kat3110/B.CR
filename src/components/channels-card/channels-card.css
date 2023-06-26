@@ -6,7 +6,7 @@
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 16px 20px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -48,6 +48,7 @@
 .channels-card__account {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 0 10px;
     width: 300px;
 }
@@ -62,4 +63,52 @@
     font-size: 13px;
     color: #000000;
     margin: 0;
+}
+
+.channels-card--mobile {
+    display: none;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.channels-card__header--mobile,
+.channels-card--mobile .channels-card__name {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.channels-card--mobile .channels-card__name {
+    gap: 7px;
+}
+
+.channels-card--mobile .channels-card__content {
+    font-size: 15px;
+}
+
+.channels-card--mobile .channels-card__time {
+    width: 70px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.channels-card__header--mobile {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .channels-card--mobile {
+        display: flex;
+    }
+    .channels-card {
+        display: none;
+    }
 }

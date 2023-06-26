@@ -1,0 +1,94 @@
+.dialog-welcome.dialog-pattern__window .MuiPaper-elevation.MuiDialog-paperScrollPaper {
+    border-radius: 30px;
+    padding: 50px 95px;
+    max-width: 800px !important;
+    width: 100%;
+}
+
+
+.dialog-welcome__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.dialog-welcome .dialog-pattern__headline {
+    justify-content: center !important;
+}
+
+.dialog-welcome .dialog-pattern__box {
+    gap: 100px;
+}
+
+.dialog-welcome__box {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+
+.dialog-welcome__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.dialog-welcome__subtitle span{
+    font-weight: 700;
+}
+
+.dialog-welcome__btn{
+    background: #FF007A;
+    box-shadow: 0 5px 25px rgba(255, 0, 122, 0.25);
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    max-width: 140px;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-welcome__img {
+    margin: auto 0 auto -34px;
+}
+
+@media screen and (max-width: 800px) {
+    .dialog-welcome .dialog-pattern__headline {
+        display: none;
+    }
+
+    .dialog-welcome__subtitle,
+    .dialog-welcome__box {
+        flex: 1;
+    }
+
+    .dialog-welcome__box {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .dialog-welcome__img {
+        margin: auto 0;
+    }
+
+    .dialog-welcome__btn {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .dialog-welcome .dialog-pattern__headline {
+        display: flex !important;
+    }
+
+    .dialog-welcome .dialog-welcome__subtitle {
+        max-width: 267px;
+    }
+}

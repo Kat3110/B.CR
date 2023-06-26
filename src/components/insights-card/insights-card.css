@@ -1,6 +1,8 @@
 .insights-card {
     cursor: pointer;
     margin: 0 !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .insights-card__flex {
@@ -19,9 +21,10 @@
     margin-bottom: 20px;
 }
 
-.insights-card__data img {
+.insights-card__data svg {
     width: 18px;
     height: 18px;
+    color: #FF007A;
 }
 
 .insights-card__text {
@@ -38,6 +41,7 @@
     color: #000000;
     height: 45px;
     overflow: hidden;
+    margin: 0 0 25px;
 }
 
 .insights-card__time {
@@ -71,4 +75,82 @@
     font-size: 13px;
     color: #000000;
     margin: 0;
+}
+
+.insights-card--mobile {
+    width: 100%;
+    max-width: 1260px;
+    min-width: 372px ;
+    max-height: max-content;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 15px;
+    display: none;
+    flex-direction: row;
+    gap: 15px 20px;
+    justify-content: space-between;
+}
+
+.insights-card--mobile.home-feed__card:last-of-type {
+    margin: 0 ;
+}
+
+.insights-card--mobile .insights-card__data svg {
+    width: 14px;
+    height: 14px;
+    color: #FF007A;
+}
+
+.insights-card--mobile .insights-card__time {
+    width: 104px;
+    height: 104px;
+    background: rgba(248, 246, 242, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.insights-card--mobile .insights-card__time span{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.insights-card--mobile .capital-letter {
+    width: 25px;
+    height: 25px;
+}
+
+.insights-card--mobile .insights-card__account {
+     margin-top: 0;
+}
+
+.insights-card--mobile .insights-card__box {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.insights-card--mobile .insights-card__content {
+    font-size: 15px;
+    margin: 0;
+    height: max-content;
+}
+
+@media (max-width: 1260px) {
+    .insights-card {
+        display: none;
+    }
+    .insights-card--mobile {
+        display: flex;
+    }
+    .insights-card--mobile .box-channels .home-feed__insights {
+        flex-direction: column;
+    }
 }

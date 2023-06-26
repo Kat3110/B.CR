@@ -11,12 +11,18 @@
     align-items: center;
 }
 
-.checkbox input {
+.checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
+}
+
+.checkbox input[type="text"] {
+    background: none;
+    border: none;
+    width: 105px;
 }
 
 .checkbox__checkmark {
@@ -76,4 +82,10 @@
     border-width: 0 1.5px 1.5px 0;
     transform: rotate(45deg);
     margin-top: -2px;
+}
+
+@media screen and (max-width: 600px) {
+    .checkbox__checkmark {
+        margin-right: 10px;
+    }
 }

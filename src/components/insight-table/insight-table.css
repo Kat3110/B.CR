@@ -14,6 +14,12 @@
     overflow: hidden;
 }
 
+.insight-table__flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .insight-table thead th {
     border-collapse: separate !important;
     border-spacing: 0;
@@ -24,11 +30,11 @@
     border: none;
 }
 
-.insight-table .MuiTableCell-root{
+.insight-table .MuiTableCell-root {
     border-bottom: none !important;
 }
 
-.insight-table td.MuiTableCell-root{
+.insight-table td.MuiTableCell-root {
     border-bottom: none !important;
     font-weight: 400;
     font-size: 15px;
@@ -68,4 +74,40 @@
 .insight-table__pm {
     display: flex;
     flex-direction: column;
+}
+
+.insight-table__edit {
+    font-weight: 700;
+    font-size: 13px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.insight-table__edit:hover {
+    color: #FF007A;
+}
+
+.insight-table__note {
+    font-weight: 400;
+    font-size: 13px;
+    color: #FD6569;
+}
+
+.insight-table__column {
+    max-width: 109px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.insight-table__column .custom-tooltip__content {
+    display: inline;
+}
+
+@media (max-width: 700px) {
+    .insight-table table {
+        display: none;
+    }
 }

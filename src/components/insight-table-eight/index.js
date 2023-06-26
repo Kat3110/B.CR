@@ -136,16 +136,13 @@ function InsightTableEight(props) {
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell align="left">{row.rank}</TableCell>
-                                <TableCell align="left"
-                                           sx={{
-                                               display: 'flex',
-                                               alignItems: 'center',
-                                               gap: '0 5px'
-                                }}>
+                                <TableCell align="left">
+                                    <div className='insight-table__flex'>
                                     <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/>
                                     <div className='insight-table__pm'>
                                         <span>{row.pm.name}</span>
                                         <span>{row.pm.email}</span>
+                                    </div>
                                     </div>
                                 </TableCell>
                                 <TableCell align="left">{row.authority}</TableCell>

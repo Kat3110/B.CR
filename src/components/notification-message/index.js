@@ -1,27 +1,27 @@
-import * as React from 'react';
-import './notification-message.css'
+import "./notification-message.css";
 import CapitalLetter from "../capital-letter";
+import { diffFormater } from "utils/diffFormater";
 
+function NotificationMessage({ onClick, item }) {
+  const { creator, title, createdAt, Project } = item;
 
-function NotificationMessage(props) {
-    return (
-        <div className='notification-message'>
-            <div className='notification-message__profile'>
-                <CapitalLetter
-                    letter={props.name[0]}
-                    bgColor={props.color}
-                />
-                <p className='notification-message__name'>{props.name}</p>
-            </div>
-            <p className='notification-message__content'>
-                {props.content} <span> {props.charis}</span>
-            </p>
-            <div className='notification-message__date'>
-                <span>{props.time}</span>
-                <p>{props.text}</p>
-            </div>
-        </div>
-    );
+  const handleMove = () => {
+    onClick(item);
+  };
+
+  return (
+    <div className="notification-message" onClick={handleMove}>
+      <div className="notification-message__profile">
+        <CapitalLetter letter={creator.name} bgColor={creator.profileColor} />
+        <p className="notification-message__name">{creator.name}</p>
+      </div>
+      <p className="notification-message__content">{title}</p>
+      <div className="notification-message__date">
+        <span>{diffFormater(createdAt)}</span>
+        <p className="notification-message__text">{Project.text}</p>
+      </div>
+    </div>
+  );
 }
 
 export default NotificationMessage;

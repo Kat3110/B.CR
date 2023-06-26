@@ -59,3 +59,49 @@
     opacity: 0.3;
     background: transparent !important;
 }
+
+.header-bar__title-page {
+    font-weight: 700;
+    font-size: 17px;
+    color: #000000;
+    text-decoration: none !important;
+    display: none;
+}
+
+.header-bar__sign {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+@media (max-width: 800px) {
+    .header-bar {
+        padding: 20px;
+    }
+    .header-bar__links {
+        min-height: auto;
+    }
+
+    .header-bar__account {
+        display: none;
+    }
+
+    .header-bar__link {
+        display: none;
+    }
+
+    .header-bar__title-page {
+        display: block;
+    }
+
+    .header-bar__buttons {
+        gap: 20px
+    }
+}
+
+@media (max-width: 500px) {
+    .header-bar__icon {
+        display: none;
+    }
+}

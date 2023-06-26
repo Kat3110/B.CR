@@ -10,11 +10,13 @@ import TableRow from '@mui/material/TableRow';
 import CapitalLetter from "../capital-letter";
 import {ReactComponent as ArrowSquareInPink} from "../../assets/ArrowSquareInPink.svg";
 import Pagination from '../../components/pagination'
+import InsightTableMobileThree from "../insight-table-mobile-three";
+import InsightTableProjectsMobile from "../insight-table-projects-mobile";
 
 function InsightTableProjectsTwo() {
 
-    function createData(no, project, pm, emoji, image, link, video, file, data) {
-        return {no, project, pm, emoji, image, link, video, file, data};
+    function createData(no, project, pm, emoji, image, link, video, file, data, access, time, email,authority,joined,blocks,mentions) {
+        return {no, project, pm, emoji, image, link, video, file, data, access, time,email,authority,joined,blocks,mentions};
     }
 
     const rows = [
@@ -31,7 +33,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             2,
@@ -46,7 +55,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             3,
@@ -61,7 +77,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             4,
@@ -76,7 +99,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             5,
@@ -91,7 +121,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             1,
@@ -106,7 +143,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             2,
@@ -121,7 +165,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             3,
@@ -136,7 +187,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             4,
@@ -151,7 +209,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
         createData(
             5,
@@ -166,7 +231,14 @@ function InsightTableProjectsTwo() {
             50,
             50,
             50,
-            50
+            50,
+            '10 min. ago',
+            '10 min. (average)',
+            'aron@internet.com',
+            'Manager',
+            '20',
+            '20',
+            '20'
         ),
     ];
 
@@ -175,14 +247,15 @@ function InsightTableProjectsTwo() {
     ]
 
     return (
-        <div className='insight-table'>
-            <TableContainer>
+        <>
+            <div className='insight-table'>
+                <TableContainer>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             {rowsHead.map((row, index) => (
                                 <TableCell align="left"
-                                    key={index}
+                                           key={index}
                                 >{row}</TableCell>
                             ))}
                         </TableRow>
@@ -200,13 +273,10 @@ function InsightTableProjectsTwo() {
                                     <ArrowSquareInPink style={{margin: '0px 4px -3px 0px'}} />
                                     {row.project}
                                 </TableCell>
-                                <TableCell align="left"
-                                   sx={{
-                                       display: 'flex',
-                                       alignItems: 'center',
-                                       gap: '0 5px'
-                                }}>
-                                    <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
+                                <TableCell align="left">
+                                    <div className='insight-table__flex'>
+                                        <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
+                                    </div>
                                 </TableCell>
                                 <TableCell align="left">{row.emoji}</TableCell>
                                 <TableCell align="left">{row.image}</TableCell>
@@ -219,8 +289,28 @@ function InsightTableProjectsTwo() {
                     </TableBody>
                 </Table>
             </TableContainer>
+            </div>
+
+            {rows.map((row, index) => (
+                <InsightTableProjectsMobile
+                    key={index}
+                    rank={row.rank}
+                    title={row.title}
+                    email={row.email}
+                    name={row.pm.name}
+                    authority={row.authority}
+                    access={row.access}
+                    joined={row.joined}
+                    blocks={row.blocks}
+                    mentions={row.mentions}
+                    time={row.time}
+                    color={row.pm.color}
+                >
+                </InsightTableProjectsMobile>
+            ))}
             <Pagination />
-        </div>
+        </>
+
     );
 }
 

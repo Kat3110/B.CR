@@ -25,10 +25,6 @@
     color: rgba(0,0,0,0.5);
 }
 
-.project-card__tooltip {
-    height: 40px;
-}
-
 .project-card__time {
     color: rgba(0,0,0,0.3);
     font-weight: 400;
@@ -86,4 +82,28 @@
     position: absolute;
     top: -35px;
     right: -45px;
+}
+@media screen and (max-width: 600px) {
+    .project-card__top {
+        margin: 0 0 15px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .project-card__top img {
+        height: max-content;
+    }
+    .project-card__bar {
+        margin: 0 0 15px
+    }
+
+    .project-card__tooltip {
+        margin: 5px 0;
+    }
+    .project-card__accounts {
+        margin-left: 5px;
+    }
+    .project-card__number {
+        display: none;
+    }
 }

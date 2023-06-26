@@ -10,6 +10,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CapitalLetter from "../capital-letter";
 import Button from "../button";
+import InsightTableMobile from "../insight-table-mobile";
+import InsightTableMobileThree from "../insight-table-mobile-three";
 
 function InsightTableThree(props) {
 
@@ -19,7 +21,7 @@ function InsightTableThree(props) {
 
     const rows = [
         createData(
-            1,
+            '1st',
             'Charis 2023 Summer Kids Package',
             {
                 name: 'Aron H.',
@@ -35,7 +37,7 @@ function InsightTableThree(props) {
             '2,150',
         ),
         createData(
-            2,
+            '2nd',
             'Dr.G 2022, 2023 Christmas',
             {
                 name: 'Yves Saint Laurent',
@@ -51,7 +53,7 @@ function InsightTableThree(props) {
             '1,028',
         ),
         createData(
-            3,
+            '3rd',
             'Moonshot Secret Project',
             {
                 name: 'Angelica',
@@ -67,7 +69,7 @@ function InsightTableThree(props) {
             '920',
         ),
         createData(
-            4,
+            '4th',
             'Espoir 2024 Spring Project',
             {
                 name: 'EDGAR',
@@ -83,7 +85,7 @@ function InsightTableThree(props) {
             '587',
         ),
         createData(
-            5,
+            '5th',
             'Voynoon Concptual Production',
             {
                 name: 'Hubert Benjamin',
@@ -105,52 +107,70 @@ function InsightTableThree(props) {
     ]
 
     return (
-        <div className='insight-table'>
-            <InsightTitle title={props.title} image={props.image} />
-            <Button text='See all' />
-            <TableContainer>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            {rowsHead.map((row, index) => (
-                                <TableCell align="left"
-                                    key={index}
-                                >{row}</TableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row, index) => (
-                            // rank, title, text, emoji, image, link, video, file, file
-                            <TableRow
-                                key={index}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="td" scope="row" color='rg'>
-                                    {row.rank}
-                                </TableCell>
-                                <TableCell align="left">{row.title}</TableCell>
-                                <TableCell align="left"
-                                           sx={{
-                                               display: 'flex',
-                                               alignItems: 'center',
-                                               gap: '0 5px'
-                                }}>
-                                    <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
-                                </TableCell>
-                                <TableCell align="left">{row.text}</TableCell>
-                                <TableCell align="left">{row.emoji}</TableCell>
-                                <TableCell align="left">{row.image}</TableCell>
-                                <TableCell align="left">{row.link}</TableCell>
-                                <TableCell align="left">{row.video}</TableCell>
-                                <TableCell align="left">{row.file}</TableCell>
-                                <TableCell className='insight-table__col-pink' align="left">{row.total}</TableCell>
+        <>
+            <div className='insight-table'>
+                <InsightTitle title={props.title} image={props.image} />
+                <Button text='See all' />
+                <TableContainer>
+                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                {rowsHead.map((row, index) => (
+                                    <TableCell align="left"
+                                               key={index}
+                                    >{row}</TableCell>
+                                ))}
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-        </div>
+                        </TableHead>
+                        <TableBody>
+                            {rows.map((row, index) => (
+                                // rank, title, text, emoji, image, link, video, file, file
+                                <TableRow
+                                    key={index}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell component="td" scope="row" color='rg'>
+                                        {row.rank}
+                                    </TableCell>
+                                    <TableCell align="left">{row.title}</TableCell>
+                                    <TableCell align="left">
+                                        <div className='insight-table__flex'>
+                                            <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
+                                        </div>
+                                    </TableCell>
+                                    <TableCell align="left">{row.text}</TableCell>
+                                    <TableCell align="left">{row.emoji}</TableCell>
+                                    <TableCell align="left">{row.image}</TableCell>
+                                    <TableCell align="left">{row.link}</TableCell>
+                                    <TableCell align="left">{row.video}</TableCell>
+                                    <TableCell align="left">{row.file}</TableCell>
+                                    <TableCell className='insight-table__col-pink' align="left">{row.total}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+            {rows.map((row, index) => (
+                <InsightTableMobileThree
+                    key={index}
+                    rank={row.rank}
+                    title={row.title}
+                    blocks={row.blocks}
+                    mentions={row.mentions}
+                    time={row.time}
+                    name={row.pm.name}
+                    total={row.total}
+                    text={row.text}
+                    emoji={row.emoji}
+                    image={row.image}
+                    link={row.link}
+                    video={row.video}
+                    file={row.file}
+                >
+                </InsightTableMobileThree>
+            ))}
+        </>
     );
 }
 

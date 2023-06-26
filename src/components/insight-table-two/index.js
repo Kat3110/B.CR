@@ -10,7 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CapitalLetter from "../capital-letter";
 import Button from "../button";
-import ChipMember from "../chip-member";
+import InsightTableMobile from "../insight-table-mobile";
 
 function InsightTableTwo(props) {
 
@@ -20,7 +20,7 @@ function InsightTableTwo(props) {
 
     const rows = [
         createData(
-            1,
+            '1st',
             'Charis 2023 Summer Kids Package',
             {
                 name: 'Aron H.',
@@ -32,7 +32,7 @@ function InsightTableTwo(props) {
             '3 hours (average)'
         ),
         createData(
-            2,
+            '2nd',
             'Dr.G 2022, 2023 Christmas',
             {
                 name: 'Yves Saint Laurent',
@@ -44,7 +44,7 @@ function InsightTableTwo(props) {
             '2 hours (average)'
         ),
         createData(
-            3,
+            '3rd',
             'Moonshot Secret Project',
             {
                 name: 'Angelica',
@@ -56,7 +56,7 @@ function InsightTableTwo(props) {
             '35 minutes (average)'
         ),
         createData(
-            4,
+            '4th',
             'Espoir 2024 Spring Project',
             {
                 name: 'EDGAR',
@@ -68,7 +68,7 @@ function InsightTableTwo(props) {
             '40 minutes (average)'
         ),
         createData(
-            5,
+            '5th',
             'Voynoon Concptual Production',
             {
                 name: 'Hubert Benjamin',
@@ -86,47 +86,58 @@ function InsightTableTwo(props) {
     ]
 
     return (
-        <div className='insight-table'>
-            <InsightTitle title={props.title} image={props.image} />
-            <Button text='See all' />
-            <TableContainer>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            {rowsHead.map((row, index) => (
-                                <TableCell align="left"
-                                    key={index}
-                                >{row}</TableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row, index) => (
-                            <TableRow
-                                key={index}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="td" scope="row" color='rg'>
-                                    {row.rank}
-                                </TableCell>
-                                <TableCell align="left">{row.title}</TableCell>
-                                <TableCell align="left"
-                                           sx={{
-                                               display: 'flex',
-                                               alignItems: 'center',
-                                               gap: '0 5px'
-                                }}>
-                                    <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
-                                </TableCell>
-                                <TableCell align="left">{row.blocks}</TableCell>
-                                <TableCell align="left">{row.mentions}</TableCell>
-                                <TableCell align="left">{row.time}</TableCell>
+        <>
+            <div className='insight-table'>
+                <InsightTitle title={props.title} image={props.image} />
+                <Button text='See all' />
+                <TableContainer>
+                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                {rowsHead.map((row, index) => (
+                                    <TableCell align="left"
+                                               key={index}
+                                    >{row}</TableCell>
+                                ))}
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-        </div>
+                        </TableHead>
+                        <TableBody>
+                            {rows.map((row, index) => (
+                                <TableRow
+                                    key={index}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell component="td" scope="row" color='rg'>
+                                        {row.rank}
+                                    </TableCell>
+                                    <TableCell align="left">{row.title}</TableCell>
+                                    <TableCell align="left">
+                                        <div className='insight-table__flex'>
+                                            <CapitalLetter letter={row.pm.name[0]} bgColor={row.pm.color}/> {row.pm.name}
+                                        </div>
+                                    </TableCell>
+                                    <TableCell align="left">{row.blocks}</TableCell>
+                                    <TableCell align="left">{row.mentions}</TableCell>
+                                    <TableCell align="left">{row.time}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+            {rows.map((row, index) => (
+                <InsightTableMobile
+                    key={index}
+                    title={row.title}
+                    rank={row.rank}
+                    blocks={row.blocks}
+                    mentions={row.mentions}
+                    time={row.time}
+                    name={row.pm.name}
+                >
+                </InsightTableMobile>
+            ))}
+        </>
     );
 }
 

@@ -1,59 +1,76 @@
 .notification-message {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    gap: 10px 0;
-    flex-direction: column;
-    cursor: pointer;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px 0;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .notification-message:hover {
-    background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .notification-message__profile {
-    display: flex;
-    gap: 0 10px;
-    align-items: center;
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
 }
 
 .notification-message__icon {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .notification-message__name {
-    font-weight: 400;
-    font-size: 13px;
-    color: #000000;
-    margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  margin: 0;
 }
 
 .notification-message__content {
-    font-weight: 400;
-    font-size: 15px;
-    color: #000000;
-    margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  margin: 0;
 }
 
-.notification-message__content span{
-    font-weight: 700;
-    margin: 0;
+.notification-message__content span {
+  font-weight: 700;
+  margin: 0;
 }
 
 .notification-message__date {
-    display: flex;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+  gap: 5px;
 }
 
-.notification-message__date span{
-    font-weight: 400;
+.notification-message__date span {
+  font-weight: 400;
 }
 
-.notification-message__date p{
-    font-weight: 700;
-    margin: 0;
+.notification-message__date p {
+  font-weight: 700;
+  margin: 0;
+}
+
+.notification-message__text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notification-message__text:before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  left: 5px;
 }

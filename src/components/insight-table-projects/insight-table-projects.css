@@ -15,3 +15,84 @@
 .insight-table__btn-group .button svg {
     color: dimgrey;
 }
+
+.insight-table__btn-group--mobile {
+    display: none;
+}
+
+.insight-table__btn-active {
+    font-weight: 700 !important;
+    background: #FFFFFF !important;
+    line-height: 30px !important;
+    color: black !important;
+}
+
+.insight-table__btn-active svg{
+    color: #FF007A;
+}
+
+
+@media (max-width: 1000px) {
+    .insight-table__btn-group .button {
+        bottom: 0 !important;
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+    }
+
+    .insight-table__btn-group .button svg {
+        display: none;
+    }
+
+    .page-insight__table .insight-table__btn-head {
+        background: #F8F6F2;
+    }
+
+    .page-insight__card .insight-table__btn-head {
+        background: #F8F6F2;
+    }
+
+    .insight-table__btn-head button {
+        border: none;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 15px 15px 0 0;
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .insight-table__btn-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .insight-table__btn-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .insight-table__btn-body button {
+        border: none;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        max-width: 160px;
+        width: 100%;
+        min-height: 44px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,146 @@
+.manager-filter {
+    width: 100%;
+    max-width: 1500px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px 50px;
+    position: relative;
+}
+
+.manager-filter__row-second {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.manager-filter .manager-filter__row-second .MuiPaper-root {
+    height: 34px;
+    border-radius: 5px !important;
+    max-width: 496px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.manager-filter__row-second .button {
+    max-width: 140px;
+    width: 100%;
+    height: 34px;
+}
+
+.manager-filter__buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.manager-filter__row-selects {
+    display: flex;
+    gap: 10px;
+}
+
+.manager-filter__row-search {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.manager-filter__row-search .input-search {
+    max-width: 566px !important;
+}
+
+.manager-filter__row-btn {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.page-manager-home__table .insight-table .MuiTableContainer-root {
+    overflow-x: scroll;
+}
+
+.page-manager-home__table .insight-table .MuiTableContainer-root table {
+    width: 1480px;
+}
+
+.page-manager-home__table .pagination--mobile,
+.page-manager-home__table .pagination {
+    padding-top: 10px;
+}
+
+@media (max-width: 1300px) {
+    .manager-filter__row-second {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .manager-filter__row-search .input-search {
+        flex-shrink: 0;
+    }
+
+}
+
+@media (max-width: 840px) {
+    .manager-filter__row-search {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .manager-filter {
+        padding: 20px;
+        gap: 30px 0;
+    }
+    .page-manager-home__table {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+
+    .page-manager-home__add-member {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .page-manager-home__table .insight-table table {
+        display: block !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .manager-filter {
+        padding: 20px 10px;
+    }
+
+    .manager-filter__row-selects {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .select-window__select {
+        min-width: 350px !important;
+        width: 100%;
+    }
+
+    .manager-filter__row-btn {
+        justify-content: center;
+    }
+
+    .page-manager-home__add-member {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}

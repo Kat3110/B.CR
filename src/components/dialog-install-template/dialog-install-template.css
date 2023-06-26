@@ -1,0 +1,147 @@
+.dialog-install-templates {
+    display: none;
+    flex-direction: column;
+}
+
+.dialog-templates__button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dialog-templates__button svg{
+    width: 18px;
+    height: 18px;
+    color: rgba(0,0,0,0.5);
+}
+
+.dialog-templates__button:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.dialog-install-templates .dialog-templates__box {
+    flex: 1;
+    padding: 50px 10px 0;
+    gap: 30px;
+}
+
+.dialog-install-templates__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 auto;
+}
+
+.dialog-install-templates__name {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 32px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.dialog-install-templates .chips-delete__box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialog-install-templates .chips-delete{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 0;
+}
+
+.dialog-install-templates .chips-delete__list div {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+}
+
+.dialog-install-templates .MuiChip-label  {
+    padding: 0;
+}
+
+.dialog-install-templates .chips-delete__add  {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    width: 100%;
+    height: 60px;
+}
+.dialog-install-templates .chips-delete:after {
+    display: none;
+}
+
+.dialog-install-templates__img {
+    margin: 0 auto;
+    position: relative;
+}
+
+.dialog-install-templates__img img{
+    width: 116px;
+    height: 116px;
+}
+
+.dialog-install-templates__add {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.dialog-install-templates .checkboxes-delete__box {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialog-install-templates .checkboxes-delete__list div {
+    width: 100%;
+    padding: 20px 40px 20px 20px;
+}
+
+.dialog-install-templates .checkboxes-delete {
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.dialog-install-templates .checkboxes-delete:after {
+    display: none;
+}
+
+.dialog-install-templates .checkboxes-delete__add {
+    height: 60px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    width: 100%;
+    margin: 30px 0 0;
+}
+
+.dialog-install-templates .dialog-templates__btn {
+    margin: 0 auto;
+}
+
+@media (max-width: 840px) {
+    .dialog-install-templates {
+        display: flex;
+    }
+}

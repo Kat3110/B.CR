@@ -1,0 +1,4 @@
+.insight-table__date {
+    display: flex;
+    flex-direction: column;
+}

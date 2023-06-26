@@ -5,12 +5,18 @@
     justify-content: flex-end;
     width: 100%;
     height: 50px;
-    background: rgba(0, 0, 0, 0.05)!important;
+    background: rgba(0, 0, 0, 0.05) !important;
     padding: 0 6px 0 12px;
-    border-radius: 10px!important;
+    border-radius: 10px !important;
     border: none;
     box-shadow: none !important;
     position: relative;
+    cursor: pointer;
+}
+
+.input-search .MuiInputBase-input {
+    height: max-content;
+    padding: 0 !important;
 }
 
 .input-search:hover {
@@ -21,7 +27,7 @@
     width: 100%;
 }
 
-.input-search__btn{
+.input-search__btn {
     padding: 0 8px 0 0;
 }
 
@@ -43,6 +49,8 @@
     cursor: pointer;
 }
 
-.input-search__select {
-
+@media screen and (max-width: 600px) {
+    .input-search__btn {
+        padding: 0 10px 0 0;
+    }
 }
